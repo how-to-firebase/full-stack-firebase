@@ -1,8 +1,12 @@
 # Summary
 
-* [Why Firebase?](why-firebase.md)
-* [What is serverless?](what-is-serverless.md)
-* [Prerequisites](prerequisites.md)
-* [Overview & Structure](overview-and-structure.md)
+## Introduction
+
+* [Why Firebase?](introduction/why-firebase.md)
+* [What is serverless?](introduction/what-is-serverless.md)
+* [Prerequisites](introduction/prerequisites.md)
+* [Overview & Structure](introduction/overview-and-structure.md)
 * [Create your Firebase project](README.md)
+
+## Firebase Authentication
 
