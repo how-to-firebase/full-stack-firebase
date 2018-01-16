@@ -1,3 +1,9 @@
+<div>
+  <iframe src="https://fogo.howtofirebase.com/gallery/dashboard" frameborder="0" width="100%" height="500px" />
+</div>
+
+
+
 # Production-Worthy Firebase
 
 This course will introduce you to Firebase and grow your understanding of the platform until you're comfortable deploying an app to production for your users.
