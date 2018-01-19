@@ -2,6 +2,10 @@
 
 This course will introduce you to Firebase and grow your understanding of the platform until you're comfortable deploying an app to production for your users.
 
+## Check out GitBooks
+
+Don't love reading raw Markdown? [Read this book on GitBook](https://how-to-firebase.gitbooks.io/full-stack-firebase/content/).
+
 ## Beginners Welcome!
 
 You'll need to know JavaScript. If you're weak on JavaScript... this may not be the course for you.
