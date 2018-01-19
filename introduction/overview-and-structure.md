@@ -1,15 +1,15 @@
 # Overview & Structure
 
-This course consists of a bunch of modules, including
+This course consists of a bunch of modules, including:
 
- - Firebase Authentication,
- - Firebase Storage,
- - Firebase Messaging,
- - Firestore,
- - the Realtime Database,
- - Security Rules,
- - Cloud Functions for Firebase,
- - and Firebase Hosting.
+ - Firebase Dashboard
+ - Firebase Authentication
+ - Firestore
+ - Realtime Database
+ - Cloud Functions for Firebase
+ - Firebase Storage
+ - Cloud Messaging
+ - Firebase Hosting
 
 ## Modules
 
@@ -23,6 +23,7 @@ These modules are multi-purpose tools that can be used in all sorts of creative 
 
 | Module         | Intensity | Reasoning                                                                            |
 | -------------- | --------- | ------------------------------------------------------------------------------------ |
+| Dashboard      | 🌶        | A quick walk-through                                           |
 | Authentication | 🌶        | Auth is the easiest Firebase feature to implement.                                   |
 | Storage        | 🌶🌶       | Small API with some complexity                                                       |
 | Messaging      | 🌶🌶       | The Firebase SDK hides most complexity                                               |
@@ -40,7 +41,7 @@ Next, we'll walk through how the feature is used in a live application. This is 
 
 Once we've seen the Firebase service in action, we'll spin up our own Firebase project and implement a feature step by step. 
 
-Finally, we'll summarize what we've learned, provide you with a "cheat sheet", and refer you to additional learning resources and next steps.
+Finally, we'll summarize what we've learned, provide you with some notes to take with you, and refer you to additional learning resources and next steps.
 
 ## Example Module
 
@@ -50,6 +51,6 @@ First, we'll explain why Firebase Authentication is critical to your application
 
 Next, we'll show how Firebase Authentication works in our production app.
 
-Then we'll break out our code editors and implement a basic authentication. We won't go any deeper than we need to, but you'll have coded up a working implementation that you can take with you.
+Then we'll break out our code editors and implement a basic authentication. We won't go any deeper than we need to, but you'll have coded a working implementation that you can take with you.
 
-And finally we'll wrap up with a summary of how we've implemented Firebase Authentication, a downloadable cheatsheet with descriptions of the functions that you should know, and suggestions for next steps in implementing Firebase Authentication in a more sophisticated way.
+And finally we'll wrap up with a summary of how we've implemented Firebase Authentication, downloadable notes with descriptions of the functions that you should know, and suggestions for next steps in implementing Firebase Authentication in a more sophisticated way.
