@@ -1,6 +1,6 @@
 # Full-Stack Firebase
 
-This course will introduce you to Firebase and grow your understanding of the platform until you're comfortable deploying an app to production for your users.
+This course will introduce you to Firebase and grow your understanding of the platform until you're comfortable deploying an app to production.
 
 ## Check out GitBooks
 
@@ -41,7 +41,7 @@ We've written un-opinionated courses in the past. It wasn't fun. So We've made s
 
 If you're not familiar with Angular or React, do not worry. The markup and JavaScript is easy enough to read, and We'll stick to vanilla JS as much as possible.
 
-Firebase's free Spark planis **very generous**. There are some uses of Firebase Functions that require upgrading to a paid Blaze plan, but they're not required.
+Firebase's free Spark plan is **very generous**. There are some uses of Firebase Functions that require upgrading to a paid Blaze plan, but they're not required.
 
 ## This course is not...
 
@@ -55,5 +55,5 @@ I'll reference the [Firebase Docs](https://firebase.google.com/docs/) quite a bi
 
 Firebase is constantly changing. The docs are canonical. Use them. I'll do my best to update this content, but staying 100% current would be a full-time job.
 
-Have you found an error or a bug? Don't hesitate to file an issue on the [GitHub repo](https://github.com/how-to-firebase/full-stack-firebase) or make pull requests.
+Have you found an error or a bug? Don't hesitate to [file an issue ](https://github.com/how-to-firebase/full-stack-firebase/issues) or make pull requests.
 
