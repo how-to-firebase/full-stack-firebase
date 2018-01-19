@@ -65,7 +65,7 @@ This is a Firebase course, so naturally, we're using Cloud Functions.
 
 Cloud Functions enables the developer to write discrete pieces of logic, known as functions, and export them to the Cloud Functions service for execution. Cloud Functions then listens to any one of a number of triggers. When these triggers are tripped, Cloud Functions executes your code with the trigger as the event context.
 
-We'll get deep, deep into Cloud Functions in a future module. Just know that these triggers can be as standard as an HTTP call directly to the Cloud Function, or as Firebase-specific as a new Firebase Authentication sign up or a change in your Firestore database.
+We'll get deep, deep into Cloud Functions in a future module. Just know that these triggers can be as standard as an HTTP call directly to the Cloud Function, or as Firebase-specific as a new Firebase Authentication sign up or a change in your Cloud Firestore database.
 
 The point is that by using triggers and Cloud Functions, we can architect an app that scales from prototype to massive success without us lifting a finger.
 
