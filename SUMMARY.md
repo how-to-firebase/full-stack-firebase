@@ -10,11 +10,11 @@
 
 ## Firebase Dashboard
 
-* [Dashboard: Introduction](dashboard/introduction.md)
+* [Introduction](dashboard/introduction.md)
 
 ## Firebase Authentication
 
-* [Firebase Authentication: Introduction](firebase-authentication/introduction.md)
+* [Introduction](firebase-authentication/introduction.md)
 
 ## Cloud Firestore
 
