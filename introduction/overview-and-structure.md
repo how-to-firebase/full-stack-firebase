@@ -21,17 +21,16 @@ However, Cloud Firestore, the Realtime Database, Security Rules and Cloud Functi
 
 These modules are multi-purpose tools that can be used in all sorts of creative ways. We'll go much deeper into these Firebase features. We'll cover common use cases, potential pitfalls and try to inspire you with more advanced architectures that will make your apps both performant and easier to write.
 
-| Module         | Intensity | Reasoning                                                                            |
-| -------------- | --------- | ------------------------------------------------------------------------------------ |
-| Dashboard      | 🌶        | A quick walk-through                                           |
-| Authentication | 🌶        | Auth is the easiest Firebase feature to implement.                                   |
-| Storage        | 🌶🌶       | Small API with some complexity                                                       |
-| Messaging      | 🌶🌶       | The Firebase SDK hides most complexity                                               |
-| Cloud Firestore | 🌶🌶🌶🌶🌶  | Firestore is the meat of Firebase's offering.                                        |
-| Security Rules | 🌶🌶🌶     | Super confusing at first, once you figure it out... it's actually quite simple       |
-| Realtime DB    | 🌶🌶🌶🌶   | The Realtime DB (RTDB) is rife with gotchas.                                          |
-| Functions      | 🌶🌶🌶🌶🌶  | Functions is the back end of your app. It's tricky to develop on, but crazy powerful |
-| Hosting        | 🌶🌶       | Static file hosting has some detail, but it's mostly just static files.              |
+| Module          | Intensity      | Reasoning                                                                            |
+| --------------- | -------------- | ------------------------------------------------------------------------------------ |
+| Dashboard       | 🌶             | A quick walk-through |
+| Authentication  | 🌶             | Auth is the easiest Firebase feature to implement. |
+| Cloud Firestore | 🌶🌶🌶🌶🌶   | Firestore is the meat of Firebase's offering. |
+| Realtime DB     | 🌶🌶🌶🌶      | The Realtime DB (RTDB) is rife with gotchas. |
+| Functions       | 🌶🌶🌶🌶🌶   | Functions is the back end of your app. It's tricky to develop on, but crazy powerful |
+| Storage         | 🌶🌶           | Small API with some complexity |
+| Messaging       | 🌶🌶           | The Firebase SDK hides most complexity |
+| Hosting         | 🌶🌶           | Static file hosting has some detail, but it's mostly just static files. |
 
 ## Module Structure
 
