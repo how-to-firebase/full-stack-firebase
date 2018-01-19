@@ -8,6 +8,10 @@
 * [Prerequisites](introduction/prerequisites.md)
 * [Overview & Structure](introduction/overview-and-structure.md)
 
+## Firebase Dashboard
+
+* [Dashboard: Introduction](dashboard/introduction.md)
+
 ## Firebase Authentication
 
 * [Firebase Authentication: Introduction](firebase-authentication/introduction.md)

@@ -21,7 +21,6 @@ The course is broken up into modules.
 Each module will have the following parts:
 
 * Introduction
-* Key concepts
 * Demo walk-through
 * Exercise
 * Downloadable notes
