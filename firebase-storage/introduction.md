@@ -1,1 +1,1 @@
-# Firebase Hosting: Introduction
+# Firebase Storage: Introduction

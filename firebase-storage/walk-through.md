@@ -1,1 +1,1 @@
-# Firebase Hosting: Walk-through
+# Firebase Storage: Walk-through

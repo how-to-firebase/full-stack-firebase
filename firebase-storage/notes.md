@@ -1,1 +1,1 @@
-# Firebase Hosting: Notes
+# Firebase Storage: Notes
