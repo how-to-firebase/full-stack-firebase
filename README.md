@@ -1,4 +1,4 @@
-# Production-Worthy Firebase
+# Full-Stack Firebase
 
 This course will introduce you to Firebase and grow your understanding of the platform until you're comfortable deploying an app to production for your users.
 
@@ -6,7 +6,7 @@ This course will introduce you to Firebase and grow your understanding of the pl
 
 You'll need to know JavaScript. If you're weak on JavaScript... this may not be the course for you.
 
-Firebase is deployed via the command line, so you'll need basic command line knowledge as well.
+Check out the Prerequisites chapter for all of the details.
 
 You don't need to know anything about Firebase to get started. Just be patient and move slowly through the material.
 
@@ -26,19 +26,19 @@ Each module will have the following parts:
 * Exercise
 * Downloadable notes
 
-Some modules will build on each other, so skip around carefully :)
+Some modules will build on each other, so skip around carefully :\)
 
 ## What to expect
 
 * Opinionated code
 * Angular and React integrations
-* You'll need a Firebase account using the free tier
+* You'll need a Firebase account
 
-I've written an un-opinionated course in the past. It wasn't fun. So I've made some decisions.
+We've written un-opinionated courses in the past. It wasn't fun. So We've made some decisions.
 
 If you're not familiar with Angular or React, do not worry. The markup and JavaScript is easy enough to read, and We'll stick to vanilla JS as much as possible.
 
-Firebase's free tier is **very generous**. There are some uses of Firebase Functions that require upgrading to a paid plan, but they're not required.
+Firebase's free Spark planis **very generous**. There are some uses of Firebase Functions that require upgrading to a paid Blaze plan, but they're not required.
 
 ## This course is not...
 
@@ -53,3 +53,4 @@ I'll reference the [Firebase Docs](https://firebase.google.com/docs/) quite a bi
 Firebase is constantly changing. The docs are canonical. Use them. I'll do my best to update this content, but staying 100% current would be a full-time job.
 
 Have you found an error or a bug? Don't hesitate to file an issue on the [GitHub repo](https://github.com/how-to-firebase/full-stack-firebase) or make pull requests.
+
