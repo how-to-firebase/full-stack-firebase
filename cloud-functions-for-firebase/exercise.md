@@ -1,1 +1,1 @@
-# Exercise
+# Cloud Functions for Firebase: Exercise

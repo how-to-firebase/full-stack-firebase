@@ -1,1 +1,1 @@
-# Exercise
+# Firebase Hosting: Exercise

@@ -1,1 +1,1 @@
-# Walk-through
+# Cloud Functions for Firebase: Walk-through

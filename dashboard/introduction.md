@@ -1,8 +1,8 @@
-# Introduction to the Firebase Dashboard
+# Firebase Dashboard: Introduction
 
 We'll kick this party off with a quick run down of the Firebase Console.
 
-It's not so much a Firebase feature, but it's how you'll interact with many of the Firebase features.
+It's not so much a Firebase feature. It's how you'll interact with many of the Firebase features.
 
 You'll need your Dashboard to configure your services and watch data flow through your project.
 

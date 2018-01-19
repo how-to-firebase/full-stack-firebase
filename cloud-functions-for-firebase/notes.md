@@ -1,1 +1,1 @@
-# Notes
+# Cloud Functions for Firebase: Notes
