@@ -32,7 +32,7 @@ The marketplace likes it, so now you have to manage a growing user-base AND ship
 
 A typical startup architecture would include servers and databases, all of which you'd need to provision and scale to keep up. This leaves your team strapped for time, because they're still building new features.
 
-Firebase architecture abstracts all of that away. Your code is "serverless", meaning that you don't manage servers yourself. You write code and the Firebase team puts it on their servers and scales it up and down as needed.
+Firebase architecture abstracts all of that away. Your code is "serverless", meaning that you don't manage servers yourself. You write code and Firebase puts it on Google's servers and scales it up and down as needed.
 
 So you can service millions of customers on the same system that you used for your prototype.
 

@@ -26,7 +26,7 @@ These modules are multi-purpose tools that can be used in all sorts of creative 
 | Dashboard       | 🌶             | A quick walk-through |
 | Authentication  | 🌶             | Auth is the easiest Firebase feature to implement. |
 | Cloud Firestore | 🌶🌶🌶🌶🌶   | Firestore is the meat of Firebase's offering. |
-| Realtime DB     | 🌶🌶🌶🌶      | The Realtime DB (RTDB) is rife with gotchas. |
+| Realtime DB     | 🌶🌶🌶🌶      | The Realtime DB (RTDB) has some "gotchas" |
 | Functions       | 🌶🌶🌶🌶🌶   | Functions is the back end of your app. It's tricky to develop on, but crazy powerful |
 | Storage         | 🌶🌶           | Small API with some complexity |
 | Messaging       | 🌶🌶           | The Firebase SDK hides most complexity |
