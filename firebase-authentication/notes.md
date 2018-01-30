@@ -97,7 +97,7 @@ firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
 ```
 
 ...and finally authenticate with the code from user input.
-```
+```javascript
 var code = getCodeFromUserInput();
 confirmationResult.confirm(code).then(function (result) {
   // User signed in successfully.
