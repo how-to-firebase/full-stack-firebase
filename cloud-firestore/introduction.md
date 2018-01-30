@@ -2,7 +2,7 @@
 
 Cloud Firestore is the successor to both Cloud Datastore and the original Firebase Realtime Database.
 
-Cloud Datastore already powers massive web applications, and the Realtime Database proved the necessity of direct browser-to-database interactions. Cloud Firestore combines the scalability and reliability of Cloud Datastore with the awesome client libraries of the Realtime Database to create a massively scalable, easily-to-develop cloud database platform.
+Cloud Datastore already powers massive web applications, and the Realtime Database proved how amazing direct browser-to-database interactions can be. Cloud Firestore combines the scalability and reliability of Cloud Datastore with the awesome client libraries of the Realtime Database to create a massively scalable, easily-to-develop cloud database platform.
 
 ### Document Collection
 
