@@ -37,11 +37,11 @@ So I could make a collection of Foods, and each Food could have entirely differe
 
 - Foods
  - Spaghetti
-  - noodleType
-  - sauceFlavor
+   - noodleType
+   - sauceFlavor
  - Sandwich
-  - breadType
-  - hasPickles
+   - breadType
+   - hasPickles
   
 
 ### What is a client library?
@@ -50,4 +50,29 @@ Traditional application architecture includes a layer of servers that talk to yo
 
 Serverless application architecture has the client--in this case a browser--communicating directly with the database. The database runs all of its own security checks and serves up data as requested.
 
-The Firestore SDK is a client library that enables your browser to talk directly to the Cloud Firestore database. This is huge, because you don't have to write any server code.
+The Firestore SDK is a client library that enables your browser to talk directly to the Cloud Firestore database. Firestore handles all of its own security, and the Firestore SDK can read and write whatever your browser asks it to.
+
+This is huge, because you don't have to write any server code. All of that time crafting REST APIs or implementing GraphQL is unnecessary!
+
+### Limitations of Cloud Firestore
+
+Cloud Firestore is not great for highly relational data. 
+
+[Relational databases](https://cloud.google.com/sql/) are optimized for relational data. For example, if you're building an inventory system and your inventory numbers are constantly changing, and each inventory item can belong to a number categories, and you need to be able to quickly run reports on different stock levels for different category groups... you might want to stick to a relational database. 
+
+Cloud Firestore can be sub-optimal for graph data.
+
+Graph databases such as [JanusGraph](http://janusgraph.org/) are optimized for graph data. For instance, if you're building a social app and you find yourself trying to query how many of a user's friends live in nearby cities, but you also need to query how many of those friends' friends also live nearby... you may want to stick to a graph database.
+
+Both of these use cases--relational and graph data--can be modeled in Cloud Firestore; however, the queries may run more slowly and cost more than if you used a more dedicated database. 
+
+### Hybrid solutions
+
+Just because you need a relational database for parts of your data does not mean that you must abandon Firestore!
+
+Most large web applications use a variety of datastores. For instance, a website may use Redis for caching, GraphQL + JanusGraph + Cassandra for social data, SQL for financial data, and Firestore for everything else. Yes, this sort of model adds complexity, and we don't recommend introducing any more complexity to your app than is necessary; however, sometimes complex problems require complex solutions.
+
+Yes, you can drive a large truck to work every day. No, that truck will not be as efficient as driving a small sedan. And yes, a small sedan can transport two cubic yards of sand if you take five trips, but nobody does that. If you need that much sand, you'll rent a truck.
+
+We recommend starting with Firestore until you discover that it won't meet your needs. You may be surprised at how flexible and powerful Firestore can be, and you may never find the need for another database :)
+
