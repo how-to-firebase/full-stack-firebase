@@ -76,3 +76,10 @@ Yes, you can drive a large truck to work every day. No, that truck will not be a
 
 We recommend starting with Firestore until you discover that it won't meet your needs. You may be surprised at how flexible and powerful Firestore can be, and you may never find the need for another database :)
 
+### Cloud Firestore cost
+
+Cloud Firestore is built for large quantities of data. It's no BigData... but it's a great place to store your live application data. You'll get billed based on how many reads, writes and deletes you complete, as well as a very economical storage fees based on the gigabytes of data in the database.
+
+Just note that if you write a query that returns 100 results, you've just logged 100 reads. As of this writing, 100k reads costs $0.06... so most apps should be fine. Just be take care not to build to "chatty" of an application. If it gets a lot of users, you may see your bills jump.
+
+The Realtime Database is a much better home for high read/write data. Use Cloud Firestore for everything else.
