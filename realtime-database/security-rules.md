@@ -233,7 +233,9 @@ And that's it! We have six base nodes in our data structure:
 
 And notice how each base node has a wildcard `$objectType` nested directly underneath it? That's so we can save lots of different types of objects, all of which will inherit their rules from their parent nodes.
 
-Instead of fighting the cascading rules, we're using them to our advantage and dramatically reducing the number of rules that we need to write.
+Instead of fighting the cascading rules, we're using them to our advantage and dramatically reducing the number of rules that we write.
+
+We're leveraging custom claims to permit users with the `admin` claim to read and write everything using `auth.token.admin === true`. Custom claims are awesome, because they're available across all three types of security rules---Firestore, RTDB and Storage--as well as your browser's `currentUser` JWT.
 
 
 ### Validation
