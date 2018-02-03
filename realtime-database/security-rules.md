@@ -233,5 +233,14 @@ And that's it! We have six base nodes in our data structure:
 
 And notice how each base node has a wildcard `$objectType` nested directly underneath it? That's so we can save lots of different types of objects, all of which will inherit their rules from their parent nodes.
 
-So data saved at `userReadable.scores.$uid.gameOne` will be readable to 
+Instead of fighting the cascading rules, we're using them to our advantage and dramatically reducing the number of rules that we need to write.
+
+
+### Validation
+
+Frankly, we do most of our validation in our client-side applications; however, the RTDB's ```.validate``` security rule will let you do validation right at your data layer.
+
+If you find yourself in need of validation, we recommend reading the [reference docs](https://firebase.google.com/docs/reference/security/database/#validate) carefully. We also recommend not getting too carried away with validation in the security rules. These rules are better seen as a flexible way to add security to your app. If you have some sensitive data or operations and you need more assurances than the `.read` and `.write` rules can give you, it's time for some `.validate` rules.  
+
+We're sure that we could write a sophisticated validation layer using the security rules, but we don't. We use client-side validation >99% of the time, because the vast majority of our writes aren't likely to be abused by an attacker. Any competent hacker will connect directly to your database and start testing your endpoints, so client-side validation won't stop hacking; however, it's easy enough to hide anything worth hacking deep within a cloud function or an admin-only data node, so try that first before relying on validation rules.
 
