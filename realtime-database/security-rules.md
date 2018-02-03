@@ -151,7 +151,7 @@ Let's modify the earlier example a bit and try to block all users from reading `
         ".read": true,
         ".write": "auth.uid === 'userThree'",
         "superSecretUserAttributes": {
-          ".read": "auth.uid === 'userThree'",
+          ".read": "auth.uid === 'userThree'"
         }
       }
     }
@@ -170,23 +170,23 @@ Cascading security rules mean that you have to design your data structure such t
   "rules": {
     "users": {
       "$uid": {
-        ".read": "auth.uid === uid || auth.token.admin === true",
-        ".write": "auth.uid === uid || auth.token.admin === true",
+        ".read": "auth.uid === $uid || auth.token.admin === true",
+        ".write": "auth.uid === $uid || auth.token.admin === true"
       }
     },
     "userOwned": {
       "$objectType": {
         "$uid": {
-          ".read": "auth.uid === uid || auth.token.admin === true",
-          ".write": "auth.uid === uid || auth.token.admin === true",
+          ".read": "auth.uid === $uid || auth.token.admin === true",
+          ".write": "auth.uid === $uid || auth.token.admin === true"
         }
       }
     },
     "userReadable": {
       "$objectType": {
         "$uid": {
-          ".read": "auth.uid === uid || auth.token.admin === true",
-          ".write": "auth.token.admin === true",
+          ".read": "auth.uid === $uid || auth.token.admin === true",
+          ".write": "auth.token.admin === true"
         }
       }
     },
@@ -194,7 +194,7 @@ Cascading security rules mean that you have to design your data structure such t
       "$objectType": {
         "$uid": {
           ".read": "auth.token.admin === true",
-          ".write": "auth.uid === uid || auth.token.admin === true",
+          ".write": "auth.uid === $uid || auth.token.admin === true"
         }
       }
     },
@@ -202,7 +202,7 @@ Cascading security rules mean that you have to design your data structure such t
       "$objectType": {
         "$uid": {
           ".read": "auth.token.admin === true",
-          ".write": "auth.token.admin === true",
+          ".write": "auth.token.admin === true"
         }
       }
     },
@@ -210,7 +210,7 @@ Cascading security rules mean that you have to design your data structure such t
       "$objectType": {
         "$uid": {
           ".read": true,
-          ".write": "auth.token.admin === true",
+          ".write": "auth.token.admin === true"
         }
       }
     }
@@ -237,12 +237,10 @@ Instead of fighting the cascading rules, we're using them to our advantage and d
 
 We're leveraging custom claims to permit users with the `admin` claim to read and write everything using `auth.token.admin === true`. Custom claims are awesome, because they're available across all three types of security rules---Firestore, RTDB and Storage--as well as your browser's `currentUser` JWT.
 
-
 ### Validation
 
-Frankly, we do most of our validation in our client-side applications; however, the RTDB's ```.validate``` security rule will let you do validation right at your data layer.
+Frankly, we do most of our validation in our client-side applications; however, the RTDB's `.validate` security rule will let you do validation right at your data layer.
 
-If you find yourself in need of validation, we recommend reading the [reference docs](https://firebase.google.com/docs/reference/security/database/#validate) carefully. We also recommend not getting too carried away with validation in the security rules. These rules are better seen as a flexible way to add security to your app. If you have some sensitive data or operations and you need more assurances than the `.read` and `.write` rules can give you, it's time for some `.validate` rules.  
+If you find yourself in need of validation, we recommend reading the [reference docs](https://firebase.google.com/docs/reference/security/database/#validate) carefully. We also recommend not getting too carried away with validation in the security rules. These rules are better seen as a flexible way to add security to your app. If you have some sensitive data or operations and you need more assurances than the `.read` and `.write` rules can give you, it's time for some `.validate` rules.
 
 We're sure that we could write a sophisticated validation layer using the security rules, but we don't. We use client-side validation >99% of the time, because the vast majority of our writes aren't likely to be abused by an attacker. Any competent hacker will connect directly to your database and start testing your endpoints, so client-side validation won't stop hacking; however, it's easy enough to hide anything worth hacking deep within a cloud function or an admin-only data node, so try that first before relying on validation rules.
-
