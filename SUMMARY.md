@@ -13,6 +13,11 @@
 * [Introduction](dashboard/introduction.md)
 * [Walk-through](dashboard/walk-through.md)
 
+## Firebase Tools
+
+* [Introduction](firebase-tools/introduction.md)
+* [Walkthrough](firebase-tools/walkthrough.md)
+
 ## Firebase Authentication
 
 * [Introduction](firebase-authentication/introduction.md)
