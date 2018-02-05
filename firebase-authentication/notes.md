@@ -1,6 +1,6 @@
 # Firebase Authentication: Notes
 
-See the [Firebase Authentiction docs for web](https://firebase.google.com/docs/auth/web/manage-users).
+See the [Firebase Authentication docs for web](https://firebase.google.com/docs/auth/web/manage-users).
 
 ### onAuthStateChanged
 ```javascript
