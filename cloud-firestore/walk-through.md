@@ -8,7 +8,7 @@ We've implemented a form of infinite-scroll pagination where a new page is reque
 
 Firestore collections can be easily paginated with a cursor.
 
-In this case our collection is named "uploads". We're also filtering by the environment attribute, which is the string "development" in this example.
+In this case our collection is named "uploads". And we're also filtering by the environment attribute, which is the string "development" in this example.
 
 Filtering on the environment attribute enables us to host multiple versions of this application on a single Firebase project. So in addition to a development environment we have a test environment and a production environment.
 
@@ -46,7 +46,7 @@ Note that the snapshot will have all of the results that match the criteria.
 
 We've just uploaded one file in this case, but if we were to upload a second file, the onSnapshot listener would fire again, but this time with two results.
 
-onSnapshot changes whenever the query results change, and it returns all of the query results every time.
+onSnapshot fires whenever the query results change, and it returns all of the query results every time.
 
 And there it is! We have infinite-scroll pagination as well as a listener that will tack new records onto the top of our list as they arrive!
 
