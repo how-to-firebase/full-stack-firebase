@@ -40,5 +40,4 @@ Notice how our onAuthStateChanged listener fires again, this time with a null cu
 
 You can log in with different OAuth providers, an email and password or even a mobile phone.
 
-Firebase Authentication is quick and easy to implement, and it provides the backbone for
-all of Firebase's security.
+Firebase Authentication is quick and easy to implement, and it provides the backbone for all of Firebase's security.
