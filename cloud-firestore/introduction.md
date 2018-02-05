@@ -19,7 +19,7 @@ Imagine a data structure like this:
  - userId
  - amount
  
-In this case we have a collection of Users and each document has a ```userId``` and an ```email```. Likewise, we have collection of Transactions where each transaction has a ```userId``` and an ```amount```.
+In this case we have a collection of Users and each user document has a `userId` and an `email`. Likewise, we have a collection of Transactions where each transaction has a `userId` and an `amount`.
 
 The ```userId``` fields can be used to connect records in the two collections, but it's an informal connection defined by your application logic, not by the database itself.
 
@@ -29,11 +29,11 @@ In a relational database you would be able to join Users to Transactions based o
 
 Relational databases and document/collection databases have quite a bit of overlap. Frankly, for most use cases, either type of database will be just fine... given that you structure your data correctly :)
 
-The advantages of document/collection databases like Firestore is that it is easier to scale, because each document can live on its own. Your database doesn't have to lock down a bunch of relationships to replicate data... it just copies documents across servers. Now, Google Spanner has achieved similar performance for relational data, so it's not like this is a pure win for the document/collection model; however, document/collection does make possible client libraries like the Firestore SDK.
+The advantages of document/collection databases like Firestore is that it is easier to scale, because each document can live on its own. Your database doesn't have to lock down a bunch of relationships to replicate data... it just copies documents across servers. We recognize that Google Spanner has achieved similar performance for relational data, so this isn't a pure win for the document/collection model; however, document/collection does make possible client libraries like the Firestore SDK.
 
 See, relational databases require schemas. Relational database require table updates. Document/collection databases can be flexible, meaning that you can save whatever data you like in a document. The database just does not care about document structure.
 
-So I could make a collection of Foods, and each Food could have entirely different attributes... and the database just wouldn't care.
+So I could make a collection of Foods, and each Food could have entirely different attributes... and the database—like the honey badger—don't care.
 
 - Foods
  - Spaghetti
@@ -46,9 +46,9 @@ So I could make a collection of Foods, and each Food could have entirely differe
 
 ### What is a client library?
 
-Traditional application architecture includes a layer of servers that talk to your database. So your client--in this case a browser--will make an HTTP call to your server, which will perform security checks, query the database, and return results to the client.
+Traditional application architecture includes a layer of servers that talk to your database. So your client—in this case, a browser—will make an HTTP call to your server, which will perform security checks, query the database, and return results to the client.
 
-Serverless application architecture has the client--in this case a browser--communicating directly with the database. The database runs all of its own security checks and serves up data as requested.
+Serverless application architecture has the browser communicating directly with the database. The database runs all of its own security checks and serves up data as requested.
 
 The Firestore SDK is a client library that enables your browser to talk directly to the Cloud Firestore database. Firestore handles all of its own security, and the Firestore SDK can read and write whatever your browser asks it to.
 
@@ -64,7 +64,7 @@ Cloud Firestore can be sub-optimal for graph data.
 
 Graph databases such as [JanusGraph](http://janusgraph.org/) are optimized for graph data. For instance, if you're building a social app and you find yourself trying to query how many of a user's friends live in nearby cities, but you also need to query how many of those friends' friends also live nearby... you may want to stick to a graph database.
 
-Both of these use cases--relational and graph data--can be modeled in Cloud Firestore; however, the queries may run more slowly and cost more than if you used a more dedicated database. 
+Both of these use cases--relational and graph data--**can** be modeled in Cloud Firestore; however, the queries may run more slowly and cost more than if you used a more dedicated database. 
 
 ### Hybrid solutions
 
@@ -76,10 +76,10 @@ Yes, you can drive a large truck to work every day. No, that truck will not be a
 
 We recommend starting with Firestore until you discover that it won't meet your needs. You may be surprised at how flexible and powerful Firestore can be, and you may never find the need for another database :)
 
-### Cloud Firestore cost
+### But how much does it cost???
 
-Cloud Firestore is built for large quantities of data. It's no BigData... but it's a great place to store your live application data. You'll get billed based on how many reads, writes and deletes you complete, as well as a very economical storage fees based on the gigabytes of data in the database.
+Cloud Firestore is built for large quantities of data. It's no BigQuery... but it's a great place to store your live application data. You'll get billed based on how many reads, writes and deletes you complete, as well as a very economical storage fee based on the gigabytes of data in the database.
 
-Just note that if you write a query that returns 100 results, you've just logged 100 reads. As of this writing, 100k reads costs $0.06... so most apps should be fine. Just be take care not to build to "chatty" of an application. If it gets a lot of users, you may see your bills jump.
+Just note that if you write a query that returns 100 results, you've just logged 100 reads. As of this writing, 100k reads costs $0.06... so most apps should be fine. Just be take care not to build too "chatty" of an application. If it gets a lot of users, you may see your bills jump.
 
 The Realtime Database is a much better home for high read/write data. Use Cloud Firestore for everything else.
