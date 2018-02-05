@@ -204,7 +204,7 @@ var getDoc = cityRef
   });
 ```
 
-# Get entire collection
+# Get an entire collection
 
 ```javascript
 var citiesRef = db.collection('cities');
