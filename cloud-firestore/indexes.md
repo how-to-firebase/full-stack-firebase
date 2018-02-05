@@ -24,7 +24,7 @@ Queries are super easy to handle via the Dashboard.
 
 The easiest way to do it is to write whatever queries you like and watch your DevTools console for error messages.
 
-When you attempt to run a query that requires an index you'll see an error message in DevTools. That error message will come with a link that you can click on to take you to your Dashboard.
+You'll see an error message in DevTools whenever you attempt to run a query that requires an index. That error message will come with a link that you can click on to take you to your Dashboard.
 
 Once on the Dashboard, you'll get a prompt to create the required index. Simply confirm and wait for the index to build.
 
