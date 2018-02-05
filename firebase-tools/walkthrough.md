@@ -3,7 +3,8 @@
 You'll get started with Firebase Tools by installing it. Open up your terminal and make sure you have Node.js installed:
 
 ```bash
-$ node --version #some version number
+$ node --version 
+$ #some version number
 ```
 
 If you see `bash: command not found: node`, then you'll need to [install Node.js](https://nodejs.org/en/download/).
@@ -17,13 +18,14 @@ $ npm -g install firebase-tools
 To confirm successful installation:
 
 ```bash
-$ firebase --version #some version number
+$ firebase --version 
+$ #some version number
 ```
 
 To get help:
 
 ```bash
-$ firebase --help #lists valid commands
+$ firebase --help 
 ```
 
 ### Initialize your app
@@ -89,7 +91,7 @@ Error: HTTP Error: 400, Project 'how-to-firebase-tutorials' is not a Firestore e
 
 ![locked-mode.png](https://goo.gl/AQDVgp)
 
-Not try `firebase deploy` again if necessary.
+Now try `firebase deploy` again if necessary.
 
 Notice the final line of output that looks like this: 
 
@@ -104,10 +106,10 @@ Follow that url to see the results!
 The Node.js community has moved toward putting all deploy commands in a `package.json` file, so let's initialize our project for Node.js as well and set up our deploy pipeline.
 
 ```bash
-$ npm init #accept the defaults for now
+$ npm init #go ahead and accept the defaults
 ```
 
-We've already installed Firebase Tools globally with `npm -g install firebase tools`. Now that we have a local `package.json file, let's install it locally as well.
+We've already installed Firebase Tools globally with `npm -g install firebase tools`. Now that we have a local `package.json` file, let's install it locally as well.
 
 ```bash
 npm install --save-dev firebase-tools
@@ -137,9 +139,9 @@ Now let's add some scripts:
 }
 ```
 
-No we have scripts for each kind of deploy that we could use. We won't need to call `firebase deploy` directly anymore. Instead we'll call `npm run deploy` or `npm run deploy:hosting`.
+We've added a `scripts` attribute and created scripts for each kind of deploy that we could use. We won't need to call `firebase deploy` directly anymore. Instead we'll call `npm run deploy` or `npm run deploy:hosting`.
 
-This is a great habit to promote. It both documents and standardizes your deploy pipeline so you can come back to this project in two years and know exactly how to deploy it.
+This is a great habit to promote. It both documents and standardizes your deploy pipeline so that you can come back to this project in two years and know exactly how to deploy it.
 
 Try running `npm run deploy:hosting` to test it out!
 
@@ -163,7 +165,7 @@ The database module deploys your security rules to the Realtime Database as defi
 
 #### Firestore
 
-The firestore module uses two files, `firestore.rules` and `firestore.indexes.json`. These files contain security rules and index specifications.
+The firestore module deploys two files, `firestore.rules` and `firestore.indexes.json`. These files contain security rules and index specifications.
 
 #### Storage
 
@@ -173,7 +175,7 @@ The storage module deploys the security rules defined in `storage.rules`, which 
 
 The functions module is the trickiest of the bunch. It runs a bunch of checks on your `/functions` folder to make sure that all of the right NPM packages are installed and that `/functions/index.js` exports valid Cloud Functions. 
 
-Firebase Tools will deploy your functions to Cloud Functions once it's validation checks pass. But beware! Firebase Tools can't validate your code very deeply. It just makes sure that you're importing modules correctly and attaching functions to valid endpoints.
+Firebase Tools will deploy your functions to Cloud Functions once its validation checks pass. But beware! Firebase Tools can't validate your code very deeply. It just makes sure that you're importing modules correctly and attaching functions to valid endpoints.
 
 We ***HIGHLY*** recommend--in all caps no less--developing Cloud Functions in a local testing environment. Don't get sucked into the tempting feedback loop of deploying a function, testing it on the Cloud Functions servers, making edits and deploying again... This is your ticket to Cloud Functions hell 😈 
 

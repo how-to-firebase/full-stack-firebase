@@ -4,4 +4,4 @@ The Firebase Dashboard handles most administrative functions, but it doesn't dep
 
 That's where Firebase Tools comes in.
 
-Firebase Tools is a command-line tool or CLI that uses Node.js to administer your Firebase projects. It has a ton of capabilities, but we'll stick to the basics.
+Firebase Tools is a command-line interface or CLI that uses Node.js to administer your Firebase projects. It has a ton of capabilities, but we'll stick to the basics.

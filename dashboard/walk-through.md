@@ -1,13 +1,15 @@
 Welcome to Full‐Stack Firebase with Juarez Filho and me, Chris Esplin.
 Juarez and I love web development, and we particularly love developing web applications
 on the Firebase platform.
+
 Firebase is an integrated application‐development platform. Think of it as a suite of
 services that all work together so that you can write less code while still developing robust,
 scalable applications.
 
 # 1
-The starting point for any Firebase project is the Firebase Dashboard, so that’s where we
+The starting point for any Firebase project is the Firebase Dashboard, and that’s where we
 will start right now.
+
 So fire up a web browser to follow along, or sit back and absorb for the next few minutes
 while we get started with Full‐Stack Firebase
 
