@@ -29,6 +29,7 @@
 
 * [Introduction](cloud-firestore/introduction.md)
 * [Walk-through](cloud-firestore/walk-through.md)
+* [Security Rules](cloud-firestore/security-rules.md)
 * [Exercise](cloud-firestore/exercise.md)
 * [Notes](cloud-firestore/notes.md)
 
@@ -36,6 +37,7 @@
 
 * [Introduction](realtime-database/introduction.md)
 * [Walk-through](realtime-database/walk-through.md)
+* [Security Rules](realtime-database/security-rules.md)
 * [Exercise](realtime-database/exercise.md)
 * [Notes](realtime-database/notes.md)
 
