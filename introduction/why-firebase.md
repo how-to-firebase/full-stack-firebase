@@ -12,15 +12,15 @@ You want to use Firebase because it gives you a huge suite of services that you 
 
 You could duplicate Firebase's services yourself, but why spend the time and money? And good luck coming in under Firebase's price point. It's not like Firebase is some extravagantly expensive service. The billing structure is entirely reasonable and one of the least expensive options... especially when you consider developer time saved.
 
-And all of Firebase's services are fully integrated. They talk to each other out of the box and use cohesive APIs. So you won't waste time architecting. You won't waste time integrating micro-services. You'll cough up a few pennies for Google's compute and storage resources, and you'll spent your valuable time writing your own application logic.
+And all of Firebase's services are fully integrated. They talk to each other out of the box and use cohesive APIs. So you won't waste time architecting. You won't waste time integrating micro-services. You'll cough up a few pennies for Google's compute and storage resources, and you'll spend your valuable time writing your own application logic.
 
-So in a nutshell, Firebase saves you time. We've seen greater-than 50% reductions in developer workload for even simple projects. Your codebase stays smaller. Your bugs stay fewer. And you can ship more features with the same team.
+In short, Firebase saves you time. We've seen greater-than 50% reductions in developer workload for even simple projects. Your codebase stays smaller. Your bugs stay fewer. And you can ship more features with the same team.
 
 And by saving you time, Firebase saves you money. Lots of money.
 
 ### Production-worthy infrastructure
 
-Startups need to write minimum-viable products. They need to prototype. They don't need to focus on scaling in those early days.
+Startups need to write minimum-viable products. They need to prototype. They don't need to focus on scaling in the early days.
 
 Firebase lets you bootstrap your initial prototype on Google-scale infrastructure. This is a massive selling point.
 
@@ -34,5 +34,4 @@ A typical startup architecture would include servers and databases, all of which
 
 Firebase architecture abstracts all of that away. Your code is "serverless", meaning that you don't manage servers yourself. You write code and Firebase puts it on Google's servers and scales it up and down as needed.
 
-So you can service millions of customers on the same system that you used for your prototype.
-
+You can service millions of customers on the same architecture and infrastructure that you used for your prototype.

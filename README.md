@@ -1,6 +1,10 @@
 # Full-Stack Firebase
 
-This course will introduce you to Firebase and grow your understanding of the platform until you're comfortable deploying an app to production.
+Welcome!
+
+Our goals is to grow your understanding of the Firebase application-development platform until you're comfortable deploying an app to production.
+
+We have a number of ways to learn, so sample them until you find what works for you 😊
 
 ## Check out GitBooks
 
@@ -25,11 +29,11 @@ The course is broken up into modules.
 Each module will have the following parts:
 
 * Introduction
-* Featurewalk-through
-* Exercise
+* Feature walk-through(s)
+* Exercise(s)
 * Downloadable notes
 
-Some modules will build on each other, so skip around carefully :\)
+Some modules will build on each other, so skip around carefully 😉
 
 ## What to expect
 
@@ -37,11 +41,11 @@ Some modules will build on each other, so skip around carefully :\)
 * Angular and React integrations
 * You'll need a Firebase account
 
-We've written un-opinionated courses in the past. It wasn't fun. So We've made some decisions.
+We write opinionated code, and we like our courses opinionated as well.
 
-If you're not familiar with Angular or React, do not worry. The markup and JavaScript is easy enough to read, and We'll stick to vanilla JS as much as possible.
+If you're not familiar with Angular or React, do not worry. The markup and JavaScript is easy enough to read, and we'll stick to vanilla JS as much as possible.
 
-Firebase's free Spark plan is **very generous**. There are some uses of Firebase Functions that require upgrading to a paid Blaze plan, but they're not required.
+Firebase's [free Spark plan](https://firebase.google.com/pricing/) is **very generous**. Firebase Functions requires a paid Blaze plan ***IF*** you want to make external HTTP calls. Otherwise, you can skate by on Spark.
 
 ## This course is not...
 
@@ -51,9 +55,8 @@ Firebase's free Spark plan is **very generous**. There are some uses of Firebase
 
 Firebase is framework-agnostic... but good luck writing a modern web application without some sort of templating framework.
 
-I'll reference the [Firebase Docs](https://firebase.google.com/docs/) quite a bit throughout. I will not be trying to duplicate them.
+We'll reference the [Firebase Docs](https://firebase.google.com/docs/) quite a bit throughout. We will try to duplicate them.
 
-Firebase is constantly changing. The docs are canonical. Use them. I'll do my best to update this content, but staying 100% current would be a full-time job.
+Firebase changes. A lot. The docs are canonical. Use them. We'll do our best to update this content, but staying 100% current would be a full-time job.
 
-Have you found an error or a bug? Don't hesitate to [file an issue ](https://github.com/how-to-firebase/full-stack-firebase/issues) or make pull requests.
-
+Have you found an error or a bug? Don't hesitate to [file an issue ](https://github.com/how-to-firebase/full-stack-firebase/issues) or make pull requests 💕

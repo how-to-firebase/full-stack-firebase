@@ -1,6 +1,6 @@
 # What is serverless?
 
-Firebase enables your team to use a "serverless" architecture. Serverless is a horribly misleading term, because it definitely involves servers. Lots of servers.
+Firebase enables your team to use a "serverless" architecture. Serverless is a horribly misleading term, because it involves servers. Lots of servers.
 
 To understand serverless, let's start with the original application architecture: the monolith.
 
@@ -12,7 +12,7 @@ Web applications started off as monoliths. Your company would develop a single a
 
 Monoliths are often the easiest way to write an application, especially in the early days of a product; however, they can be truly evil to scale. So as an application grows, companies often migrate to a microservices architecture.
 
-### Microservices scale much better
+### Microservices scale differently
 
 [Microservices](https://martinfowler.com/articles/microservices.html) are usually the next step after a company's monolith is overrun.
 
@@ -26,7 +26,7 @@ But you still have to manage infrastructure. You still have to spin up ten email
 
 ### Serverless
 
-The next progression in the app-fragmentation process is known as serverless. There are still plenty of servers, but you're not managing them any longer! Google, Amazon or Microsoft now gets to manage the servers, and you merely manage your own code.
+The next progression in the app-fragmentation process is known as serverless. There are still plenty of servers, but you're not managing them any longer! Google, Amazon or Microsoft now get to manage the servers, and you merely manage your own code.
 
 Serverless is much more difficult from a service provider's point of view. The Google engineers who make your code run as if by magic are using extremely sophisticated tooling and programming methods to automatically scale your apps up and down.
 
@@ -37,9 +37,9 @@ The upside of serverless is that it saves the user—in this case you—signific
 Most "serverless" web apps use a combination of technologies. These technologies include
 
 - single-page applications (SPAs) written in JavaScript that provide the graphical user-interface to your users,
-- a static file host that provides the JavaScript, CSS and HTML files necessary for the single-page application,
-- a cloud-based database that the SPA connects to directly,
-- and finally, a functions-as-a-service provider that runs secure functions on a server.
+- a static file host to serve the JavaScript, CSS and HTML files necessary for the SPA,
+- a cloud-based database that the SPA connects to directly, and finally,
+- a functions-as-a-service provider that runs secure functions on a server.
 
 ### Single-page applications
 
@@ -59,7 +59,7 @@ While these things could potentially be done in a browser, these operations requ
 
 Secure operations must be done on a secure server. But this architecture is called serverless! How on Earth does this work???
 
-The answer is functions-as-a-service, or FaaS. Google's functions-as-a-service is called Cloud Functions. You may have heard of Amazon's Faas offering, AWS Lambda. 
+The answer is functions-as-a-service, or FaaS. Google's functions-as-a-service is called Cloud Functions. You may have heard of Amazon's FaaS offering, AWS Lambda. 
 
 This is a Firebase course, so naturally, we're using Cloud Functions.
 
@@ -67,6 +67,4 @@ Cloud Functions enables the developer to write discrete pieces of logic, known a
 
 We'll get deep, deep into Cloud Functions in a future module. Just know that these triggers can be as standard as an HTTP call directly to the Cloud Function, or as Firebase-specific as a new Firebase Authentication sign up or a change in your Cloud Firestore database.
 
-The point is that by using triggers and Cloud Functions, we can architect an app that scales from prototype to massive success without us lifting a finger.
-
-
+The point is that by using triggers and Cloud Functions we can architect an app that scales from prototype to massive success without us lifting a finger.
