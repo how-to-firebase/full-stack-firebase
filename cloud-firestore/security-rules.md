@@ -2,7 +2,7 @@
 
 A public-facing database wouldn't be complete without a security system.
 
-Firestore and Firebase Storage both use Firebase's new security rules syntax, which the original Firebase Realtime Database uses the original JSON security rules syntax. Both systems are easy enough to work with.
+Firestore and Firebase Storage both use Firebase's new security rules syntax, while the original Firebase Realtime Database uses the original JSON security rules syntax. Both systems are easy enough to work with.
 
 The gist of security rules is that you'll be granting read and/or write access to individual nodes of your database.
 
@@ -27,15 +27,15 @@ service cloud.firestore {
 
 Let's break these rules down line-by-line.
 
-**service cloud.firestore** - defines the service, in this case it's cloud.firestore
+**service cloud.firestore** — defines the service, in this case it's `cloud.firestore`
 
-**match /databases/{database}/documents** - defines the database; the `{database}` clause indicates that these rules apply to all Firestore databases on the project
+**match /databases/{database}/documents** — defines the database; the `{database}` clause indicates that these rules apply to all Firestore databases on the project
 
-**match /uploads/{document=\*\*}** - creates a new rules block to apply to the _uploads_ collection and all documents contained therein
+**match /uploads/{document=\*\*}** — creates a new rules block to apply to the _uploads_ collection and all documents contained therein
 
-**allow write: if requests.auth.token.admin == true ;** - allows write access for authenticated sessions with an `admin` attribute equal to `true` on the auth token, which is also known as the user's JWT
+**allow write: if requests.auth.token.admin == true ;** — allows write access for authenticated sessions with an `admin` attribute equal to `true` on the auth token, which is also known as the user's JWT
 
-**allow read;** - allows public read access
+**allow read;** — allows public read access
 
 **match /users/{document=\*\*}** - creates a new rules block for the _users_ collection and all documents contained therein
 
@@ -106,7 +106,7 @@ The basic rule types are `read` and `write`. But each of these rule types can be
   * list
 * write
   * create
-  * updated
+  * update
   * delete
 
 #### Read rules
@@ -157,7 +157,7 @@ Imagine a project-management app with three levels of user-security: admins, man
 
 Perhaps the trickiest part of security rules is writing the individual rule conditions.
 
-To start off, you can always declare a rule without permissions:
+To start off, you can always declare a rule without conditions:
 
 ```
 match /dropboxCollection {
@@ -170,10 +170,10 @@ match /mailboxCollection {
   write false;
 }
 ```
+> ***Note:***
+> Your Cloud Functions and authorized Node.js servers have full read/write access to the entire database, regardless of security rules.
 
-But most apps need to write conditions, so security rules have a JavaScript-inspired DSL (domain-specific language) for defining those conditions.
-
-First off, we're going to need variables.
+But most apps need write conditions, so security rules have a similar-to-JavaScript DSL (domain-specific language) for defining those conditions.
 
 ### Wildcard variables
 
@@ -254,9 +254,9 @@ In addition to the `request` object, there's also a `resource` object available.
 
 ### Stick with request.auth
 
-The `request.auth` object is by far the most commonly used part of the `request` object, especially when [custom claims](https://firebase.google.com/docs/auth/admin/custom-claims) have been set on `request.auth`. 
+The `request.auth` object is by far the most commonly used part of the `request` object, especially when [custom claims](https://firebase.google.com/docs/auth/admin/custom-claims) have been set on `request.auth.token`. 
 
-A common custom claim to set is an `admin` flag which can be used like so:
+A common custom claim pattern is to set an `admin` flag which can be used like so:
 
 ```
 match /superSecretAdminStuff/{docs=**} {
