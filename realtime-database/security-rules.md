@@ -57,7 +57,7 @@ The RTDB has only three rule types:
 * `.write`
 * `.validate`
 
-The first three, `.read`, `.write` and `.validate` must all be set to `true`, `false` or a string representing a condition that the security rules engine will need to evaluate.
+`.read`, `.write` and `.validate` must all be set to `true`, `false` or a string "condition" that the security rules engine will need to evaluate.
 
 `.read` and `.write` are simple enough. They grant read or write access.
 
@@ -102,7 +102,7 @@ Wildcards are an important concept in RTDB security rules. Here's an example of 
 }
 ```
 
-The dollar sign in `$userId` indicates that it's a wildcard.
+The dollar sign in `$userId` indicates that it's a wildcard. You an name wildcards whatever you like. You could have named it `$broccoli`... but then you'd have to refer to the wildcard as `broccoli` in your condition statements :)
 
 Wildcards apply to all otherwise-unspecified attributes. So assume the following data:
 
@@ -163,7 +163,7 @@ Remember how rules cascade? Well, our attempt at securing `superSecretUserAttrib
 
 ### Design your data with cascading rules in mind
 
-Cascading security rules mean that you have to design your data structure such that you never need to nest security rules. Here's our favorite way to write rules:
+Cascading security rules mean that you should design your data structure such that you never need to nest security rules. Here's our favorite way to write rules:
 
 ```json
 {
@@ -235,7 +235,7 @@ And notice how each base node has a wildcard `$objectType` nested directly under
 
 Instead of fighting the cascading rules, we're using them to our advantage and dramatically reducing the number of rules that we write.
 
-We're leveraging custom claims to permit users with the `admin` claim to read and write everything using `auth.token.admin === true`. Custom claims are awesome, because they're available across all three types of security rules---Firestore, RTDB and Storage--as well as your browser's `currentUser` JWT.
+We're leveraging custom claims to permit users with the `admin` claim to read and write everything using `auth.token.admin === true`. [Custom claims](https://firebase.google.com/docs/auth/admin/custom-claims) are awesome, because they're available across all three types of security rules—Firestore, RTDB and Storage—as well as your browser's `currentUser` JWT.
 
 ### Validation
 
@@ -243,4 +243,4 @@ Frankly, we do most of our validation in our client-side applications; however, 
 
 If you find yourself in need of validation, we recommend reading the [reference docs](https://firebase.google.com/docs/reference/security/database/#validate) carefully. We also recommend not getting too carried away with validation in the security rules. These rules are better seen as a flexible way to add security to your app. If you have some sensitive data or operations and you need more assurances than the `.read` and `.write` rules can give you, it's time for some `.validate` rules.
 
-We're sure that we could write a sophisticated validation layer using the security rules, but we don't. We use client-side validation >99% of the time, because the vast majority of our writes aren't likely to be abused by an attacker. Any competent hacker will connect directly to your database and start testing your endpoints, so client-side validation won't stop hacking; however, it's easy enough to hide anything worth hacking deep within a cloud function or an admin-only data node, so try that first before relying on validation rules.
+We're sure that we *could* write a sophisticated validation layer using the security rules, but we don't. We use client-side validation >99% of the time, because the vast majority of our writes aren't likely to be abused by an attacker. Any competent hacker will connect directly to your database and start testing your endpoints, so client-side validation won't stop hacking; however, it's easy enough to hide anything worth hacking deep within a cloud function or an admin-only data node, so try that first before relying on validation rules.
