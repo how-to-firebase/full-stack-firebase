@@ -10,7 +10,7 @@ The original innovation was to enable web browsers to connect directly to the da
 
 The RTDB is neither a relational database nor a document/collection datastore like Cloud Firestore. 
 
-The RTDB is a single JSON object with up to 32 levels of depth, and you can subscribe to any node of that JSON object, whether already exists or has yet to be made.
+The RTDB is a single JSON object with up to 32 levels of depth, and you can subscribe to any node of that JSON object, whether it already exists or has yet to be made.
 
 This sort of JSON datastore makes the RTDB entirely unstructured. You can define whatever data structures you prefer in your browser and then save those data structures directly to the RTDB without modification and without telling the RTDB what the data will look like.
 
@@ -30,15 +30,15 @@ In fact, the entire Realtime Database SDK is evented. It treats data as event st
 
 RTDB devotees such as ourselves spent the years of 2012 through 2017 learning to model all sorts of creative data structures in pure JSON. It hasn't always been easy.
 
-Before Firestore came along to give us a more structured data model, we learned to host entire production applications on the RTDB. We can model almost anything in JSON...but we don't have to do that anymore, so we'll completely avoid the RTDB's weaknesses by using Firestore for all of those use cases.
+We learned to host entire production applications on the RTDB long before Firestore came along to give us a more structured data model. We can model almost anything in JSON...but we don't have to do that anymore, so we'll completely avoid the RTDB's weaknesses by using Firestore for all of those use cases.
 
 ### Why is the Realtime Database so limited?
 
 The RTDB was designed for lightning fast updates. That primary design constraint prevented the Firebase team from developing sophisticated query capabilities. 
 
-You can execute a single order-by filter and a single limit-filter on each RTDB data stream. So you can order a list of movies by release date and request a live stream of the 10 most recent movies, but you can't also filter that stream to include only action movies. You already used your one order-by filter on the release date. Tough luck!
+You can execute a single order-by filter and a single limit filter on each RTDB data stream. So you can order a list of movies by release date and request a live stream of the 10 most recent movies, but you can't also filter that stream to include only action movies. You already used your one order-by filter on the release date. Tough luck!
 
-Now, you can create a new collection of movieTypes, each of which has movies ordered by release date... so your movieTypes could include action, drama and comedy, in which case you could then query the action movies list and order by release date. 
+Of course, you **can** create a new collection of movieTypes, each of which has movies ordered by release date... so your movieTypes could include action, drama and comedy, in which case you could then query the action movies list and order by release date. 
 
 That achieves the same goal, but it adds a bunch of complexity to how you write your data, because now each movie has to be duplicated from the primary movies list to the appropriate movieTypes list. And what if you also want to filter by MPAA ratings? Get prepared to duplicate your data once again.
 
