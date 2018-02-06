@@ -87,7 +87,7 @@ const bucket = admin.storage().bucket();
 // 'bucket' is a Cloud Storage bucket instance
 ```
 
-`bucket` is an object defined by the [@google-cloud/storage library](https://cloud.google.com/nodejs/docs/reference/storage/1.5.x/Bucket) for Node.js. The GCP libraries feel different from the Firebase libraries, mostly because the docs look different. But don't be afraid of GCP. It gives you much finer-grained control over its features than Firebase does.
+**bucket** is an object defined by the [@google-cloud/storage library](https://cloud.google.com/nodejs/docs/reference/storage/1.5.x/Bucket) for Node.js. The GCP libraries feel different from the Firebase libraries, mostly because the docs look different. But don't be afraid of GCP. It gives you much finer-grained control over its features than Firebase does.
 
 
 
