@@ -18,11 +18,11 @@ You send messages using Cloud Functions or your own server, and you receive them
 
 You can message individual browsers, and you can subscribe a browser to a "topic" so that it can receive bulk messages.
 
-We'll get into the details later... just know that there's not much to it. You can send messages to your clients either individually or by topic. And the device handles displaying the message, so your work is done.
+We'll get into the details later... just know that there's not much to it. You can send messages to your clients either individually or by topic. And the device handles displaying the message. Your work is done.
 
 ### Why send messages?
 
-Excessive browser and mobile notifications are obnoxious. Our phones and browsers light up constantly with Twitter notifications trying to draw us back into the app. We disable those notifications pretty aggressively.
+Excessive browser and mobile notifications are obnoxious. Our phones and browsers light up constantly with Twitter notifications trying to drag us back into their app. We disable those notifications pretty aggressively.
 
 But there's a reason for the flood of alerts. They work. They pull people back into Twitter, Tumblr, and Facebook. And they're super helpful when you miss a bunch of Slack messages or emails from the office.
 
