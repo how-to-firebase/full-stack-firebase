@@ -7,7 +7,7 @@ services that all work together so that you can write less code while still deve
 scalable applications.
 
 # 1
-The starting point for any Firebase project is the Firebase Dashboard, and that’s where we
+The starting point for any Firebase project is the Firebase Console, and that’s where we
 will start right now.
 
 So fire up a web browser to follow along, or sit back and absorb for the next few minutes
@@ -79,7 +79,7 @@ Notice the five tab links,
 # 9
 We spend most of our time in the Guides. It’s where the Firebase team publishes code
 snippets for each feature and gives you suggestions on how to use them.
-We keep the Guides page pinned to a browser tab right alongside our Firebase Dashboard
+We keep the Guides page pinned to a browser tab right alongside our Firebase Console
 tab during our Firebase development process.
 
 # 10
@@ -95,12 +95,12 @@ The Get started for Web section covers browser‐specific code
 The Get started for Admin section covers the Node.js SDK that you’ll use with Cloud
 Functions later on to securely administer your Firebase project.
 Feel free to take a five‐minute break to noodle around the docs a bit. Go ahead and pause
-here and come back when you’re ready to continue our Dashboard overview.
+here and come back when you’re ready to continue our Console overview.
 
 # 12
 …
 And welcome back!
-Navigate back to your Dashboard and let’s click the “Alerts” bell in the top‐right corner next
+Navigate back to your Console and let’s click the “Alerts” bell in the top‐right corner next
 to your user Icon.
 
 # 13
@@ -214,7 +214,7 @@ This is a shortcut to switch between the Realtime Database and Cloud Firestore.
 Let’s jump across to Cloud Firestore to see a much more structured way to manage data.
 
 # 25
-And this is the Cloud Firestore dashboard.
+And this is the Cloud Firestore console.
 It’s a little different than the Realtime Database, because it’s a document/collection
 database instead of a JSON database.
 You may have heard of other document/collection databases such as MongoDB or
@@ -395,7 +395,7 @@ Thanks for watching!
 @ChrisEsplin
 HowToFirebase.com
 github.com/how-to-firebase
-… and that’s the Firebase Dashboard! As usual, we’ve just scratched the surface.
+… and that’s the Firebase Console! As usual, we’ve just scratched the surface.
 Follow along for deeper dives into Firebase’s feature set.
 We’re Juarez Filho and Chris Esplin, and you can find us and our Firebase web apps all over
 the internets.
