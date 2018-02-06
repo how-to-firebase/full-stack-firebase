@@ -51,19 +51,17 @@ function uploadFile(file) {
 }
 ```
 
-#### And the Firebase Dashboard pretends that the file is in a nested folder!
+And the Firebase Console pretends that the file is in a nested folder!
 
+![storage-browser.png](https://goo.gl/r5bWP9)
 
-![storage-browser.png](https://goo.gl/zpYKzh)
+Cloud Storage pretends that it's in a folder as well:
 
+![cloud-storage-browser.png](https://goo.gl/mVB1p8)
 
-#### Cloud Storage pretends that it's in a folder as well:
+But then we pulled the file details down using the Cloud Storage SDK and pushed them up to Firestore. Notice that file's name attribute is `howtofirebase/uploads/enable-firestore.png`.
 
-![cloud-storage-browser.png](https://goo.gl/j7kVrS)
-
-#### But then we pulled the file details down using the Cloud Storage SDK and pushed them up to Firestore. Notice that file's name attribute is `howtofirebase/uploads/enable-firestore.png`.
-
-![file-details.png](https://goo.gl/YQPnMR)
+![file-details.png](https://goo.gl/fhm5w5)
 
 ### Cloud Storage SDK
 
@@ -87,7 +85,7 @@ const bucket = admin.storage().bucket();
 // 'bucket' is a Cloud Storage bucket instance
 ```
 
-**bucket** is an object defined by the [@google-cloud/storage library](https://cloud.google.com/nodejs/docs/reference/storage/1.5.x/Bucket) for Node.js. The GCP libraries feel different from the Firebase libraries, mostly because the docs look different. But don't be afraid of GCP. It gives you much finer-grained control over its features than Firebase does.
+`bucket` is an object defined by the [@google-cloud/storage library](https://cloud.google.com/nodejs/docs/reference/storage/1.5.x/Bucket) for Node.js. The GCP libraries feel different from the Firebase libraries, mostly because the docs look different. But don't be afraid of GCP. It gives you much finer-grained control over its features than Firebase does.
 
 
 

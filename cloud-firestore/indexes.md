@@ -18,15 +18,15 @@ async function getUploadsByUser(userId) {
 
 This query would require indexes on `userId` and `created`.
 
-### Dashboard index management
+### Console index management
 
-Queries are super easy to handle via the Dashboard.
+Queries are super easy to handle via the Console.
 
 The easiest way to do it is to write whatever queries you like and watch your DevTools console for error messages.
 
-You'll see an error message in DevTools whenever you attempt to run a query that requires an index. That error message will come with a link that you can click on to take you to your Dashboard.
+You'll see an error message in DevTools whenever you attempt to run a query that requires an index. That error message will come with a link that you can click on to take you to your Console.
 
-Once on the Dashboard, you'll get a prompt to create the required index. Simply confirm and wait for the index to build.
+Once on the Console, you'll get a prompt to create the required index. Simply confirm and wait for the index to build.
 
 ### Firebase Tools index management
 

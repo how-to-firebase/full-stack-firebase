@@ -2,7 +2,7 @@
 
 This course consists of a bunch of modules, including:
 
- - Firebase Dashboard
+ - Firebase Console
  - Firebase Authentication
  - Firestore
  - Realtime Database
@@ -23,7 +23,7 @@ These modules are multi-purpose tools that can be used in all sorts of creative 
 
 | Module          | Intensity      | Reasoning                                                                            |
 | --------------- | -------------- | ------------------------------------------------------------------------------------ |
-| Dashboard       | 🌶             | A quick walk-through |
+| Console         | 🌶             | A quick walk-through |
 | Authentication  | 🌶             | Auth is the easiest Firebase feature to implement. |
 | Firestore       | 🌶🌶🌶🌶🌶      | Firestore is the meat of Firebase's offering. |
 | Realtime DB     | 🌶🌶🌶🌶        | The Realtime DB (RTDB) has some "gotchas" |

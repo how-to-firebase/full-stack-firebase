@@ -6,7 +6,7 @@ There are plenty of easy ways to serve up static files; but since every app need
 
 ### Advantages of Firebase Hosting
 
-Firebase Hosting is fully integrated with the rest of the Firebase platform. You can deploy easily from the command line. You can see those deploys on the Firebase Dashboard and roll back to earlier versions if you break something.
+Firebase Hosting is fully integrated with the rest of the Firebase platform. You can deploy easily from the command line. You can see those deploys on the Firebase Console and roll back to earlier versions if you break something.
 
 Hosting supports URL redirects, URL rewrites, control over headers and default HTTP2 support.
 

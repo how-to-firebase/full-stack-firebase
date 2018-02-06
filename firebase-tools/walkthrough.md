@@ -85,7 +85,7 @@ You may get an error like...
 Error: HTTP Error: 400, Project 'how-to-firebase-tutorials' is not a Firestore enabled project.
 ```
 
-... in which case, you'll need to use your Dashboard to activate the Firestore Beta. Make sure to start in locked mode.
+... in which case, you'll need to use your Console to activate the Firestore Beta. Make sure to start in locked mode.
 
 ![enable-firestore.png](https://goo.gl/veDwFU)
 
