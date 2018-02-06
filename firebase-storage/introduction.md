@@ -53,11 +53,11 @@ function uploadFile(file) {
 
 And the Firebase Dashboard pretends that the file is in a nested folder!
 
-![storage-browser.png](https://goo.gl/r5bWP9)
+![storage-browser.png](https://goo.gl/zpYKzh)
 
 Cloud Storage pretends that it's in a folder as well:
 
-![cloud-storage-browser.png](https://goo.gl/mVB1p8)
+![cloud-storage-browser.png](https://goo.gl/j7kVrS)
 
 But then we pulled the file details down using the Cloud Storage SDK and pushed them up to Firestore. Notice that file's name attribute is `howtofirebase/uploads/enable-firestore.png`.
 
