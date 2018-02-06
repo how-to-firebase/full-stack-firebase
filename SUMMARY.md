@@ -8,10 +8,10 @@
 * [Prerequisites](introduction/prerequisites.md)
 * [Overview & Structure](introduction/overview-and-structure.md)
 
-## Firebase Dashboard
+## Firebase Console
 
-* [Introduction](dashboard/introduction.md)
-* [Walk-through](dashboard/walk-through.md)
+* [Introduction](console/introduction.md)
+* [Walk-through](console/walk-through.md)
 
 ## Firebase Tools
 
