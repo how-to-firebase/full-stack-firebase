@@ -4,11 +4,11 @@ Every image that you upload online has to get stored somewhere, and cloud storag
 
 The Firebase Realtime Database and Cloud Firestore are great for storing data, but they're not so good with files. Google Cloud Storage, heretofore referred to as Cloud Storage, is built to store and serve these files.
 
-Firebase Storage is a front for Cloud Storage. And it's an extremely useful front.
+Firebase Storage is a front for Cloud Storage... an extremely useful front.
 
 ### The old file-upload pattern
 
-Browsers are great at uploading files, but these files are too big to send over a single HTTP POST, so they're typically streamed to a server. This streaming happens as a series of chunks which the server has to listen for, waiting patiently until the total size of the chunks adds up to the expected file size. The server can then take the file that it has assembled from a bunch of chunks and stream it up to Cloud Storage... again, in a series of chunks.
+Browsers are great at uploading files, but files are often too big to send over a single HTTP POST, so they're typically streamed to a server. This streaming happens as a series of chunks which the server has to listen for, waiting patiently until the total size of the chunks adds up to the expected file size. The server can then take the file that it has assembled from a bunch of chunks and stream it up to Cloud Storage... again, in a series of chunks.
 
 We've written plenty of file streaming servers, and they're a pain in the neck.
 
@@ -34,7 +34,7 @@ Cloud Storage does not have a concept of folders.
 
 But you **can** put forward slashes in your filenames, which Firebase Storage will treat as a file path.
 
-For example, we have a Firebase project named `Quiver Four`. So Firebase Storage automatically creates a Cloud Storage bucket named `quiver-four.appspot.com`.
+For example, we've created a Firebase project named `Quiver Four`; therefore, Firebase Storage automatically creates a Cloud Storage bucket named `quiver-four.appspot.com`.
 
 Let's upload a file to `howtofirebase/uploads/enable-firestore.png`:
 
@@ -42,7 +42,8 @@ Let's upload a file to `howtofirebase/uploads/enable-firestore.png`:
 function uploadFile(file) {
   return firebase
     .storage()
-    .ref('howtofirebase/uploads/enable-firestore.png')
+    .ref()
+    .child('howtofirebase/uploads/enable-firestore.png')
     .put(file)
     .then(snapshot => {
       // snapshot represents the uploaded file
@@ -84,7 +85,7 @@ const bucket = admin.storage().bucket();
 // 'bucket' is a Cloud Storage bucket instance
 ```
 
-`bucket` is an object defined by the [@google-cloud/storage library](https://cloud.google.com/nodejs/docs/reference/storage/1.5.x/Bucket) for Node.js. The GCP libraries feel different from the Firebase libraries, mostly because the docs look different. But don't be afraid GCP. It gives you much finer-grained control over its features than Firebase does.
+`bucket` is an object defined by the [@google-cloud/storage library](https://cloud.google.com/nodejs/docs/reference/storage/1.5.x/Bucket) for Node.js. The GCP libraries feel different from the Firebase libraries, mostly because the docs look different. But don't be afraid of GCP. It gives you much finer-grained control over its features than Firebase does.
 
 
 
