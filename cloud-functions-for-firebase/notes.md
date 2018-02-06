@@ -1,6 +1,6 @@
 # Cloud Functions for Firebase: Notes
 
-# Functions samples
+## Functions samples
 
 See [the official GitHub repo of Cloud Functions for Firebase sample functions](https://github.com/firebase/functions-samples)
 

@@ -2,13 +2,13 @@
 
 Cloud Functions is the connective tissue that makes Firebase a "serverless" platform.
 
-Secure operations are unavoidable in production applications. Sure, you can make a quick demo that doesn't need to send any email or accept a Stripe payment... but without secure, administrative operations, most apps are worthless.
+Secure operations are unavoidable in production applications. Sure, you can make a quick demo that doesn't need to send any email or accept a Stripe payment... but most apps are worthless without secure, administrative operations.
 
-Until the advent of Functions-as-a-Service (aka Faas), we had to run servers to perform administrative actions on the Firebase platform.
+Until the advent of Functions-as-a-Service (aka FaaS), we had to run servers to perform administrative actions on the Firebase platform.
 
 Cloud Functions lets us ship single functions to the Firebase platform for execution based on a whole variety of events.
 
-### Serverless includes lots of servers
+### Serverless: other people's servers
 
 Cloud Functions runs on servers, but you don't get to interact with those servers. Cloud Functions has your code and will run it as Cloud Functions sees fit. It can spin up 20 servers to handle a spike in traffic, and it can spin them all down again without any input from you or your code.
 
@@ -32,7 +32,7 @@ This function is named "hello" and it listens to an `onWrite` event on the `/hel
 
 Cloud Functions is a Google Cloud Platform (GCP) service, but it has a series of Firebase-specific events, so we often refer to those events as Cloud Functions for Firebase.
 
-Cloud Functions is really for all of GCP, not just Firebase. But it is extremely useful when combined with Firebase.
+Cloud Functions is for all of GCP, not just Firebase... but it's especially useful when combined with Firebase.
 
 Here's a quick list of some Cloud Functions event sources:
 
@@ -46,7 +46,7 @@ Let's dive in a little deeper to each event source.
 
 ### HTTP triggers
 
-Cloud Functions enables us to the Express framework for Node.js to handle HTTP calls.
+Cloud Functions enables us to use the Express framework for Node.js to handle HTTP calls.
 
 We can mount an entire Express app to a Cloud Functions endpoint, or we can attach a single Express request handler to each Cloud Function endpoint. It's quite flexible and enables us to create any kind of HTTP-based API that we could ever need.
 
@@ -59,9 +59,9 @@ We can listen to any part of our RTDB JSON tree with the following triggers:
 * onUpdate()
 * onDelete()
 
-The event do exactly what you'd think. The one catch is that `onWrite()` executes for any and all changes to the data tree including deletions... so use it wisely :)
+The events do exactly what you'd think. The one catch is that `onWrite()` executes for any and all changes to the data tree including deletions... so use it wisely :)
 
-RTDB triggers are great for creating job queues. For instance, you can queue up a bunch of jobs under `/job-queues/image-resizing/` and write a Cloud Function that resizes images. Crazy, right? You can create 100 image resizing jobs that Cloud Functions will execute as fast as it can, oftentimes running batches of jobs in parallel.
+RTDB triggers are great for creating job queues. For instance, you can queue up a bunch of jobs under `/job-queues/image-resizing/` and write a Cloud Function that resizes images. Crazy, right? You can create 100 image resizing jobs that Cloud Functions will execute as fast as it can, often running batches of jobs in parallel.
 
 ### Firestore triggers
 
@@ -83,7 +83,7 @@ Authentication has only two triggers:
 * onCreate()
 * onDelete()
 
-We like to use the `onCreate()` event to set custom attributes on my user's auth tokens. This method is known as [custom claims](https://firebase.google.com/docs/auth/admin/custom-claims), and it's extremely helpful for granting elevated privileges in Firebase, Firestore and Storage security rules.
+We like to use the `onCreate()` event to set custom attributes on our user's auth tokens. This method is known as [custom claims](https://firebase.google.com/docs/auth/admin/custom-claims), and it's extremely helpful for granting elevated privileges in Firebase, Firestore and Storage security rules.
 
 ```javascript
 const admin = require('firebase-admin');
@@ -110,7 +110,7 @@ exports.setCustomClaims = functions.auth.user().onCreate(event => {
 
 ### Firebase Storage triggers
 
-Firebase Storage has only a single trigger, there are two ways to listen to it:
+Firebase Storage has a single trigger with two ways to listen to it:
 
 > The optional `.bucket('bucketName')` function allows for filtering based on storage buckets
 
@@ -127,9 +127,9 @@ exports.generateThumbnail = functions.storage
   });
 ```
 
-Generating thumbnails or other kinds of image manipulation is the core use case for Firebase Storage triggers.
+Generating thumbnails or other kinds of image manipulation is a core use case for Firebase Storage triggers. Each Cloud Functions virtual machine has a [native build of Imagemagick](https://cloud.google.com/functions/docs/tutorials/imagemagick) installed for this very purpose.
 
-Just note that Firebase Storage is backed by Google Cloud Storaage, which treats each bucket as a single store. So while Firebase Storage lets us navigate deep into folder structures, Cloud Storage does not have any sort of folder structure.
+Just note that Firebase Storage is backed by Google Cloud Storage, which treats each bucket as a single store.
 
 Cloud Storage lets you put slashes in filenames, which is how Firebase Storage simulates folders... but it's just one big bucket under the hood. This is why you can only listen to Cloud Storage events at the bucket level. You'll need to do your own filtering based on the filenames of your objects.
 
@@ -139,4 +139,6 @@ Cloud Functions enables you to get truly creative in how you architect your serv
 
 You can craft highly scalable job pipelines, complex messaging systems, or simply track and tweak your data as your users make changes to your databases.
 
-Start out with simple functions. Don't get carried away until you're comfortable with the basics. Cloud Functions is like swimming in the ocean; wade around in the shallows before heading out to deep water. And we're still discovering new application architectures that Functions-as-a-service makes possible. These are early days for all of us.
+Start out with simple functions. Don't get carried away until you're comfortable with the basics. Cloud Functions is an ocean; wade around in the shallows before heading out to deep water. 
+
+And we're still discovering new application architectures that Functions-as-a-service makes possible. These are early days for all of us.
