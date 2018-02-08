@@ -22,9 +22,20 @@ If you're already adept with Firebase, then please jump around! The more advance
 
 We'll cover integration for Angular and React. The Firebase SDK is all vanilla JavaScript, so if you can integrate with Angular and React, you should be able to integrate with any other modern framework.
 
-## Course Structure
+## Modules
 
-The course is broken up into modules.
+This course consists of a bunch of modules, including:
+
+ - Firebase Console
+ - Authentication
+ - Firestore
+ - Realtime Database
+ - Cloud Functions
+ - Storage
+ - Messaging
+ - Hosting
+
+## Module Structure
 
 Each module will have the following parts:
 
