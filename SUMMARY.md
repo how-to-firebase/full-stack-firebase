@@ -7,6 +7,7 @@
 * [What is serverless?](introduction/what-is-serverless.md)
 * [Prerequisites](introduction/prerequisites.md)
 * [Overview & Structure](introduction/overview-and-structure.md)
+* [Write your first query](introduction/write-your-first-query.md)
 
 ## Firebase Console
 

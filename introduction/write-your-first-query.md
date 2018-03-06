@@ -1,6 +1,6 @@
-# Write your first query!
+# Write your first query
 
-We'll be using Firestore. Just follow the instructions below :)
+We'll be using Firestore. Just follow the instructions below.
 
 ### Instructions
 
