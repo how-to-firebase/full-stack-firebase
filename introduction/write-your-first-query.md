@@ -18,6 +18,14 @@ We'll be using Firestore. Just follow the instructions below.
 
 7. Try to query the `star-wars-people` collection inside the `getPeople()` function
 
+## Check out your results
+
+1. Click the "Show" button on your glitch to pop open a preview of your page.
+
+2. [Open Chrome's DevTools](https://developer.chrome.com/devtools).
+
+3. Navigate to the [Console](https://developers.google.com/web/tools/chrome-devtools/console/?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3) tab in DevTools to view your JavaScript output
+
 ### If you get stuck...
 
 1. Reference [the Firestore docs](https://firebase.google.com/docs/firestore/query-data/get-data) as necessary
