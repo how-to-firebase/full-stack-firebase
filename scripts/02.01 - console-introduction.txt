@@ -14,7 +14,7 @@ So let's log in to Firebase.
 
 Visit firebase.google.com and click the SIGN IN button
 
-You'll sign in with your Google account and then land on you Console project selection screen
+You'll sign in with your Google account and then land on you project selection screen
 
 Click "Add project" or select a project that you've already created.
 
@@ -22,7 +22,7 @@ Once your project is live you'll be taken to that project's overview.
 
 The project overview has one button that we use, "Add Firebase to your web app".
 
-You can copy/paste value from this popup directly into your index.html to connect to this project.
+You can copy/paste values from this popup directly into your index.html to connect to this project.
 
 Now notice the gears button. We won't spend much time here, but it's good to click around.
 
@@ -36,13 +36,15 @@ The left bar has four sections, Develop, Stability, Analytics and Grow.
 
 The first section, Develop, is the only one that we use for web. The other sections are mobile only.
 
-Google rolled a bunch of their mobile platform products into the Firebase brand, but they haven't done the same for web.
+Google rolled a bunch of their mobile platform products into the Firebase brand
 
-Let's start with Authentication.
+However, Google's web products, such as Analytics and AdSense, are not under the Firebase brand
+
+So let's start with Authentication.
 
 Our user accounts list is empty, because we haven't enabled any sign-in methods, so let's do that.
 
-We have a plethora of available sign-in methods. Our favorites are Email/Password and Google.
+We have a variety of sign-in methods. Our favorites are Email/Password and Google.
 
 So let's enable those methods. 
 
@@ -64,21 +66,29 @@ Firebase will send some email on your behalf, so it's nice to customize those em
 
 And you'll have to pay for phone authentication if your app gets enormous. 
 
-Moving on...
+Having a hugely successful app would be a great problem to have.
+
+We hope to someday suffer that plight and spend more time monitoring usage.
+
+But until then... let's forge ahead to Firebase's juicy core, the databases.
 
 The Database section will give you two options, the Realtime Database or Cloud Firestore
-
-The tabs are core to the Firebase experience.
 
 The Realtime Database has tabs for Data, Rules, Backups and Usage.
 
 We can use the Data tab to view and modify the data in our JSON tree.
 
-The Rules tab is great for visualizing testing security rules.
+The Rules tab is great for visualizing and testing security rules.
 
-Once you're in production you'll use the Backups tab to enable and track your database backups.
+You can use the security rules simulator to simulate reads and writes.
 
-And the Usage tab will help you manage your costs as you scale.
+This is super useful for making sure that your data is locked down and secure.
+
+Moving on... the Backups tab is great once you're in production. 
+
+You'll want to enable frequent database backups. They're cheap insurance against data loss.
+
+And the Usage tab will, as we've seen before, help you manage your costs as you scale.
 
 Let's continue on to the Storage section.
 
