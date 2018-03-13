@@ -4,7 +4,7 @@ There are lots of databases, authentication and file storage services out there.
 
 but Firebase is unique in that you can connect to its services directly from a browser or mobile app
 
-This connection is manage by client libraries.
+This connection is made possible by client libraries.
 
 A client library lives on your web page and maintains connections to your Firebase project.
 
@@ -38,7 +38,7 @@ Click through to sign-in method and enable Anonymous auth. Make sure to click SA
 
 Now add Glitch.me to your authorized domains list.
 
-Note that it's Glitch do "M" "E", not Glitch.com. 
+Note that it's Glitch dot "M" "E", not Glitch.com. 
 
 That's because Glitch serves its previews on Glitch.me.
 
@@ -56,7 +56,7 @@ Click your Glitch's Show button to preview the page.
 
 Open up DevTools to see the logged out currentUser and to troubleshoot any errors.
 
-The most common error is you either forgot to save when you enabled anonymous auth...
+The most common error is that you either forgot to save when you enabled anonymous auth...
 
 ... or you didn't add Glitch.me to the authorized domains list.
 
@@ -84,7 +84,7 @@ So use this technique wisely.
 
 Now there are a few more Firebase initialization tricks that you can learn from the docs.
 
-I don't want to spoil your fun, so head on over to the docs and for a quick read.
+I don't want to spoil your fun, so head on over to the docs for a quick read.
 
 We stick to the basics here.
 
