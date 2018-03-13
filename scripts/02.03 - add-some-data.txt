@@ -1,0 +1,76 @@
+There are two database under the Firebase brand, the Realtime Database and Cloud Firestore.
+
+We'll be sticking to Cloud Firestore for the most part, so let's get familiar with it's dashboard.
+
+Navigate to firebase.google.com, sign in to your Console, and select or create a project.
+
+Now open the Database page under the Develop section on the left bar.
+
+Select Cloud Firestore.
+
+Cloud Firestore is a document/collection database.
+
+It's best to keep collection names simple and descriptive.
+
+You can also use high-level collections to group your data.
+
+In this case, let's add a collection called "admin".
+
+We'll use this collection to store administrative documents that only we can access.
+
+Let's create our first document within "admin" and call it "salaries".
+
+Note that we could use an auto-generated document ID, but this isn't an arbitrary list.
+
+For now we're using a custom document ID to organize our data.
+
+Because this is merely organizational structure, select NULL under field type and create it.
+
+We now have an empty document named "salaries". It's useless. There's nothing here.
+
+So let's add another collection under Salaries and call it "employees"
+
+We don't have any employees yet, so we'll generate an automatic document ID.
+
+Now let's fill in some employee salary data.
+
+Notice all of the different data types that you can store, particularly the Array and Object types.
+
+Being able to save Arrays and Objects is huge. It provides massive flexibility.
+
+Also, since each document lives on its own, you don't have to follow any field patterns.
+
+One of our employees can have an isAdmin flag and another can have a roles array.
+
+Documents don't have to follow any sort of structure... they're extremely flexible.
+
+This is, like so many trade-offs, a blessing if you use it correctly or an awful curse.
+
+So let's cover a few hints for modeling Firestore data.
+
+First, we recommend defining data structures early using this Firestore dashboard.
+
+Go ahead and create fake data just to make sure that it works within the Firestore model.
+
+Second, just because we nested data deep in sub-collections for this demo...
+
+does not mean that you need to nest data very often.
+
+In fact, we recommend not nesting data unless it's truly necessary.
+
+We sometimes create high-level collections like this example for simplicity in our security rules.
+
+But otherwise, we tend not to nest data. 
+
+We use lots of sibling collections and we use lots of array and object data types.
+
+This is because you can query based on a document's fields.
+
+You cannot query on a document's sub-collections. 
+
+Think of sub-collections as loose affiliations. 
+
+They can be powerful... but they're usually more trouble than they're worth.
+
+
+

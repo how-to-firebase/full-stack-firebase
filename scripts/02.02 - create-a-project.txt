@@ -1,0 +1,21 @@
+Creating a Firebase project is easy.
+
+Navigate to firebase.google.com and click the Sign In or Go To Console links at the top-right
+
+I see a list of my existing Firebase projects, but you'll need to Add a project to get started. 
+
+Click Add Project and create a project name.
+
+Project names do not need to be unique, but project IDs must be unique.
+
+If you pick a previously-used project name, your project ID will get extra characters on the end.
+
+We'd rather not have strange characters in our project IDs, so we try to have unique project names.
+
+Now pick a region that is close to you or to your users, then click Create Project!
+
+Now click around your brand-new project's console to get familiar.
+
+Stick to the Develop tab in the left bar, and continue on when you're ready to learn more.
+
+
