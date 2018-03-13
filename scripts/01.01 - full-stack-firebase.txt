@@ -1,0 +1,99 @@
+Welcome to Full-Stack Firebase.
+
+My name is Chris Esplin. 
+
+I'm a JavaScript engineer, and I love Front-End web development.
+
+I started using Firebase in 2013 when I quit my full-time job to strike out on my own.
+
+I was newly independent from the corporate environment, 
+
+and since I didn't have any managers or even co-workers, I got to pick my own development tools. 
+
+A lot has changed since then, but my two constants have been JavaScript and Firebase.
+
+I hope you'll come to enjoy Firebase as I have. 
+
+Yes, I've had great experiences developing outside of the Firebase ecosystem, 
+
+but, given a choice, I always come back to Firebase.
+
+The goal of this course is for you to roll your first Firebase app to production.
+
+We'll be doing code challenges where you practice what you've learned. 
+
+These challenges will use Firebase within a live, working web application.
+
+We'll be hands-on and super interactive.
+
+But you'll need to know JavaScript!
+
+If you're weak on JavaScript... this may not be the course for you.
+
+On the plus side, you don't need to know anything about Firebase to get started. 
+
+Just be patient and move slowly through the material.
+
+And if you're already adept with Firebase, please skip around and for the highlights! 
+
+The more advanced modules later in the course will be of particular interest.
+
+I'm working on this course with my good friend and fellow Google Developer Expert, Juarez Filho. 
+
+Juarez and I have spent a lot of time teaching Firebase together, but we've never embarked on a project quite like this one. 
+
+Juarez is an expert in using Firebase with Angular. 
+
+I'm more experienced with other JavaScript frameworks, so I'll be focusing on React.
+
+So let's set up our expectations.
+
+First, we'll cover integration for Angular and React. 
+
+The Firebase SDK is all vanilla JavaScript, 
+
+so if you can integrate with Angular and React, you can integrate with any modern framework.
+
+Second, you'll need a Firebase account. 
+
+You'll probably even want to sign up for a paid account.
+
+Firebase's free Spark plan is **very generous**. 
+
+However, there are some uses of Firebase Functions that require upgrading to a paid Blaze plan.
+
+Fortunately, these features are not required for the course.
+
+Now let's cover what this course is NOT.
+
+This course is not framework agnostic. You will see framework-specific code.
+
+This course is not exhaustive documentation. 
+
+Firebase has excellent docs, so please use the docs along with this course. 
+
+We can't re-shoot videos every time the Firebase SDK gets updated.
+
+That would be insane.
+
+And one last note.
+
+Please leave us a course rating. 
+
+Your feedback is incredibly valuable.
+
+We're not kidding. 
+
+We read your comments, even the means ones.
+
+Anyway, now you know what to expect from Full-Stack Firebase.
+
+And we are just getting started!
+
+
+
+
+
+
+
+

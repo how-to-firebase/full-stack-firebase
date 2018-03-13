@@ -1,0 +1,142 @@
+Welcome back to How To Firebase!
+
+You may have noticed that I've been missing for just about a year :)
+
+Two things happened. 
+
+First, I got super busy and started a full-time job. 
+
+So my free time has been cut way, way back.
+
+Second, I decided to up my video game and produce a full-blown Firebase course.
+
+I'll be teasing that new content here in the coming weeks and months. 
+
+The course will be a paid experience, which means that I'm spending a lot more time on each video.
+
+But I'm still committed to open-source. 
+
+Therefore, you can find my written course content on FullStackFirebase.com
+
+So hop on over to FullStackFirebase.com to follow along as I write and publish. 
+
+The course is taking a lot longer than I'd hoped, and I need to keep publishing stuff to YouTube.
+
+So when I come across a topic that doesn't fit cleanly into the course...
+
+I'll cut a video and post it here!
+
+And that brings us to today's topic, Firebase vs Firestore.
+
+I know a lot of you are super happy with the Firebase Realtime Database.
+
+You're probably wondering why you'd want to mess with anything else.
+
+So here we go!
+
+Firebase's Realtime Database is a JSON datastore. It's totally unstructured, which is a blessing and a curse.
+
+What makes the Realtime Database popular is it's awesome client libraries.
+
+Client libraries let you connect from your app--be it web, Android or iOS--directly to the database.
+
+So you could save your JSON directly to the Realtime Database without transforming it at all.
+
+And you could quickly fetch your data back with realtime change detection.
+
+The Realtime Database made our lives so much easier!
+
+Firestore is built to work side-by-side with the Realtime Database.
+
+Using Firestore does not mean abandoning the Realtime Database...
+
+but you'll likely find that it's better for most tasks.
+
+Think of Firestore as the next generation of the Realtime Database. 
+
+It has great client libraries.
+
+It has security rules.
+
+It works with Cloud Functions for Firebase.
+
+But Firestore is structured data.
+
+And Firestore supports complex queries.
+
+And Firestore scales based on your result set, not on your collection's record count.
+
+So let's back up and cover these differences one by one.
+
+First off, Firestore is a document/collection database.
+
+If you've used Google Cloud Datastore or MongoDB then you'll be familiar.
+
+There's a strict pattern to Firestore.
+
+First, you define a collection. Then you add documents.
+
+And each document supports sub-collections, which contain their own documents.
+
+So you can nest data much like you did in the Realtime Database, but it's much more structured.
+
+Think collection... then document... then collection... then document.
+
+It's a new pattern, but it's not hard to figure out.
+
+Second, Firestore has client libraries just like the Realtime Database.
+
+The Firestore client library enables you to execute single queries or listen to a document or collection for changes.
+
+Unlike the Realtime Database, your Firestore queries can have multiple where and orderBy statements.
+
+And unlike the Realtime Database, your Firestore queries remain performant for massive collections.
+
+The Realtime Database gets cranky if you force it to query over millions of records.
+
+Firestore doesn't care how complicated your query is or how many records are in the collection.
+
+But Firestore DOES care about how many records you return.
+
+This is one of the main differences between Firebase and Firestore.
+
+The Realtime Database always billed you based on connection count and data transfer.
+
+Firestore does not bill you by connected client count.
+
+But Firestore does bill you by the volume of data transferred.
+
+AND Firestore bills you by your read, write and delete counts.
+
+So every record that you pull from the database counts against your reads.
+
+Don't get too nervous, because reads are six cents for 100 thousand;
+
+however, you need to recognize that Firestore scales based on the result set.
+
+So if the feature you're building has lots of fast, small reads and writes, stick to the Realtime Database.
+
+But you'll find that most app features are much easier to build on Firestore.
+
+I've found myself using Firestore for about 95% of my app's data needs.
+
+I keep the Realtime Database in my back pocket for those edge cases where it's still the best solution.
+
+But more and more I'm using Firestore for all of my new features.
+
+I hope that clears up the differences between Firebase and Firestore.
+
+I'm sure there will be questions, so fire away in the comments below.
+
+Thanks for watching!
+
+And make sure to subscribe to get updates on my new videos...
+
+and I'll let you know how my course is going :)
+
+
+
+
+
+
+

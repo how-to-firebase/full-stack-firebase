@@ -1,0 +1,73 @@
+Let's cover a couple of these items in more depth.
+
+Single-page applications or SPAs are websites that render their own HTML and CSS. 
+
+In olden times these pages were all rendered on the server. 
+
+Server rendering is still the fastest way to show a page to your users
+
+However, the industry is moving quickly toward SPAs.
+
+Single-page applications can be hosted on a static file host. 
+
+Firebase has a static file hosting feature, and it's tuned just for SPAs. 
+
+It doesn't do any rendering of files. 
+
+It doesn't serve dynamic content. 
+
+It serves static JavaScript, HTML, images... whatever your SPA needs to run.
+
+Single-page applications are powerful, but there are things that you ***NEVER*** want to do in a browser. 
+
+For instance, you should never attempt to send an email from a browser.
+
+Now if you're thinking, wait! 
+
+Doesn't GMail work in my browser and doesn't it send email?
+
+Well yes it does! But it's actually sending that email to GMail's private servers, which forward the email on to your recipients. 
+
+The GMail web app only talks to GMail's servers. Anything else would be insecure!
+
+Secure operations must be done on a secure server. 
+
+But this architecture is called serverless! How on Earth does this work???
+
+The answer is functions-as-a-service, or FaaS. 
+
+Google's functions-as-a-service is called Cloud Functions. 
+
+Cloud Functions enables the developer to write discrete pieces of logic--known as functions--
+
+and export them to the Cloud Functions service for execution. 
+
+Cloud Functions then listens to any one of a number of triggers. 
+
+When these triggers are tripped, Cloud Functions executes your code with the trigger as the event context.
+
+We'll get deep, deep into Cloud Functions in a future module. 
+
+Just know that these triggers can be as standard as an HTTP call directly to the Cloud Function, 
+
+or as Firebase-specific as a new Firebase Authentication sign up or a change in your Cloud Firestore database.
+
+The point is that by using triggers and Cloud Functions, 
+
+we can architect an app that scales from prototype to massive success without **us** lifting a finger.
+
+So now we've introduced Firebase, we understand why we need it, and we recognize that "serverless" is a total misnomer. 
+
+It's now time to connect a boring old HTML file to Firebase and write our very. first. query!
+
+
+
+
+
+
+
+
+
+
+
+

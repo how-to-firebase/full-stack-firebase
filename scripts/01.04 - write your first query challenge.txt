@@ -1,0 +1,35 @@
+By now you should have a vague idea of what Firebase is.
+
+It's an app platform!
+
+It rolls together a bunch of very useful technologies into a cohesive, easy-to-use whole.
+
+The core of these technologies is Firestore, the document/collection database of the FUTURE!
+
+At least... of our future... for the next few minutes.
+
+It's time for your first Full-Stack Firebase challenge!
+
+You're going to write your first Firestore query. 
+
+It's going to be glorious!
+
+And it's going to be self-directed!
+
+So hang onto for dear life... 'cause we're plunging into the deep end.
+
+You'll need a few resources to get started.
+
+These resource are available in the links for this video.
+
+You'll be reading some Firebase docs.
+
+And you'll make friends with Glitch.com, 
+
+...which is an awesome new tool for programming in a web browser.
+
+So don't be nervous. 
+
+There are plenty of hints to get you started.
+
+
