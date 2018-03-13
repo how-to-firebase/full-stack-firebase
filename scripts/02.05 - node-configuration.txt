@@ -1,0 +1,67 @@
+Firebase wouldn't be complete without a server SDK or "software development kit"
+
+We're web developers, and we're most comfortable with JavaScript, so we use the Node SDK.
+
+Let's connect Node to our Firebase Project using the Firebase Admin SDK for Node.
+
+To get started, we'll create a fresh Node app on Glitch.com.
+
+Navigate to your Node project's package.json file and click Add Package.
+
+Search for "firebase-admin" and add it.
+
+Now open a new tab to your Firebase Console and click the gears button and then Project settings.
+
+Click the "service accounts" tab and make sure you're on the Firebase Admin SDK card.
+
+The Firebase Admin SDK is how we'll connect Node to our Firebase project.
+
+But first, we need to create a new private key.
+
+So go ahead and generate a new private key. It will download to your local downloads directory.
+
+Open your new key in the text editor of your choice and copy the contents to your clipboard.
+
+Keep this file safe, since it grants admin access to your Firebase project.
+
+Now, back on your Glitch, create a new file under dot data slash service-account dot json.
+
+Glitch keeps files under dot data private, so you won't leak your service account onto the web.
+
+Now return to your Firebase Console and make sure that you're still in the "service account" view.
+
+Click the "Copy" button to copy the Node.js connection details to your clipboard.
+
+Now return to your Glitch and replace the contents of your server.js file with the copied text.
+
+This will put your project in an error state, because the path to your service account file is wrong.
+
+So fix the path to the service account and the error should resolve
+
+We now have a connected admin SDK.
+
+Just for funzies, let's query an empty endpoint from the Realtime Database to prove our connection.
+
+Call admin dot database to get the Realtime Database library.
+
+Then chain on dot ref with any string you like.
+
+And finally, chain dot once value and dot then to capture the data snapshot.
+
+Log out snapshot dot key.
+
+It should match the same string that you used for your ref.
+
+Click the "Logs" button on your Glitch to see your project's logs and confirm.  
+
+And you're configured!
+
+You've given the Admin SDK full access to your project. 
+
+You can read or write anything you like using any of the Firebase features.
+
+As always, see the Firebase Docs for all of the gory detail on the Firebase Admin SDK.
+
+
+
+

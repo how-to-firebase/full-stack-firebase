@@ -14,7 +14,7 @@ When you want to save or query some data to Firestore, you have the Cloud Firest
 
 We're going to wire up a simple web page to our Firebase project. 
 
-First off, let's create a fresh Glitch.com project to experiment.
+First off, let's create a fresh web project on Glitch.com.
 
 We'll be working in index.html.
 
