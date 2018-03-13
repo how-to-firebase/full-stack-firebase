@@ -1,0 +1,107 @@
+Firebase is famous for its client libraries.
+
+There are lots of databases, authentication and file storage services out there...
+
+but Firebase is unique in that you can connect to its services directly from a browser or mobile app
+
+This connection is manage by client libraries.
+
+A client library lives on your web page and maintains connections to your Firebase project.
+
+When you want to authenticate, you use the Firebase Authentication client library.
+
+When you want to save or query some data to Firestore, you have the Cloud Firestore client library.
+
+We're going to wire up a simple web page to our Firebase project. 
+
+First off, let's create a fresh Glitch.com project to experiment.
+
+We'll be working in index.html.
+
+You'll always initialize Firebase in your index.html.
+
+Now, open a new tab to your Firebase Console accessible via console.firebase.google.com
+
+Click over to your Project Overview and click "Add Firebase to your web app"
+
+Click "Copy" to grab the initialization script tags and paste them into your index.html.
+
+You can paste them in the HEAD tag or at the bottom of the BODY tag.
+
+Now let's prove to ourselves that we have a live connection to Firebase.
+
+We'll do this with anonymous authentication.
+
+So click back to your Firebase Console and select the Authentication page.
+
+Click through to sign-in method and enable Anonymous auth. Make sure to click SAVE.
+
+Now add Glitch.me to your authorized domains list.
+
+Note that it's Glitch do "M" "E", not Glitch.com. 
+
+That's because Glitch serves its previews on Glitch.me.
+
+Now return to your Glitch and edit script.js.
+
+The initialization scripts that we pasted in earlier have added 'firebase' to the Window object.
+
+Let's use window.firebase.auth() to get our auth client library.
+
+Then we'll create an onAuthStateChanged listener to log out our currentUser.
+
+And finally we'll call auth.signInAnonymously() to authenticate.
+
+Click your Glitch's Show button to preview the page.
+
+Open up DevTools to see the logged out currentUser and to troubleshoot any errors.
+
+The most common error is you either forgot to save when you enabled anonymous auth...
+
+... or you didn't add Glitch.me to the authorized domains list.
+
+Review the Firebase docs if you're still having trouble.
+
+And one more note.
+
+You don't have to import the entire Firebase SDK with all of its client libraries.
+
+Firebase.js is just over 100 kilobytes right now.
+
+You can import firebase-app.js and firebase-auth.js instead.
+
+Firebase-app is required for Firebase initialization.
+
+Firebase-auth is required to use the authentication client library.
+
+These two files are about 55 kilobytes.
+
+You can import the other client libraries as needed; 
+
+however, importing each library separately results in a larger file size than the full firebase.js.
+
+So use this technique wisely.
+
+Now there are a few more Firebase initialization tricks that you can learn from the docs.
+
+I don't want to spoil your fun, so head on over to the docs and for a quick read.
+
+We stick to the basics here.
+
+But don't let us hold you back. 
+
+The Firebase docs are a treasure trove. Please use them!
+
+
+
+https://firebase.google.com/docs/web/setup
+
+
+
+
+
+
+
+
+
+

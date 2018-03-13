@@ -50,7 +50,9 @@ So let's enable those methods.
 
 Next we'll need to make sure that our domains are authorized, especially for development.
 
-Later in the course we'll be coding on Glitch.com. So let's authorize the Glitch.com domain.
+Later in the course we'll be coding on Glitch.com. So let's authorize the Glitch.me domain.
+
+Glitch serves its pages up on Glitch.me, not on Glitch.com.
 
 Let's also allow creation of multiple accounts per email address. 
 
