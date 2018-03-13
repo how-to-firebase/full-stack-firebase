@@ -1,0 +1,135 @@
+We'll kick this party off with a quick run down of the Firebase Console.
+
+It's not so much a Firebase feature. 
+
+It's how you'll interact with many of the Firebase features.
+
+You'll need your Dashboard to configure your services and watch data flow through your project.
+
+Most of the Dashboard's functions are also accessible via the Firebase Tools command-line interface, or CLI.
+
+However, we always have our Firebase console open in a browser tab whenever we're developing on Firebase. 
+
+So let's log in to Firebase.
+
+Visit firebase.google.com and click the SIGN IN button
+
+You'll sign in with your Google account and then land on you Console project selection screen
+
+Click "Add project" or select a project that you've already created.
+
+Once your project is live you'll be taken to that project's overview.
+
+The project overview has one button that we use, "Add Firebase to your web app".
+
+You can copy/paste value from this popup directly into your index.html to connect to this project.
+
+Now notice the gears button. We won't spend much time here, but it's good to click around.
+
+Notice that you can change your project name and generate service accounts.
+
+We'll use the service accounts later when we're using Node.js in admin mode. 
+
+But let's continue on to the left bar.
+
+The left bar has four sections, Develop, Stability, Analytics and Grow.
+
+The first section, Develop, is the only one that we use for web. The other sections are mobile only.
+
+Google rolled a bunch of their mobile platform products into the Firebase brand, but they haven't done the same for web.
+
+Let's start with Authentication.
+
+Our user accounts list is empty, because we haven't enabled any sign-in methods, so let's do that.
+
+We have a plethora of available sign-in methods. Our favorites are Email/Password and Google.
+
+So let's enable those methods. 
+
+Next we'll need to make sure that our domains are authorized, especially for development.
+
+Later in the course we'll be coding on Glitch.com. So let's authorize the Glitch.com domain.
+
+Let's also allow creation of multiple accounts per email address. 
+
+This will automatically merge duplicate accounts created under the same email address.
+
+It's super common to create an email/password account with your GMail address...
+
+...and later try to log in with Google using that same GMail address.
+
+Now let's click through the Templates and Usage tabs. 
+
+Firebase will send some email on your behalf, so it's nice to customize those emails.
+
+And you'll have to pay for phone authentication if your app gets enormous. 
+
+Moving on...
+
+The Database section will give you two options, the Realtime Database or Cloud Firestore
+
+The tabs are core to the Firebase experience.
+
+The Realtime Database has tabs for Data, Rules, Backups and Usage.
+
+We can use the Data tab to view and modify the data in our JSON tree.
+
+The Rules tab is great for visualizing testing security rules.
+
+Once you're in production you'll use the Backups tab to enable and track your database backups.
+
+And the Usage tab will help you manage your costs as you scale.
+
+Let's continue on to the Storage section.
+
+It's pretty spare with only two tabs, Files and Rules.
+
+We can use the File browser to create folders and upload files. 
+
+Once we have files in our Storage bucket we can also view file details and some metadata.
+
+We'll cover security rules for Storage in a later chapter. 
+
+So let's continue on to Hosting!
+
+You'll mostly use Hosting's Dashboard tab to connect a custom domain.
+
+Firebase Hosting provides a firebaseapp.com subdomain for each project. 
+
+But when you're ready for real users, you'll want a custom domain with free SSL certs.
+
+You can also manage your deploys and review your deployment history.
+
+The Usage tab is, again, most useful for cost control if your site gets massively popular.
+
+So on to Functions.
+
+Cloud Functions for Firebase is the "serverless" glue that holds your apps together.
+
+There's nothing to see here now, but we'll get very familiar with both the Dashboard and Logs tabs.
+
+Cloud Functions are deployed via Firebase's CLI or command-line interface. 
+
+We'll use the terminal to deploy our Functions, but we'll monitor the deploys here.
+
+We'll also spend time on the Logs and Usage tabs to make sure our Functions behave themselves.
+
+And finally, let's click the Modify pricing plans button to see our options.
+
+Blaze includes the same free usage as Spark, but you'll pay as you exceed those limits.
+
+All of our development usage and some of our production usage falls within the free limits.
+
+Flame is never cheaper than Blaze... it's just price capped at 25 US dollars
+
+We use Blaze for all of our projects. 
+
+So that's the Firebase Console!
+
+We'll dive deeper into each console section as we learn the associated Firebase features.
+
+There's a lot to learn here, but you'll need a rich, active project for it to get interesting :)
+
+
+
+
