@@ -8,7 +8,13 @@ Read the online book at [FullStackFirebase.com](https://www.fullstackfirebase.co
 
 ## Firebase Console
 
+[Browser configuration](https://glitch.com/edit/#!/malachite-engine)
+
+[Node.js configuration](https://glitch.com/edit/#!/thread-asphalt)
+
 ## Firebase Tools
+
+[Firebase Tools](https://glitch.com/edit/#!/somber-binder)
 
 ## Firebase Authentication
 

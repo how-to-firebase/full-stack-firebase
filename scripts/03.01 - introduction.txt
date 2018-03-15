@@ -1,20 +1,22 @@
 You need Firebase Authentication for two reasons:
 
-1. Firebase Security Rules rely on Firebase Authentication
+Number one, Firebase Security Rules rely on Firebase Authentication
 
-2. Firebase Authentication is ridiculously easy to use
+And number two, Firebase Authentication is ridiculously easy to use
 
-Firebase needs a security system. 
+So why does Firebase need a security system?
 
 In a traditional database you provide your own security using your API server. 
 
-Since Firebase is the API server, it needs a programmable way to control read and write access to your data.
+Since Firebase is the API server, it needs a way to control read and write access to your data.
 
-When people use your client apps to authenticate with Firebase Authentication they receive a JSON Web Token or JWT.
+When client apps authenticate with Firebase, they receive a JSON Web Token or JWT.
 
 JWTs identify users to Firebase's security rules system. We'll cover this more later. 
 
-Just remember that Firebase Authentication will enable your users to interact with the rest of the Firebase platform.
+Just remember that Firebase Authentication enables users to interact with the Firebase platform.
+
+So let's talk ease of use.
 
 Have you ever implemented your own auth system? 
 
@@ -22,16 +24,16 @@ Yes? Then you know how challenging it can be.
 
 If not... then take my word for it and use an off-the-shelf system. 
 
-Firebase Authentication supports a variety of ways for your users to log into your apps.
+Firebase Authentication supports a variety of ways to log into your apps.
 
 These authentication methods include:
 
 * Email and password
 * Phone SMS
 * Log in with Google
-* Log in with Facebook, Twitter, Github...
+* Log in with Facebook, Twitter, and Github
 
-And you can even roll your own custom authentication or integrate with an existing third-party auth system.
+And you can even roll your own custom authentication or integrate with a third-party auth system.
 
 So let's do a quick overview of these auth methods.
 
@@ -41,7 +43,7 @@ You register an email address and a password with Firebase and it keeps track of
 
 There's nothing more to it.
 
-Next up, SMS auth on your phone!
+Next up, SMS auth!
 
 Google acquired Twitter Digits in early 2017 and rolled their phone authentication into Firebase. 
 
@@ -49,9 +51,9 @@ This means that with minimum fuss you can implement a full SMS-based phone auth 
 
 This is particularly great for mobile web apps. 
 
-Phone authentication is the preferred auth method for many users, especially those outside of the United States.
+Phone authentication preferred by many users, especially outside of the United States.
 
-Next we have OAuth.
+And next we have OAuth.
 
 OAuth is a standard way to authenticate through a third-party.
 
@@ -65,19 +67,23 @@ OAuth is the fastest auth method, because it relies on accounts that your users 
 
 Most everyone has either Google, Facebook or Twitter, and developers love Github. 
 
-OAuth  is also the easiest auth flow to implement.
+OAuth is also the easiest auth flow to implement.
 
-And all of the OAuth providers support multi-factor authentication.
+Also, all of the OAuth providers support multi-factor authentication.
 
-It's time for a Public Service Announcement!
+And now for a Public Service Announcement!
 
-Multi-factor auth is when you use a code generator app on your phone or when you receive an SMS with a one-time code.
+Multi-factor auth uses a code generator app on your phone or a one-time code delivered via SMS.
 
 Multi-factor auth is much, much more secure than single-factor email/password auth.
 
 You should opt-in to use multi-factor whenever possible.
 
-There are no excuses. Do not get hacked. Use multi-factor auth!
+There are no excuses. 
+
+Do not get hacked. 
+
+Use multi-factor auth!
 
 Ok. 
 
@@ -91,5 +97,10 @@ Does your company use SAML or LDAP?
 
 Awesome. That's going to work just fine. 
 
-Your existing auth servers can mint Firebase JWTs to give your users access to their Firebase services.
+Your existing auth servers can mint Firebase JWTs to give users access to their Firebase services.
+
+In conclusion, Firebase Auth is one of the simplest and highest work-to-value services around.
+
+It requires minimal dev time and provides an integrated security system for all Firebase apps.
+
 

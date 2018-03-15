@@ -1,46 +1,92 @@
+Let's walk through Firebase Authentication in the wild.
 
-Welcome to Full-Stack Firebase with Chris Esplin and Juarez Filho
+We'll be touring an app that I built in late 2017 to help my wife share images on the web.
 
-The app you see before you is publicly accessible at fogo, that's spelled F-O-G-O, dot how to firebase dot com
+She had some unique sharing needs and existing services weren't cutting it...
 
-So let's see Firebase Authentication in action in the wild.
+so I spent a few weeks of my free time writing her an image sharing app using Firebase services.
 
-We'll start off by logging into Google with a Provider.
+This app is accessible at fogo, that's spelled F-O-G-O, dot how to firebase dot com
 
-Don't worry... providers are trivial to create, and we'll cover them elsewhere
+We'll open up DevTools and set two breakpoints in auth dot service dot js.
 
-Just note that this provider is specific to Google. 
+The first is on Line 13 on the firebase auth dot onAuthStateChanged function
 
-You'll have different providers for Facebook, Twitter or GitHub.
+The second breakpoint is on line 84 to capture firebase auth dot signInWithRedirect
 
-Now simply pass the provider into auth.signInWithRedirect and we're off and running
+Note that I'm using some fancy JavaScript services to wrap these calls... 
 
-Notice how our browser automatically redirects to Google's auth page
+... you do not have to get as fancy as I did with your own implementations. 
 
-When authentication is complete we're redirected back to our app
+Auth should be easy.
 
-Our auth state has changed, so our onAuthStateChanged listener fires with our new currentUser
+Now let's click log in with Google to watch the auth flow.
 
-The currentUser is our J-W-T or JOT, and it represents our authentication session.
+We hit our breakpoint in signInWithRedirect.
 
-Notice the currentUser's displayName, email and emailVerified attributes
+Line 84 is pulling a provider from the providersMap.
 
-There's some extra provider data available as well.
+If I scroll up we can get a quick view of the map.
 
-Now we'll let our application-specific logic respond to the new currentUser object and log us into the app.
+The line of interest is line 8
 
-And now that we've logged in, let's log out!
+I've called new firebase dot auth dot GoogleAuthProvider to create the provider.
 
-auth.signOut() will get the job done for us.
+Scrolling back down...
 
-Notice how our onAuthStateChanged listener fires again, this time with a null currentUser
+Line 84 pulls off that provider and line 85 passes it into firebase dot auth dot signInWithRedirect
+
+Let's play through the breakpoint and log into a Google account.
+
+Firebase handles all of the redirects for us... 
+
+none of this requires any of our own code... it just works.
+
+After the login, Firebase redirects us back to the page we just left.
+
+And we hit our other breakpoint on line 13.
+
+Again, I got a bit fancy here, so we'll need to step through auth dot onAuthStateChanged
+
+You don't have to write wrapper functions like these... you can just write callbacks.
+
+I've set another breakpoint inside the callback to make things easier.
+
+If I hover over the currentUser you can see that there's a bunch of data here.
+
+This currentUser data is our JWT.
+
+We can scroll down a bit to see the displayName and email.
+
+A little farther down and we can see the providerData which includes a uid and more account details.
+
+So let's release the breakpoint and let the login complete.
+
+This function, onAuthStateChanged, is the core of Firebase Authentication.
+
+You can log in and log out with any auth method, and the onAuthStateChanged callback will fire
+
+So your application-specific logic only needs to listen to onAuthStateChanged!
+
+Let's sign out to see onAuthStateChanged in action.
+
+Fogo is as bit unique, so we'll have to play through the breakpoint once...
+
+but finally we hit our breakpoint again...
+
+and if we hover over currentUser, you'll see that it's null.
+
+Let's release the breakpoint to complete the sign out.
+
+Fogo's app-specific logic now has a null currentUser, so it logs us out.
 
 ... and that's it!
 
 You can log in with different OAuth providers, an email and password or even a mobile phone.
 
-Firebase Authentication is quick and easy to implement, and it provides the backbone for
-all of Firebase's security.
+Firebase Authentication is quick and easy to implement...
+
+and it provides the backbone for all of Firebase's security.
 
 
 
