@@ -1,10 +1,12 @@
-Cloud Firestore is the successor to both Cloud Datastore and the original Firebase Realtime Database.
+Cloud Firestore is the successor to Google's Cloud Datastore and the original Realtime Database.
 
 Cloud Datastore already powers massive web applications, 
 
 ...and the Realtime Database proved how amazing direct browser-to-database interactions can be. 
 
-Cloud Firestore combines the scalability and reliability of Cloud Datastore with the awesome client libraries of the Realtime Database 
+Cloud Firestore starts with the scalability and reliability of Cloud Datastore...
+
+...and adds awesome client libraries like we have with the Realtime Database...
 
 ...to create a massively scalable, easily-to-develop cloud database platform.
 
@@ -14,47 +16,59 @@ Document/collection means that you create collections and nest documents within 
 
 A nested document may itself have a sub-collection of documents.
 
-Unlike a relational database, there are no explicit connections between documents besides this parent/child relationship. 
+Unlike a relational database, there are no other formal ways to connect documents.
 
-If you'd like one document to reference another document, you'll need to save the target document's ID to a field in the referencing document.
+The parent/child relationship is the only relationship that Firestore understands...
 
-Imaginge a data structure with two collections, Users and Transactions. 
+...but that won't stop us from writing our own logic to connect documents.
 
-Each User document has a ```userId``` and an ```email```. 
+If you'd like one document to reference another document...
 
-Likewise, we have collection of Transactions where each transaction has a ```userId``` and an ```amount```.
+...simply save the target document's ID to a field in the referencing document.
 
-The ```userId``` fields can be used to connect records in the two collections, 
+Imagine a data structure with two collections, Users and Transactions. 
 
-but it's an informal connection defined by your application logic, not by the database itself.
+Each User document has a userId and an email. 
 
-In a relational database you would be able to join Users to Transactions based on the shared userId key. 
+Likewise, we have collection of Transactions where each transaction has a userId and an amount.
+
+The userId fields can be used to connect records in the two collections...
+
+...but it's an informal connection defined by our application logic, not by the database itself.
+
+In a relational database you would be able to join Users to Transactions based on the shared userId
 
 In a document/collection DB that is not possible. 
 
 Instead, you'd run two queries, one on each collection, and then join the records manually.
 
-So why not use just a relational database?
+So why not use a relational database?
 
 Relational databases and document/collection databases have quite a bit of overlap. 
 
-Frankly, for most use cases, either type of database will be just fine as long as you structure your data correctly :)
+Frankly, either type of database will be just fine as long as you structure your data correctly
 
-The advantages of document/collection databases like Firestore is that it is easier to scale, because each document can live on its own. 
+The advantage of document/collection databases like Firestore is scalability and speed.
 
-Your database doesn't have to lock down a bunch of relationships to replicate data... 
+Your database doesn't have to lock down a bunch of relationships to shard data across servers...
 
-it just copies documents across servers. 
+...it just copies the documents for fast, reliable horizontal scaling.
 
-Now, Google Spanner has achieved similar performance for relational data, so it's not like this is a pure win for the document/collection model; 
+Also, you cannot write a slow query with Cloud Firestore.
 
-however, document/collection does make possible client libraries like the Firestore SDK.
+Go ahead and try it.
 
-See, relational databases require schemas. Relational databases require table updates.
+The entire database is written for speed and reliability.
 
- Document/collection databases can be flexible, meaning that you can save whatever data you like in a document. 
+And that's what makes client libraries possible.
+
+See, relational databases require schemas. 
+
+Relational databases require table updates.
+
+Document/collection databases can be flexible, meaning that you save whatever data you like.
  
- The database just does not care about document structure.
+The database just does not care about document structure.
 
 So I could make a collection of Foods, and each Food could have entirely different attributes...
 
@@ -64,27 +78,27 @@ For example, my Foods collection could have a Food called spaghetti
 
 ...with a noodleType attribute and a sauceFlavor attribute. 
 
-The Foods collection could contain another Food called a sandwich, 
+The Foods collection could contain another Food called a sandwich... 
 
-which has a breadType and a hasPickles boolean flag.
+...which has a breadType and a hasPickles boolean flag.
 
 Each Food document has entirely different fields, and the database doesn't care one bit.
+
+And that gives us the flexibility to use client libraries.
 
 So what is a client library?
 
 Traditional application architecture includes a layer of servers that talk to your database. 
 
-So your client--in this case a browser--will make an HTTP call to your server, 
+So your client--in this case a browser--will make an HTTP call to your server...
 
 ...which will perform security checks, query the database, and return results to the client.
 
-Serverless application architecture has the client--in this case a browser--communicating directly with the database. 
+Serverless application architecture has the browser communicating directly with the database. 
 
 The database runs all of its own security checks and serves up data as requested.
 
-The Firestore SDK is a client library that enables your browser to talk directly to the Cloud Firestore database. 
-
-Firestore handles all of its own security, and the Firestore SDK can read and write whatever your browser asks it to.
+The Firestore SDK is a client library that enables your browser to talk directly to Firestore. 
 
 This is huge, because you don't have to write any server code. 
 
@@ -96,23 +110,23 @@ Cloud Firestore is not great for highly relational data.
 
 Relational databases are optimized for relational data. 
 
-For example, if you're building an inventory system and your inventory numbers are constantly changing, 
+For example, if you're building an inventory system and with changing inventory counts... 
 
-...and each inventory item can belong to a number categories, 
+...and each inventory item can belong to a number of categories...
 
-...and you need to be able to quickly run reports on different stock levels for different category groups... 
+...and you need to quickly run reports on different stock levels for different category groups... 
 
-you might want to stick to a relational database.
+...you might want to stick to a relational database.
 
 Cloud Firestore can also be sub-optimal for graph data.
 
 Graph databases such as JanusGraph are optimized for graph data. 
 
-For instance, if you're building a social app and you find yourself trying to query how many of a user's friends live in nearby cities, 
+Imagine a social app that needs to query how many of a user's friends live in nearby cities...
 
-...but you also need to query how many of those friends' friends also live nearby... 
+...but also needs to query how many of those friends' friends live nearby.
 
-you may want to stick to a graph database.
+This is a classic graph data problem, and you should consider using a graph database.
 
 Both of these use cases--relational and graph data--can be modeled in Cloud Firestore; 
 
@@ -120,40 +134,31 @@ however, the queries may run more slowly and cost more than if you used a dedica
 
 And that brings us to hybrid solutions.
 
-Just because you need a relational database for parts of your data does not mean that you must abandon Firestore!
+Just because you need a relational database does not mean that you must abandon Firestore!
 
 Most large web applications use a variety of datastores. 
 
-For instance, a website may use Redis for caching, GraphQL + JanusGraph + Cassandra for social data, relational SQL for financial data, and Firestore for everything else. 
+For instance, a website may use Redis for caching...
 
-Yes, this sort of model adds complexity, 
+...use GraphQL + JanusGraph + Cassandra for social data...
+
+...store financial data in relational SQL...
+
+...and use Firestore for user accounts and the rest of the data models.
+
+Yes, this sort of system adds complexity...
 
 ...and we don't recommend introducing any more complexity to your app than is necessary; 
 
-however, sometimes complex problems require complex solutions.
+however, complex problems often require complex solutions.
 
-Yes, you can drive a large truck to work every day. 
-
-No, that truck will not be as efficient as driving a small sedan. 
-
-And yes, a small sedan can transport two cubic yards of sand if you take five trips, but nobody does that. 
-
-If you need that much sand, you'll rent a truck.
-
-Likewise, you can handle relational data in Firestore, and you can handle document/collection data in a relational database like Postgres. 
-
-But why not use the right tool for each job?
+Pick the right tool for each job and don't be afraid of necessary complexity.
 
 We recommend starting with Firestore until you discover that it won't meet your needs. 
 
-You may be surprised at how flexible and powerful Firestore can be, 
+You may be surprised at how flexible and powerful Firestore can be...
 
-...and you may never find the need for another database :)
-
-
-
-
-
+...and you might just finish your app without needing any other database.
 
 
 
