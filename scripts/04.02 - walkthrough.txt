@@ -1,56 +1,128 @@
+It's time to see Firestore in action.
+
+But we have one quick note before diving in.
+
+We're about to visit Fogo dot how to Firebase dot com.
+
+Fogo is a live production application.
+
+So the code you're about to see is complicated, because the app is complicated.
+
+Fogo took weeks to build, and we don't expect you to understand the code.
+
+We just want you to see real-life, production-grade Firestore.
+
+The internet is full of simple little demo apps that make everything look so easy.
+
+But real-life apps are all complicated...
+
+...and we can't be scared off just because we don't understand something.
+
+You'll understand all of this after a few more lessons.
+
+So let's get started with Fogo.
+
 Fogo is an image-management application, and as such, it needs to handle thousands of images.
 
-We would never attempt to display thousands of images in a browser, so we need to paginate our results.
+We would never attempt to display thousands of images in a browser, so we'll paginate our results.
 
-We've implemented a form of infinite-scroll pagination where a new page is requested whenever the bottom of the list becomes visible to the user.
+We've implemented a form of infinite-scroll pagination...
+
+...where a new page is requested whenever the bottom of the list becomes visible to the user.
 
 Firestore collections can be easily paginated with a cursor.
 
-In this case our collection is named "uploads". We're also filtering by the environment attribute, which is the string "development" in this example.
+The word cursor is just fancy database speak for the last record a query has returned.
 
-Filtering on the environment attribute enables us to host multiple versions of this application on a single Firebase project. So in addition to a development environment we have a test environment and a production environment.
+So let's load Fogo's main images list and step through these queries.
 
-Next we define the limitedCollection by adding a .limit filter on the collection.
+We'll start with a breakpoint in images dot query dot js.
 
-Finally, if there is an existing cursor then we modify the limitedCollection to start after that cursor. 
+imagesQuery handles the initial and all subsequent page loads.
 
-If there is no cursor, then we don't call the startAfter function and simply request the first 25 records.
+If there's no data in the store, it loads the first page of records.
 
-We receive the first 25 records and that fills the page just fine.
+If there is data in the store, it looks at the last result, which we've called the cursor...
 
-Now, let's scroll down a bit to trigger another page to load.
+...and it modifies the query to start after that cursor and grab the next page.
 
-This page load will pass in the last image on the page as the cursor.
+Line 5 shows that our collection is named "uploads". 
 
-So now notice that we have a cursor and we're calling limitedCollection.startAfter with cursor.created.
+Line 6 is a simple where clause to limit the query to our current environment.
 
-The query that follows results in another 25 records and we've filled another page!
+We've tagged all image records with an environment flag.
 
-Now to demonstrate using Firestore's onSnapshot function to listen for new records.
+This way we can support multiple instances of the app on a single Firebase project.
 
-After the initial pagination load we will be adding images to the top of the list. These images will have a "created" timestamp before the first record from the pagination.
+And then, on line 7, we order by a created timestamp in descending order.
 
-So we set up a new query for the uploads collection. Again, we filter on the environment.
+This way we get the newest records first.
 
-This time we also put on a second "where" clause to require the "created" attribute to be after the lastCreated timestamp.
+Then line 8 sets a limit on the number of records to return using the dot limit function
 
-Now we'll use the onSnapshot function to listen for new records. 
+Line 9 is where the pagination is done.
 
-The initial snapshot result is null, because there are no records uploaded after our lastCreated timestamp.
+If we call imagesQuery with a cursor, we'll use startAfter to paginate off of cursor dot created
 
-However, as soon as a new record hits the database with a more recent timestamp, the onSnapshot listener fires with all of the results. 
+If there is no cursor, then we skip the pagination and the query is just the limitedCollection
 
-Note that the snapshot will have all of the results that match the criteria. 
+Line 11 awaits query dot get, and lines 12 through 21 process the results
 
-We've just uploaded one file in this case, but if we were to upload a second file, the onSnapshot listener would fire again, but this time with two results.
+Our first time through this query returns our 25 most-recent results.
 
-onSnapshot changes whenever the query results change, and it returns all of the query results every time.
+Let's scroll down to trigger another page load...
 
-And there it is! We have infinite-scroll pagination as well as a listener that will tack new records onto the top of our list as they arrive!
+and this time there's a cursor, so we've started after that cursor and we get the next page.
 
+imagesQuery is great for paginating existing records, but it can't handle new records 
 
+For that, we'll set a breakpoint in images dot observer dot js.
 
+imagesObserver uses onSnapshot to listen to new records as they're added.
 
+You'll notice that lines 6 through 11 look familiar from the last query...
+
+but line 10 is new, because it's going to use a where clause to only query new records
+
+We pass in a lastCreated timestamp to indicate the most recent record that the app has seen...
+
+...and imagesObserver now only returns records with a more recent timestamp than lastCreated.
+
+Line 14 uses onSnapshot to start listening to the collection.
+
+Each snapshot returned by onSnapshot will have all of the newer records. 
+
+So if we add one new image, the snapshot will include that image...
+
+...and if we add another image, onSnapshot will fire a second time, but this time with both images.
+
+Lines 15 through 23 are some application-specific logic to process the incoming records...
+
+...and also to remove any duplicates from earlier onSnapshot events.
+
+So let's add an image to watch onSnapshot fire.
+
+onSnapshot fires with an empty snapshot when it's first called, because there are no new records.
+
+But then the new records hit Firestore, and onSnapshot fires again...
+
+...this time with a single record in snapshot dot docs.
+
+And that's it!
+
+We have infinite-scroll pagination as well as a listener that handles realtime updates.
+
+And we achieved this epic feat with under 50 lines of code.
+
+We've written this behavior before with the Realtime Database...
+
+...and it was well over 100 lines of code, and pagination was much more confusing.
+
+These queries may seem a bit complicated, because they are.
+
+So don't worry if you didn't understand this code.
+
+We'll clear it all up, step by step, in the coming videos.
 
 
 
