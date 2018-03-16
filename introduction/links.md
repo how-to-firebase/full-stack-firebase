@@ -18,6 +18,8 @@ Read the online book at [FullStackFirebase.com](https://www.fullstackfirebase.co
 
 ## Firebase Authentication
 
+[Fogo](https://fogo.howtofirebase.com/login)
+
 ## Cloud Firestore
 
 [Where and orderBy](https://glitch.com/edit/#!/earthy-rhinoceros)

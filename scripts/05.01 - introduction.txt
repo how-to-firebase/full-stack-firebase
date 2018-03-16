@@ -1,0 +1,115 @@
+The Realtime Database, or RTDB, is the original product that shot Firebase onto the scene in 2012.
+
+The RTDB was one of the first "serverless" datastores on the market.
+
+It has two primary innovations.
+
+First is that it's built to be realtime and super fast.
+
+You aren't allowed to write slow queries for the Realtime Database.
+
+Second, the RTDB has client libraries.
+
+Client libraries enable your browser application to connect directly to the database.
+
+Client libraries are part of what makes an application "serverless", because they skip the server.
+
+So what is the Realtime Database, and what does it do?
+
+The RTDB is neither a relational database nor a document/collection datastore like Cloud Firestore.
+
+The RTDB is a single JSON object with up to 32 levels of depth.
+
+You can query any node of that JSON object, whether it already exists or has yet to be made.
+
+This sort of JSON datastore makes the RTDB entirely unstructured. 
+
+You first define whatever data structures you prefer in your browser.
+
+Then you save that data directly to the RTDB without modification...
+
+...and without telling the RTDB what the data will look like.
+
+Unstructured data can make development lightning fast... if you know what you're doing.
+
+If you're naive in how you structure your data, then you're in for very unpleasant surprises.
+
+So let's talk about the Realtime Database's strengths.
+
+The Realtime Database is ideal for realtime interactions. 
+
+Think of the ideal RTDB use case as streaming data. 
+
+You stream data to the RTDB and it streams that data out to all connected clients.
+
+Imagine a chat feature.
+
+Building chat with the Realtime Database is a piece of cake.
+
+Every user in the chat room is subscribed to the data feed.
+
+As users add messages to the data feed, they're automatically sent to the connected clients.
+
+The Realtime Database excels at these sorts of fast, small data changes.
+
+But most app features don't need fast, small data.
+
+And that's where the Realtime Database has its weaknesses.
+
+RTDB devotees such as ourselves spent the years of 2012 through 2017 getting very creative.
+
+We learned to model all sorts of crazy data structures in pure JSON. 
+
+It was not easy.
+
+But we were devoted to building our entire apps on the Realtime Database...
+
+...so we made it work, and we shipped highly performant apps to our users.
+
+We can model almost anything in JSON... but we don't have to do that anymore...
+
+...because now we have Firestore.
+
+We'll completely avoid the RTDB's weaknesses by using Firestore for all of those use cases.
+
+So why is the Realtime Database limited?
+
+The RTDB was designed for lightning fast updates. 
+
+That primary design constraint prevented the Firebase team from developing sophisticated queries.
+
+You can execute a single order-by filter and a single limit filter on each RTDB data stream. 
+
+So you can order a list of movies by release date and query a stream of the 10 most recent movies...
+
+...but you can't also filter that stream to include only action movies. 
+
+You already used your one order-by filter on the release date. 
+
+So tough luck!
+
+There are workarounds, but they're not necessary anymore... 
+
+...so we're not going to cover them!
+
+We'll only cover the use cases where Firebase is preferred to Firestore.
+
+We use the RTDB for streaming short-lived, constantly-changing data.
+
+We use it for tracking logged-in users.
+
+We use it for live dashboards.
+
+We use it for progress bars.
+
+And that's about it.
+
+Over 90% of our new app features now use Firestore.
+
+But the Realtime Database is still useful, and it isn't going away.
+
+So as long as we have it, we'll embrace its strengths and sidestep its weaknesses.
+
+
+
+
