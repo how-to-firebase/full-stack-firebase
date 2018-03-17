@@ -1,0 +1,67 @@
+Cloud Functions is a huge part of the Firebase ecosystem.
+
+It just came out of beta in 2018, and it's changing the way we code.
+
+Cloud Functions is the connective tissue that makes Firebase a "serverless" platform.
+
+Secure operations are unavoidable in production applications. 
+
+Sure, you can make a quick demo that doesn't need to send any email or accept a Stripe payment... 
+
+...but most apps are worthless without secure, administrative operations.
+
+Functions-as-a-service, or FaaS, let's us perform secure server operations without managing a server
+
+Cloud Functions is a Functions-as-a-Service provider that's integrated into the Firebase platform.
+
+So we can ship single JavaScript functions to Cloud Functions and trigger them in a variety of ways.
+
+Cloud Functions runs on servers, but you don't get to interact with those servers. 
+
+Cloud Functions has your code and will run it as Cloud Functions sees fit. 
+
+It can spin up 20 servers to handle a spike in traffic...
+
+...and it can spin them all down again without any input from you or your code.
+
+Cloud Functions is a Google Cloud Platform or GCP service...
+
+...but it has a series of Firebase-specific events...
+
+...so we often refer to those events as Cloud Functions for Firebase.
+
+Cloud Functions is for all of GCP, not just Firebase... 
+
+...but it's especially useful when combined with Firebase.
+
+Cloud functions can be triggered with HTTP calls, changes to the Realtime Database or Firestore...
+
+...account creation or deletion with Firebase Authentication...
+
+...and object changes in Firebase Storage.
+
+Cloud Functions enables you to get truly creative in how you architect your serverless apps.
+
+You can craft highly scalable job pipelines...
+
+...implement complex messaging systems...
+
+...or simply track and tweak your data as your users make changes to your databases.
+
+Start out with simple functions. 
+
+Don't get carried away until you're comfortable with the basics. 
+
+Cloud Functions is an ocean; wade around in the shallows before heading out to deep water.
+
+Cloud Functions has made possible entirely new application architectures.
+
+The Firebase community is still inventing best practices and discovering what's possible.
+
+We are in the early stages of a serverless revolution...
+
+...so it's an exciting time to be a Firebase developer.
+
+
+
+
