@@ -26,6 +26,8 @@ Read the online book at [FullStackFirebase.com](https://www.fullstackfirebase.co
 
 ## Realtime Database
 
+[Firebase Chat](https://glitch.com/edit/#!/truth-spleen)
+
 ## Cloud Functions for Firebase
 
 ## Firebase Storage
