@@ -1,0 +1,47 @@
+Most production apps will eventually need to handle user-uploaded files.
+
+Uploaded files are different than the data that we store in a database, because they're big.
+
+Data fields are tiny, usually just a few bytes.
+
+Image files are massive, often many megabytes in size.
+
+Images, PDFs, Word Docs... in database land, these are known as BLOBs.
+
+A BLOB is a binary large object.
+
+It's a big chunk of data that we can't see into.
+
+We're not saving the data across multiple database fields... it's just a single BLOB.
+
+Dealing with files or BLOBs has traditionally been a massive pain in the neck.
+
+They're usually too big to get sent over the internet with a single HTTP call...
+
+...so they have to be streamed across the wire with tens or hundreds of calls.
+
+This involves having a sophisticated client-side uploader as well as a server to receive the stream.
+
+The server has to collect chunks of streamed data, reassemble them...
+
+...and send the result to a hosting service.
+
+Firebase Storage solves this file-upload problem once and for all.
+
+Firebase Storage enables you to stream files directly from your browser to the hosting provider.
+
+In this case, the host is a Google Cloud Storage bucket, similar to Amazon's S3 service.
+
+It's a bucket meant to host and serve files, and Firebase Storage uploads to it directly.
+
+So while Firebase Storage may not seem like a huge feature...
+
+...it's just for uploading files right?...
+
+...these file uploads are miserable to write on your own.
+
+Anyone who has ever written a file uploader will appreciate the glory that is Firebase Storage.
+
+
+
+
