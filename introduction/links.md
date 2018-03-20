@@ -30,6 +30,8 @@ Read the online book at [FullStackFirebase.com](https://www.fullstackfirebase.co
 
 ## Cloud Functions for Firebase
 
+[Firebase Chat with Functions](https://glitch.com/edit/#!/merciful-quicksand)
+
 ## Firebase Storage
 
 ## Cloud Messaging
