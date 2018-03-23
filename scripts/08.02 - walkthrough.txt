@@ -1,0 +1,150 @@
+Let's walk through a basic Firebase Cloud Messaging implementation on Glitch.com.
+
+We've prepared this Glitch as a standalone example to make FCM as easy-to-understand as possible.
+
+Feel free to remix this Glitch or copy/paste code for your own implementations.
+
+FCM is one of those systems where copying and pasting code is a best practice.
+
+It's mostly boilerplate...
+
+...and that's what open-source code is all about.
+
+You can sit back and relax... because this is just another walk through.
+
+We'll go through the FCM implementation in detail later on.
+
+Our Glitch is named 'fine ping', so we'll navigate to fine dash ping dot glitch dot me.
+
+We'll open DevTools and find the client dot js source file.
+
+We'll set breakpoints on lines 35, 54, 56, 59 and 70.
+
+Let's reload the page to see line 35, where we're instantiating the messaging client library.
+
+Now let's sign in with Google to get an authenticated user.
+
+Once we've signed in, we'll click the 'request permission' button.
+
+This triggers our breakpoint on line 54
+
+A simple call to messaging dot requestPermission causes the browser to request our permission.
+
+We allow permission, which calls the callback on line 56.
+
+Line 56 calls messaging dot getToken to generate a unique token for the browser session.
+
+We receive the token on line 59 and send the token to the Realtime Database.
+
+Let's navigate to our Realtime Database console to see the data.
+
+It's all under authenticated slash notification dash users.
+
+You can see the existing user objects with their tokens.
+
+Now back to the Glitch web page to define a message, any message.
+
+We'll click on the 'send' button to trigger line 70.
+
+Line 70 sends a POST request to our server.
+
+Notice the token and message query parameters.
+
+We'll let that play through and go check out the server code.
+
+Server dot js contains our POST handler.
+
+It pulls the token and message attributes from request dot query and sends the message.
+
+Admin dot messaging gets the server library and dot send does the sending.
+
+The message body needs token and data attributes, which will go straight to our client.
+
+Let's return to the client and trigger another message.
+
+Each message triggers the onMessage callback on line 41 of client dot js.
+
+The onMessage callback gets triggered whenever the app is active in the browser.
+
+But what if the app is closed or running in the background? 
+
+Can we still receive notifications?
+
+Of course we can!
+
+We can use a service worker to execute code while our app is in the background.
+
+In the DevTools console there's an application tab that lets us view our service worker code.
+
+We'll select the Service Workers page and click through to our service worker.
+
+Line 14 registers our 'set background message handler' callback.
+
+It's like the earlier 'on message' callback, but it only fires when the app is in the background.
+
+So let's trigger a message while the app is in the background!
+
+We'll do this by going to the Network tab in DevTools and finding our last sendMessage POST.
+
+Right-click on the request and copy the request as CURL.
+
+Now we'll hop into our bash command line and fire off the CURL command to recreate the POST.
+
+This example is using the Windows 10 Linux Sub-system version of BASH.
+
+If you try this copy-as-curl trick on MacOS, you don't need to use the Linux sub-system.
+
+MacOS has a bash terminal by default... so your life is that much easier.
+
+We've left the Glitch app in the front of our browser, so the regular alert triggers.
+
+Let's try that again while on a different tab.
+
+We send the CURL command again... 
+
+...and check that out!
+
+It's a system-level notification from our browser.
+
+This example sends a single message to a single user.
+
+Real-life production apps will need a lot more application-specific logic.
+
+You can use FCM to subscribe users to topic messaging lists...
+
+...and you can use Node.js to send mass messages to those topic lists.
+
+Also, you'll need to manage user tokens in a more sophisticated way...
+
+...because this system only saves one token per user.
+
+In real life, users log in with lots of different browsers, each of which needs its own token.
+
+And another quick note...
+
+Firebase Cloud Messaging uses the browser's Push API.
+
+The Push API is currently only supported by Chrome and Firefox...
+
+...so don't build mission-critical functionality with these kinds of messages.
+
+Firebase Cloud Messages should be viewed as a progressive enhancement...
+
+...meaning that users with better browsers get the enhanced experience...
+
+...but we need to develop our app to still work well for less-privileged users.
+
+That was all very fast...
+
+...and bouncing between client and server code is confusing.
+
+So hang in there.
+
+We'll be building a production-grade messaging framework.
+
+And you'll be able to use your framework in any app with just a bit of copy/paste.
+
+
+
+
+
