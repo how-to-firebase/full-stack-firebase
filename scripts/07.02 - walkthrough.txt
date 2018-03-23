@@ -1,0 +1,92 @@
+The Firebase Storage client library is the smallest Firebase client library.
+
+It does one thing, and it does it easily.
+
+You pass Firebase Storage a browser File object and tell it where to upload the file.
+
+Firebase Storage starts the upload and lets you track progress, errors and completion.
+
+It's that simple.
+
+We're going to watch Firebase Storage in action on fogo dot how to firebase dot com.
+
+So let's go to the app now and open DevTools. 
+
+We'll set some breakpoints in storage dot service dot js.
+
+Line 5 is the instantiation of the Storage client library.
+
+Line 12 creates a storage ref, which is any arbitrary file path. 
+
+You can create any sort of folder structure and choose a filename at this point.
+
+Line 13 calls ref dot put with the File object as the argument...
+
+...and it saves the resulting task.
+
+The task is now the source of our upload progress updates.
+
+The task is a promise, so line 17 registers a 'dot then' callback.
+
+Lines 19 through 23 register callbacks for progress, error and success events.
+
+This storage service is an RxJs wrapper that enables sequential uploading of files.
+
+Don't worry about this application-specific code... 
+
+...it will look familiar if you've used RxJS...
+
+...but RxJs isn't part of this course, so you can ignore it!
+
+Let's start a file upload to watch how the code flows.
+
+But first we'll need breakpoints on lines 12, 21 and 23.
+
+We'll start the upload and watch the code break on line 12. 
+
+This is where we define the ref with the folder value being howtofirebase slash uploads
+
+The file dot name value is the name of the file from our filesystem.
+
+Let's step through to pass the file and task out to our RxJs observer...
+
+... and register a 'dot then' callback for when the task is completed.
+
+Now we'll let the breakpoints play through while the upload completes.
+
+We'll receive a progress event on line 21.
+
+bytesTransferred are zero and the state is 'running'
+
+After a couple more progress events we'll see that the bytesTransferred matches the file size...
+
+...at which point our success callback, the third in the list, gets called.
+
+Let's deactivate the breakpoints and run that one more time with a bigger file.
+
+Notice the green progress bar?
+
+That progress percentage is calculated from the bytesTransferred value in the progress callback.
+
+And we're done!
+
+Just to confirm that the file uploaded, let's visit our Firebase Console's Storage page.
+
+We navigate through the howtofirebase and uploads folders to find our uploaded file.
+
+We can click on the file to see a preview and some metadata.
+
+And there's not much more to it!
+
+We'll cover implementation details in the following videos...
+
+...but now you've seen what Firebase Storage does...
+
+...and with a bit of instruction, you'll have no trouble implementing it yourself!
+
+
+
+
+
+
+
