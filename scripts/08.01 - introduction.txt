@@ -1,0 +1,39 @@
+Firebase Cloud Messaging, or FCM, lets you send notifications to Android, iOS and browser apps.
+
+You know when your web browser asks for your permission to send you notifications?
+
+And you click "allow" start receiving a bunch of system-level popups from Chrome or Firefox?
+
+We've seen this a lot with apps like Google Calendar, Google Hangouts and Facebook Messenger.
+
+These notifications got popular on Android and iOS, so browser vendors started to support them too.
+
+Firebase Cloud Messaging is the easiest way to send these notifications.
+
+We will, of course, learn the browser implementation of FCM.
+
+The FCM libraries aren't nearly as big as those of the Realtime Database and Firestore;
+
+however, implementing FCM requires both client-side browser code and server code in Node.js.
+
+This makes FCM one of the most complicated implementations in the Firebase ecosystem.
+
+Go ahead and skip this section if you're feeling overwhelmed.
+
+You can always come back to it later.
+
+But make sure to watch it if you're confident in your Node.js and browser skills.
+
+The code itself isn't complicated... 
+
+...it just crosses back and forth between Node and the browser, which can be confusing.
+
+Although not every app needs messaging, it's growing in popularity.
+
+And if you ever need to implement messaging...
+
+Firebase Cloud Messaging is by far the easiest way to do it.
+
+
+
+
