@@ -2,7 +2,7 @@ There are two database under the Firebase brand, the Realtime Database and Cloud
 
 We'll be sticking to Cloud Firestore for the most part, so let's get familiar with it's dashboard.
 
-Navigate to firebase.google.com, sign in to your Console, and select or create a project.
+Navigate to 'firebase dot google dot com', sign in to your Console, and select or create a project.
 
 Now open the Database page under the Develop section on the left bar.
 
@@ -26,7 +26,9 @@ For now we're using a custom document ID to organize our data.
 
 Because this is merely organizational structure, select NULL under field type and create it.
 
-We now have an empty document named "salaries". It's useless. There's nothing here.
+We now have an empty document named "salaries". 
+
+It's useless. There's nothing here.
 
 So let's add another collection under Salaries and call it "employees"
 
@@ -36,9 +38,11 @@ Now let's fill in some employee salary data.
 
 Notice all of the different data types that you can store, particularly the Array and Object types.
 
-Being able to save Arrays and Objects is huge. It provides massive flexibility.
+Being able to save Arrays and Objects is huge. 
 
-Also, since each document lives on its own, you don't have to follow any field patterns.
+It provides maximum flexibility.
+
+Also, since each document lives on its own, you don't need consistent field names.
 
 One of our employees can have an isAdmin flag and another can have a roles array.
 
@@ -54,7 +58,7 @@ Go ahead and create fake data just to make sure that it works within the Firesto
 
 Second, just because we nested data deep in sub-collections for this demo...
 
-does not mean that you need to nest data very often.
+...does not mean that you need to nest your own data.
 
 In fact, we recommend not nesting data unless it's truly necessary.
 
@@ -70,7 +74,12 @@ You cannot query on a document's sub-collections.
 
 Think of sub-collections as loose affiliations. 
 
-They can be powerful... but they're usually more trouble than they're worth.
+They can be powerful... 
+
+...but they're usually more trouble than they're worth.
+
+
+
 
 
 

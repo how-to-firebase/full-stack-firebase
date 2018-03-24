@@ -16,7 +16,7 @@ It's going to be glorious!
 
 And it's going to be self-directed!
 
-So hang onto for dear life... 'cause we're plunging into the deep end.
+So hang on tight... 'cause we're plunging into the deep end.
 
 You'll need a few resources to get started.
 
@@ -24,12 +24,13 @@ These resource are available in the links for this video.
 
 You'll be reading some Firebase docs.
 
-And you'll make friends with Glitch.com, 
+And you'll make friends with Glitch.com...
 
 ...which is an awesome new tool for programming in a web browser.
 
 So don't be nervous. 
 
-There are plenty of hints to get you started.
+There are plenty of hints to get you going.
+
 
 

@@ -10,7 +10,9 @@ CLI stands for command-line interface.
 
 There are some tasks that are just easier to complete via the terminal.
 
-We use the Firebase Tools CLI to configure projects and to deploy Firebase Hosting and Cloud Functions.
+We use the Firebase Tools CLI to configure new projects.
+
+We also use it to deploy Firebase Hosting and Cloud Functions.
 
 Let's stick to our pattern and create a new Node Project on Glitch.com.
 
@@ -18,11 +20,11 @@ Open your project's Advanced Options and click Open Console
 
 The Glitch console or terminal--we'll use the terms interchangeably--runs Ubuntu Linux
 
-It has NPM installed, so we'll run npm install dash dash save dash dev firebase dash admin
+It has NPM installed, so we'll run 'npm install dash dash save dash dev firebase dash admin'
 
-The console throws some warnings, but it will install firebase-tools locally.
+The console throws some warnings, but it will install Firebase Tools locally.
 
-Once the install is complete, type firebase dash dash version to check your installed version.
+Once the install is complete, type 'firebase dash dash version' to check your installed version.
 
 Now type just "firebase" to see all of your options
 
@@ -56,9 +58,11 @@ Confirm your selections and pick your project, again with the arrow keys...
 
 Then accept all of the defaults except for one.
 
-You want to select Y for "yes" when asked if you want to configure a single-page app.
+You want to type Y for "yes" when asked if you want to configure a single-page app.
 
-Glitch doesn't automatically sync the console and the editor quite yet, so type "refresh" and "enter"
+Glitch doesn't automatically sync the console and the editor quite yet...
+
+...so you'll need to use the 'refresh' command to refresh your Glitch with the new files.
 
 You should now have an initialized project and be able to view your files in the Glitch editor.
 
@@ -66,7 +70,7 @@ All that Firebase Tools did was create a bunch of configuration files.
 
 Go ahead and click around a bit through the new files to see what's been configured.
 
-We'll cover more Firebase Tools functions as we continue through the course.
+We'll cover more Firebase Tools functionality as we continue through the course.
 
 For now just remember that you can always type "firebase" to read out the commands.
 
@@ -84,7 +88,9 @@ But stick with it!
 
 We're building a fresh, new skill set, and that doesn't happen overnight.
 
-Hang in there. Stay patient. 
+Hang in there.
+
+Stay patient. 
 
 And you'll be a seeing awesome results before you know it!
 

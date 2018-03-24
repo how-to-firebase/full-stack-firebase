@@ -4,9 +4,9 @@ Because we're writing our first Firestore query.
 
 In under five minutes we're going to connect to the Firestore database and query some public data.
 
-We'll cover this subject in depth in the Firestore section of this course, but for now, let's just see Firestore in action.
+We'll cover this subject in depth in the Firestore section of this course...
 
-But first, let's do a quick tour of Glitch.com.
+...but first, let's do a quick tour of Glitch.com.
 
 Let's start with the top nav bar.
 
@@ -14,107 +14,125 @@ The project dropdown gives us a bunch options.
 
 Click through to the Advanced Options just to know that they exist.
 
-Your options may be a bit different, because you don't own the Coordinated Freighter project.
+Your options may be a bit different, because you don't own the 'Coordinated Freighter' project.
 
-But you can remix Coordinated Freighter in your own account, or create a new project and work from scratch.
+But you can remix Coordinated Freighter in your own account...
+
+...or you can create a new project and work from scratch.
 
 Next, click the "Show" button for a live preview of your app.
 
-It's just a new tab that shows whatever you have in your index.html
+It's just a new tab that shows whatever you have in your 'index dot html'
 
 Now click the search bar to see how easy it is to jump between files.
 
-Now click away and type command + P on your keyboard to trigger the search shortcut.
+Then click away and type 'command P' on your keyboard to trigger the search shortcut.
 
-Command + P is super useful once you have a bunch files that you need to switch between.
+'Command P' is super useful once you have a bunch files that you need to switch between.
 
 Next up is your user menu. 
 
-I like the change my theme to the dark theme, but maybe you like the light!
+We'll use the dark theme, but maybe you like the light!
 
-And finally is the double-fish menu with your Glitch.com options.
+And finally... the double-fish menu with your Glitch.com options.
 
 I find the Keyboard Shortcuts page to be particularly useful.
 
-So by now you've done the "write your first query" challenge, so you have your own copy of this glitch.
+So by now you've done the "write your first query" challenge...
 
-Of course your own code is perfect, but let's walk through it just for fun.
+...which means that you have your own copy of this glitch.
 
-We need to understand the first three script tags in `index.html`.
+Of course your own code is perfect, but let's walk through it just to review.
 
-The first tag imports firebase-app.js, which makes the `firebase` variable available on our page.
+We need to understand the first three script tags in 'index dot html'.
 
-The second tag imports Firestore so that we can call `firebase.firestore()` and interact with Firestore.
+The first tag imports 'firebase dash app dot js'...
+
+...which makes the 'firebase' variable available on our page.
+
+The second tag imports Firestore so that we can call 'firebase dot firestore'...
+
+...to retrieve the client library and interact with Firestore.
 
 The third script tag connects this page to the How To Firebase Tutorials project.
 
-Each Firebase project that uses Firebase Hosting has an `init.js` file that's publicly available.
+Each Firebase project that uses Firebase Hosting has a publicly-available 'init dot js' file.
 
-We're linking in this `init.js` file to connect the page to our Firebase project.
+We're linking in this 'init dot js' file to connect the page to our Firebase project.
 
-Without making this initialization,
-
-our page has no idea which Firebase project to connect to.
+Without making this initialization, our page has no idea which Firebase project to connect to.
 
 Now, just to make sure you're comfortable with DevTools, let's click the "Show" button.
 
 We have a new tab now that shows our page.
 
-Open DevTools by right-clicking Inspect Element or typing command, shift, j in Windows or command,option, J on Mac
+Open DevTools by right-clicking Inspect Element.
 
-Notice that you can use the three-dot menu in DevTools to doc it to different parts of the page.
+You can also type 'command shift J' on Windows or 'command option J' on Mac.
+
+Notice that you can use the three-dot menu in DevTools to dock it to different parts of the page.
 
 And you can click around through the tabs.
 
 You can also use command, open-bracket and command, close-bracket to jump through the tabs.
 
-So navigate to the Sources tab and click ESCAPE or use the three-dot menu to show the console drawer.
+So click the Sources tab and the ESCAPE key, or use the three-dot menu to show the console drawer.
 
-You can even use the left-bar to find your `index.html` file and set breakpoints in your JavaScript!
+You can even use the left-bar to find your 'index dot html' file and set JavaScript breakpoints!
 
 Now pop back to our Glitch code to finish the challenge.
 
-We'll be filling out the `getPeople()` function.
+We'll be filling out the 'getPeople' function.
 
-The comment shows that we have a nested data structure. The top-level collection is called "public".
+The comment shows that we have a nested data structure. 
 
-"public" has a doc within it named "write-your-first-query".
+The top-level collection is called "public".
 
-and "write-your-first-query" has a sub-collection within *it* named "star-wars-people".
+"public" has a doc within it named "write-your-first-query"...
 
-We want to reference the `star-wars-people` collection.
+...and "write your first query" has a sub-collection named "star wars people".
 
-We'll use `db.collection` and `collection.doc` to chain our way to `star-wars-people`.
+We want to reference the 'star wars people' collection.
 
-Remember, Firestore always follows a pattern of collection then doc. In this case, we're two collections deep.
+We'll use 'db dot collection' and 'collection dot doc' to chain our way to 'star wars people'.
 
-Once we have the collection reference, we'll call `.get()` on the collection.
+Remember, Firestore always follows a pattern of collection then doc. 
 
-Note that we have to use the await keyword, because `.get()` is asynchronous. 
+In this case, we're two collections deep.
 
-`.get()` returns a snapshot, which has an array of docs in it.
+Once we have the collection reference, we'll call 'dot get' on the collection.
+
+Note that we have to use the await keyword, because 'dot get' is asynchronous. 
+
+'dot get' returns a snapshot, which has an array of docs in it.
 
 We're going to map those docs to a plain-old JavaScript object.
 
 Notice that we're using two attributes of the doc.
 
-First is `doc.id`, which holds the id of the doc.
+First is 'doc oot id', which holds the id of the doc.
 
-Second is `doc.data()`, which is a function that returns the doc's data as JSON.
+Second is 'doc dot data()', which is a function that returns the doc's data as JSON.
 
-We're using the three-dot spread operator to spread the results of `doc.data()` into the resulting object.
+We're using the three-dot spread operator to spread the results of 'doc dot data()'
 
-Notice that we have another async function named `runQuery` that calls `getPeople`
+The spread operator will inject one object's attributes into the receiving object.
 
-`runQuery` uses the await keyword to wait for getPeople's result, then logs it out with `console.table`.
+Notice that we have another async function named 'runQuery' that calls 'getPeople'
 
-`console.table` will pretty-print your arrays. 
+'runQuery' uses the await keyword to wait for getPeople's result.
 
-You could also use `console.log`, but it's not as pretty.
+It then logs the result out with 'console dot table'.
 
-And finally notice that we're calling `runQuery` at the bottom of the script.
+'console dot table' will pretty-print your arrays. 
 
-`runQuery` is an async function, but because we don't care about the result, we don't need to use the `await` keyword.
+You could also use 'console dot log', but it's not as pretty.
+
+And finally notice that we're calling 'runQuery' at the bottom of the script.
+
+'runQuery' is an async function, but because we don't care about the result...
+
+...we don't need to use the 'await' keyword.
 
 We just fire and forget.
 
@@ -124,13 +142,9 @@ See that pretty table?
 
 This was a piece of cake!
 
-Does it get easier than this?
+It does not get easier than this.
 
-Nope! 
-
-The answer is nope!
-
-Congrats on surviving to this point.
+So congratulations on surviving to this point.
 
 ...not because this was difficult, but because it was new.
 

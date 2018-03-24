@@ -6,17 +6,17 @@ I'm a JavaScript engineer, and I love Front-End web development.
 
 I started using Firebase in 2013 when I quit my full-time job to strike out on my own.
 
-I was newly independent from the corporate environment, 
+I was newly independent from the corporate environment...
 
-and since I didn't have any managers or even co-workers, I got to pick my own development tools. 
+...and since I didn't have any managers or co-workers...
 
-A lot has changed since then, but my two constants have been JavaScript and Firebase.
+...I got to pick my own development tools. 
 
-I hope you'll come to enjoy Firebase as I have. 
+A lot has changed, but my two constants have been JavaScript and Firebase.
 
-Yes, I've had great experiences developing outside of the Firebase ecosystem, 
+Yes, I've had great experiences developing outside of the Firebase ecosystem...
 
-but, given a choice, I always come back to Firebase.
+...but, given a choice, I always come back to Firebase.
 
 The goal of this course is for you to roll your first Firebase app to production.
 
@@ -34,31 +34,35 @@ On the plus side, you don't need to know anything about Firebase to get started.
 
 Just be patient and move slowly through the material.
 
-And if you're already adept with Firebase, please skip around and for the highlights! 
+And if you're already adept with Firebase...
 
-The more advanced modules later in the course will be of particular interest.
+...you'll want to skip around for the highlights.
 
 I'm working on this course with my good friend and fellow Google Developer Expert, Juarez Filho. 
 
-Juarez and I have spent a lot of time teaching Firebase together, but we've never embarked on a project quite like this one. 
+Juarez and I have spent a lot of time teaching Firebase together...
+
+...but we've never embarked on a project quite like this one. 
 
 Juarez is an expert in using Firebase with Angular. 
 
-I'm more experienced with other JavaScript frameworks, so I'll be focusing on React.
+I'm more experienced with other JavaScript frameworks, so I'll focus on React.
 
-So let's set up our expectations.
+Now let's establish some expectations.
 
 First, we'll cover integration for Angular and React. 
 
-The Firebase SDK is all vanilla JavaScript, 
+The Firebase SDK is all vanilla JavaScript...
 
-so if you can integrate with Angular and React, you can integrate with any modern framework.
+...so if you can integrate with Angular and React...
+
+...you can integrate with any modern framework.
 
 Second, you'll need a Firebase account. 
 
 You'll probably even want to sign up for a paid account.
 
-Firebase's free Spark plan is **very generous**. 
+Firebase's free Spark plan is very generous. 
 
 However, there are some uses of Firebase Functions that require upgrading to a paid Blaze plan.
 
@@ -66,11 +70,13 @@ Fortunately, these features are not required for the course.
 
 Now let's cover what this course is NOT.
 
-This course is not framework agnostic. You will see framework-specific code.
+This course is not framework agnostic. 
 
-This course is not exhaustive documentation. 
+You will see framework-specific code.
 
-Firebase has excellent docs, so please use the docs along with this course. 
+This course is also not exhaustive documentation. 
+
+Firebase has excellent docs, so please use the docs along with the course. 
 
 We can't re-shoot videos every time the Firebase SDK gets updated.
 
@@ -80,11 +86,9 @@ And one last note.
 
 Please leave us a course rating. 
 
-Your feedback is incredibly valuable.
+Your feedback is super valuable.
 
-We're not kidding. 
-
-We read your comments, even the means ones.
+We read your comments, especially the nice ones...
 
 Anyway, now you know what to expect from Full-Stack Firebase.
 

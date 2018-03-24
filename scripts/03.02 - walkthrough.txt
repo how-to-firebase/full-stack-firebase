@@ -4,19 +4,19 @@ We'll be touring an app that I built in late 2017 to help my wife share images o
 
 She had some unique sharing needs and existing services weren't cutting it...
 
-so I spent a few weeks of my free time writing her an image sharing app using Firebase services.
+...so I spent a few weeks writing her an image sharing app using Firebase services.
 
-This app is accessible at fogo, that's spelled F-O-G-O, dot how to firebase dot com
+This app is accessible at fogo, that's spelled F-O-G-O, 'dot how to firebase dot com'
 
-We'll open up DevTools and set two breakpoints in auth dot service dot js.
+We'll open up DevTools and set two breakpoints in 'auth dot service dot js'.
 
-The first is on Line 13 on the firebase auth dot onAuthStateChanged function
+The first is on Line 13 on the 'firebase auth dot onAuthStateChanged' function
 
-The second breakpoint is on line 84 to capture firebase auth dot signInWithRedirect
+The second breakpoint is on line 84 to capture 'firebase auth dot signInWithRedirect'
 
 Note that I'm using some fancy JavaScript services to wrap these calls... 
 
-... you do not have to get as fancy as I did with your own implementations. 
+...you do not have to get as fancy as I did with your own implementations. 
 
 Auth should be easy.
 
@@ -30,23 +30,25 @@ If I scroll up we can get a quick view of the map.
 
 The line of interest is line 8
 
-I've called new firebase dot auth dot GoogleAuthProvider to create the provider.
+I've called 'new firebase dot auth dot GoogleAuthProvider' to create the provider.
 
 Scrolling back down...
 
-Line 84 pulls off that provider and line 85 passes it into firebase dot auth dot signInWithRedirect
+Line 84 grabs that provider and line 85 passes it to 'firebase dot auth dot signInWithRedirect'
 
 Let's play through the breakpoint and log into a Google account.
 
 Firebase handles all of the redirects for us... 
 
-none of this requires any of our own code... it just works.
+...meaning that none of this requires custom code... 
+
+...it just works.
 
 After the login, Firebase redirects us back to the page we just left.
 
 And we hit our other breakpoint on line 13.
 
-Again, I got a bit fancy here, so we'll need to step through auth dot onAuthStateChanged
+Again, I got a bit fancy here, so we'll need to step through 'auth dot onAuthStateChanged'
 
 You don't have to write wrapper functions like these... you can just write callbacks.
 
@@ -72,9 +74,9 @@ Let's sign out to see onAuthStateChanged in action.
 
 Fogo is as bit unique, so we'll have to play through the breakpoint once...
 
-but finally we hit our breakpoint again...
+...but finally we hit our breakpoint again...
 
-and if we hover over currentUser, you'll see that it's null.
+...and if we hover over currentUser, you'll see that it's null.
 
 Let's release the breakpoint to complete the sign out.
 
@@ -86,7 +88,7 @@ You can log in with different OAuth providers, an email and password or even a m
 
 Firebase Authentication is quick and easy to implement...
 
-and it provides the backbone for all of Firebase's security.
+...and it provides the backbone for all of Firebase's security.
 
 
 

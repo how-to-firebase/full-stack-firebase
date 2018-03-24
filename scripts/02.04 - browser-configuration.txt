@@ -1,8 +1,8 @@
 Firebase is famous for its client libraries.
 
-There are lots of databases, authentication and file storage services out there...
+There are lots of database, authentication and file storage services out there...
 
-but Firebase is unique in that you can connect to its services directly from a browser or mobile app
+...but Firebase is unique because you connect to its services directly from a browser or mobile app
 
 This connection is made possible by client libraries.
 
@@ -16,15 +16,15 @@ We're going to wire up a simple web page to our Firebase project.
 
 First off, let's create a fresh web project on Glitch.com.
 
-We'll be working in index.html.
+We'll be working in 'index dot html'.
 
-You'll always initialize Firebase in your index.html.
+You'll always initialize Firebase in your 'index dot html'.
 
-Now, open a new tab to your Firebase Console accessible via console.firebase.google.com
+Now, open a new tab to your Firebase Console via 'console dot firebase dot google dot com'
 
 Click over to your Project Overview and click "Add Firebase to your web app"
 
-Click "Copy" to grab the initialization script tags and paste them into your index.html.
+Click "Copy" to grab the initialization script tags and paste them into your 'index dot html'.
 
 You can paste them in the HEAD tag or at the bottom of the BODY tag.
 
@@ -34,23 +34,23 @@ We'll do this with anonymous authentication.
 
 So click back to your Firebase Console and select the Authentication page.
 
-Click through to sign-in method and enable Anonymous auth. Make sure to click SAVE.
+Click through to the 'sign-in method' tab and enable Anonymous auth. Make sure to click SAVE.
 
-Now add Glitch.me to your authorized domains list.
+Now add 'Glitch dot me' to your authorized domains list.
 
 Note that it's Glitch dot "M" "E", not Glitch.com. 
 
-That's because Glitch serves its previews on Glitch.me.
+That's because Glitch serves its web previews on 'Glitch dot me'.
 
-Now return to your Glitch and edit script.js.
+Now return to your Glitch and edit 'script dot js'.
 
-The initialization scripts that we pasted in earlier have added 'firebase' to the Window object.
+The initialization scripts that we pasted in earlier have added 'firebase' to the window object.
 
-Let's use window.firebase.auth() to get our auth client library.
+Let's use 'window dot firebase dot auth' to get our auth client library.
 
-Then we'll create an onAuthStateChanged listener to log out our currentUser.
+Then we'll create an onAuthStateChanged listener to console log our currentUser.
 
-And finally we'll call auth.signInAnonymously() to authenticate.
+And finally we'll call 'auth dot signInAnonymously' to authenticate.
 
 Click your Glitch's Show button to preview the page.
 
@@ -58,7 +58,7 @@ Open up DevTools to see the logged out currentUser and to troubleshoot any error
 
 The most common error is that you either forgot to save when you enabled anonymous auth...
 
-... or you didn't add Glitch.me to the authorized domains list.
+...or you didn't add 'Glitch dot me' to the authorized domains list.
 
 Review the Firebase docs if you're still having trouble.
 
@@ -66,19 +66,19 @@ And one more note.
 
 You don't have to import the entire Firebase SDK with all of its client libraries.
 
-Firebase.js is just over 100 kilobytes right now.
+'Firebase dot js' is just over 100 kilobytes right now.
 
-You can import firebase-app.js and firebase-auth.js instead.
+You can import 'firebase dash app dot js' and 'firebase dash auth dot js' instead.
 
-Firebase-app is required for Firebase initialization.
+'firebase app' is required for Firebase initialization.
 
-Firebase-auth is required to use the authentication client library.
+'firebase auth' is required to use the authentication client library.
 
 These two files are about 55 kilobytes.
 
 You can import the other client libraries as needed; 
 
-however, importing each library separately results in a larger file size than the full firebase.js.
+however, importing all of the libraries results in a larger file size than 'firebase dot js'
 
 So use this technique wisely.
 
@@ -90,7 +90,9 @@ We stick to the basics here.
 
 But don't let us hold you back. 
 
-The Firebase docs are a treasure trove. Please use them!
+The Firebase docs are a treasure trove. 
+
+So make sure to use them.
 
 
 

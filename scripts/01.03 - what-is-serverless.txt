@@ -1,24 +1,28 @@
 Firebase enables your team to use a "serverless" architecture. 
 
-Serverless is a horribly misleading term, because it definitely involves servers. Lots of servers.
+Serverless is a horribly misleading term, because it definitely involves servers. 
+
+Lots of servers.
 
 To understand serverless, let's start with the original application architecture: the monolith.
 
 A monolithic web application is a single application that serves web pages.
 
-Monoliths are often the easiest way to write an application, especially in the early days of a product; 
+Monoliths are often the easiest way to write an application...
 
-however, they can be truly evil to scale. 
+...especially in the early days of a product; 
+
+however, they can be difficult to scale. 
 
 So as an application grows, companies often migrate to a microservices architecture.
 
 Microservices use HTTP calls to connect tens or hundreds of tiny apps together.
 
-So instead of a single monolith that handles authentication, payments and sending email to clients, 
+So instead of a single monolith that handles authentication, payments and sending email... 
 
-a microservices architecture has one app for authentication, another for payments... 
+...a microservices architecture has one app for authentication, another for payments... 
 
-and another for filling your inbox with marketing email.
+...and another for filling your inbox with marketing email.
 
 Microservices allow us to scale up just the parts of our application that need it. 
 
@@ -26,9 +30,9 @@ So a single, tiny server may handle authentication, while ten servers send email
 
 But you still have to manage infrastructure. 
 
-You still have to spin up ten email servers, 
+You still have to spin up ten email servers...
 
-and you still need to make sure that those email servers stay in sync as customer data changes. 
+...and you still need to make sure that those email servers stay in sync as customer data changes. 
 
 It's manageable, but is there a better way??? 
 
@@ -40,33 +44,29 @@ There are still plenty of servers, but you're not managing them any longer!
 
 Google, Amazon or Microsoft now get to manage the servers, and you merely manage your own code.
 
-Serverless saves the user—in this case you—significant time and resources. 
+Serverless saves you, the developer, significant time and resources. 
 
 You deploy code to your service provider, and the service provider runs it.
 
 Most serverless web apps use a combination of technologies. 
 
-These include single-page web applications, or SPAs,
+These include single-page web applications, or SPAs...
 
-static file servers to serve up the SPA,
+...static file servers to serve up the SPA...
 
-a publicly-available database to save your app's data,
+...a publicly-available database to save your app's data...
 
-and finally, a functions-as-a-service provider to run secure functions on a server.
+...and finally, a functions-as-a-service provider to run secure functions on a server.
 
-We'll cover all of these items in more depth later on.
+We'll cover all of these items in more depth as the course continues.
 
 Just know that we can use serverless to architect an app...
 
-that scales from prototype to massive success without **us** lifting a finger.
+...that scales from prototype to massive success without us lifting a finger.
 
 So now we've introduced Firebase and we understand why we need it.
 
-We also recognize that "serverless" is a total misnomer. 
-
-Now don't touch that mouse and think of navigating away!
-
-...because we're about to dive even deeper into the great new world of serverless.
+Which means that we're now ready dive deeper into serverless.
 
 
 
