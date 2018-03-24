@@ -1,0 +1,76 @@
+Firebase Hosting is the one feature where you won't be writing any code.
+
+There's a single configuration file.
+
+There's a deploy command.
+
+And there's a Firebase Console page.
+
+That's it.
+
+So let's check out a simple Hosting implementation in a Glitch.
+
+This Glitch is named 'ripe knife', and you can follow along on Glitch.com.
+
+Let's start with firebase dot json.
+
+This file is for Firebase configuration.
+
+We have a single node to configure hosting.
+
+The "public" folder is "public", so you'll notice that Hosting deploys only our "public" folder.
+
+Next, we've ignored some common files and folders that you'd never want deployed.
+
+Then come the rewrites.
+
+Order matters here.
+
+Our first rewrite is for 'slash hey dash guys'.
+
+It rewrites to a Cloud Function named helloWorld.
+
+If we pop over to 'functions slash index dot js', we can see that helloWorld returns some HTML.
+
+Back at 'firebase dot json'...
+
+...we have another rewrite.
+
+If the first 'hey guys' rewrite is not applied, the second rewrite gets evaluated.
+
+This is a 'star star' rewrite, meaning that it matches all files.
+
+So all paths besides 'hey guys' will get rewritten to 'index dot html'.
+
+This is a standard rewrite for single-page apps that need to funnel urls through one entry point.
+
+An important note here is that this star star rewrite won't get applied for existing files.
+
+This means that if you request 'slash public slash style dot css', you'll get the css file.
+
+That's because Hosting searches the file system and tries to return static assets first.
+
+It only evaluates the rewrites after that point.
+
+Finally, we've redirected 'slash console' to the Firebase Console URL for this project.
+
+Let's see this in action on the hosted page.
+
+The bare URL returns the contents of 'index dot html'.
+
+We can add some gibberish to the end of the URL and it's rewritten back to 'index dot html'.
+
+If we request the existing css file, we can see that 'style dot css' gets returned.
+
+Our other rewrite, 'hey dash guys', returns the result of the Cloud Function.
+
+And finally, 'slash console' redirects us to our console.
+
+You've come this far, so Firebase Hosting will not be a challenge.
+
+It's just a great feature that ties together the platform and makes "serverless" easier.
+
+
+
+
+
