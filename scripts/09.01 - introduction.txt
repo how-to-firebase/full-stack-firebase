@@ -1,0 +1,68 @@
+Firebase Hosting is meant to serve the static web assets that form your client application.
+
+Hosting is for JavaScript, CSS, HTML and other static assets like images.
+
+This is perfect for apps that are rendered client-side with React or Angular.
+
+It's not perfect for server-side rendered applications like those written in PHP or Ruby...
+
+...in fact, there's no server-side code executed on Firebase Hosting.
+
+However, Hosting includes a few useful features in addition to static file hosting.
+
+Hosting lets you defined URL redirects and URL rewrites.
+
+It also lets you rewrite paths to an HTTP Cloud Function.
+
+URL Redirection is the simplest to understand.
+
+When you hit a redirected URL, the server tells your client that the requested asset has moved.
+
+Your client changes the URL in the address bar to the new location and requests the asset again.
+
+URL rewrites are server-side only, meaning that your client won't change the URL in the address bar.
+
+When you rewrite a URL you tell the server to internally return a different asset...
+
+...but you don't want the client app to know what the server did.
+
+Rewriting to a cloud function is a perfect example.
+
+You can define a URL rewrite for Firebase Hosting that redirects all requests to a Cloud Function.
+
+HTTP Cloud Functions have ugly URLs. 
+
+It's just part of how Cloud Functions works.
+
+So Firebase Hosting allows you to rewrite your pretty client-facing urls...
+
+...to internally redirect to the ugly Cloud Function HTTP endpoint.
+
+Another nicety of Firebase Hosting is that it integrates tightly with the Firebase platform.
+
+You can roll back Hosting deploys on the Firebase Console.
+
+You can also deploy directly from the Firebase Tools CLI.
+
+And finally, Firebase Hosting lets you connect a custom domain...
+
+...and it will mint a free SSL certificate for that custom domain.
+
+Hosting will not serve your content over insecure HTTP... 
+
+...it always uses HTTPS.
+
+Firebase Hosting does not have an exhaustive feature set like Apache or NGINX...
+
+...and that's the point.
+
+It's meant for serverless web apps and nothing else.
+
+Firebase Hosting is so well done that it has attracted its own following...
+
+...meaning that developers are using Hosting even when they don't need the platform's databases.
+
+
+
+
+
