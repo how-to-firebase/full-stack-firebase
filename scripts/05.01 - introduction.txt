@@ -24,7 +24,7 @@ You can query any node of that JSON object, whether it already exists or has yet
 
 This sort of JSON datastore makes the RTDB entirely unstructured. 
 
-You first define whatever data structures you prefer in your browser.
+You first define whatever data structures you prefer in your application code.
 
 Then you save that data directly to the RTDB without modification...
 

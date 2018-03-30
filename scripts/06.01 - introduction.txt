@@ -52,7 +52,9 @@ Start out with simple functions.
 
 Don't get carried away until you're comfortable with the basics. 
 
-Cloud Functions is an ocean; wade around in the shallows before heading out to deep water.
+Cloud Functions is an ocean; 
+
+You should wade around in the shallows before heading out to deep water.
 
 Cloud Functions has made possible entirely new application architectures.
 
@@ -61,7 +63,6 @@ The Firebase community is still inventing best practices and discovering what's 
 We are in the early stages of a serverless revolution...
 
 ...so it's an exciting time to be a Firebase developer.
-
 
 
 

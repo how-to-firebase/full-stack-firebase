@@ -2,7 +2,7 @@ Firebase Cloud Messaging, or FCM, lets you send notifications to Android, iOS an
 
 You know when your web browser asks for your permission to send you notifications?
 
-And you click "allow" start receiving a bunch of system-level popups from Chrome or Firefox?
+And you click "allow" and start receiving a bunch of system-level popups from Chrome or Firefox?
 
 We've seen this a lot with apps like Google Calendar, Google Hangouts and Facebook Messenger.
 

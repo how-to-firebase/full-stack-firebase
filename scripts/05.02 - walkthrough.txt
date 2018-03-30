@@ -12,17 +12,17 @@ You can log in, send messages and read the last 50 messages.
 
 In fact, you're welcome to log into the app yourself and leave us trolly comments.
 
-Anyway, we'll open up chat dash wrapper dot js and set breakpoints on lines 25, 44, 47 and 55.
+Anyway, we'll open up "chat dash wrapper dot js" and set breakpoints on lines 25, 44, 47 and 55.
 
 Let's start by refreshing the page to see how the the messagesQuery gets set.
 
 messagesQuery is generated using what we call a Firebase ref.
 
-We first need to access the Realtime Database client library by calling firebase dot database.
+We first need to access the Realtime Database client library by calling "firebase dot database".
 
 Then we create the ref with a string representing the slash-delimited path to the node we want.
 
-We've arbitrarily picked a node with a ref name of authenticated slash react dash chat slash room
+We've arbitrarily picked a node with a ref name of "authenticated slash react dash chat slash room"
 
 Refs can accept any path up to 32 levels deep.
 
@@ -34,13 +34,13 @@ Once we have the ref, we'll call limitToLast to limit our result set to the last
 
 Now let's release our breakpoint and log in.
 
-Our listenToMessages function sets an on child-added listener on line 44
+Our listenToMessages function sets an "on child-added" listener on line 44
 
 The child-added event fires once for every existing record and for every new record as it's added.
 
 So the callback will now fire 50 times to load the initial query results.
 
-We can hover over the results of snapshot dot val to see a query result.
+We can hover over the results of "snapshot dot val" to see a query result.
 
 The next three lines add the message to the app's record set.
 
@@ -50,7 +50,7 @@ Our app has loaded the last 50 messages and we can scroll through to read them.
 
 Now let's enable our breakpoint again and send another message.
 
-We'll also set breakpoints in chat dash form dot js on lines 22 and 31.
+We'll also set breakpoints in "chat dash form dot js" on lines 22 and 31.
 
 Line 22 shows how we get the room ref to add the new message.
 
@@ -60,7 +60,7 @@ Let's open our Firebase Console to see our data structure.
 
 Notice how the JSON attributes correspond to the ref path that we used earlier.
 
-Our data is nested under authenticated, react dash chat and the room name, Default Chat Room.
+Our data is nested under "authenticated slash react dash chat" and the room name, Default Chat Room.
 
 We'll open up the data structure for the room and then let our breakpoint play through.
 
@@ -76,7 +76,7 @@ We've lost our authenticated session with Firebase, so we need to stop listening
 
 Line 55 shows how we do that.
 
-We've saved our messageHandler on line 44, so we call messagesQuery dot off...
+We've saved our messageHandler on line 44, so we call "messagesQuery dot off"...
 
 ...with the child-added string and the messagesHandler
 

@@ -2,7 +2,7 @@ It's time to see Firestore in action.
 
 But we have one quick note before diving in.
 
-We're about to visit Fogo dot how to Firebase dot com.
+We're about to visit "Fogo dot how to Firebase dot com".
 
 Fogo is a live production application.
 
@@ -10,15 +10,13 @@ So the code you're about to see is complicated, because the app is complicated.
 
 Fogo took weeks to build, and we don't expect you to understand the code.
 
-We just want you to see real-life, production-grade Firestore.
+We just want you to see a real-life, production-grade Firestore implementation.
 
 The internet is full of simple little demo apps that make everything look so easy.
 
 But real-life apps are all complicated...
 
 ...and we can't be scared off just because we don't understand something.
-
-You'll understand all of this after a few more lessons.
 
 So let's get started with Fogo.
 
@@ -36,7 +34,7 @@ The word cursor is just fancy database speak for the last record a query has ret
 
 So let's load Fogo's main images list and step through these queries.
 
-We'll start with a breakpoint in images dot query dot js.
+We'll start with a breakpoint in "images dot query dot js".
 
 imagesQuery handles the initial and all subsequent page loads.
 
@@ -48,7 +46,7 @@ If there is data in the store, it looks at the last result, which we've called t
 
 Line 5 shows that our collection is named "uploads". 
 
-Line 6 is a simple where clause to limit the query to our current environment.
+Line 6 is a simple "where" clause to limit the query to our current environment.
 
 We've tagged all image records with an environment flag.
 
@@ -58,15 +56,15 @@ And then, on line 7, we order by a created timestamp in descending order.
 
 This way we get the newest records first.
 
-Then line 8 sets a limit on the number of records to return using the dot limit function
+Then line 8 sets a limit on the number of records to return using the "dot limit" function
 
 Line 9 is where the pagination is done.
 
-If we call imagesQuery with a cursor, we'll use startAfter to paginate off of cursor dot created
+If we call imagesQuery with a cursor, we'll use startAfter to paginate off of "cursor dot created"
 
 If there is no cursor, then we skip the pagination and the query is just the limitedCollection
 
-Line 11 awaits query dot get, and lines 12 through 21 process the results
+Line 11 awaits "query dot get", and lines 12 through 21 process the results
 
 Our first time through this query returns our 25 most-recent results.
 
@@ -76,13 +74,13 @@ and this time there's a cursor, so we've started after that cursor and we get th
 
 imagesQuery is great for paginating existing records, but it can't handle new records 
 
-For that, we'll set a breakpoint in images dot observer dot js.
+For that, we'll set a breakpoint in "images dot observer dot js".
 
 imagesObserver uses onSnapshot to listen to new records as they're added.
 
 You'll notice that lines 6 through 11 look familiar from the last query...
 
-but line 10 is new, because it's going to use a where clause to only query new records
+but line 10 is new, because it's going to use a "where" clause to only query new records
 
 We pass in a lastCreated timestamp to indicate the most recent record that the app has seen...
 
@@ -122,7 +120,7 @@ These queries may seem a bit complicated, because they are.
 
 So don't worry if you didn't understand this code.
 
-We'll clear it all up, step by step, in the coming videos.
+We'll clear it all up, step by step, in the upcoming videos.
 
 
 

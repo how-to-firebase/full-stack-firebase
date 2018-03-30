@@ -10,7 +10,7 @@ It's not perfect for server-side rendered applications like those written in PHP
 
 However, Hosting includes a few useful features in addition to static file hosting.
 
-Hosting lets you defined URL redirects and URL rewrites.
+Hosting lets you define URL redirects and URL rewrites.
 
 It also lets you rewrite paths to an HTTP Cloud Function.
 
@@ -61,6 +61,8 @@ It's meant for serverless web apps and nothing else.
 Firebase Hosting is so well done that it has attracted its own following...
 
 ...meaning that developers are using Hosting even when they don't need the platform's databases.
+
+
 
 
 

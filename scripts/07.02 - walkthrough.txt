@@ -8,11 +8,11 @@ Firebase Storage starts the upload and lets you track progress, errors and compl
 
 It's that simple.
 
-We're going to watch Firebase Storage in action on fogo dot how to firebase dot com.
+We're going to watch Firebase Storage in action on "fogo dot how to firebase dot com".
 
 So let's go to the app now and open DevTools. 
 
-We'll set some breakpoints in storage dot service dot js.
+We'll set some breakpoints in "storage dot service dot js".
 
 Line 5 is the instantiation of the Storage client library.
 
@@ -20,7 +20,7 @@ Line 12 creates a storage ref, which is any arbitrary file path.
 
 You can create any sort of folder structure and choose a filename at this point.
 
-Line 13 calls ref dot put with the File object as the argument...
+Line 13 calls "ref dot put" with the File object as the argument...
 
 ...and it saves the resulting task.
 
@@ -44,9 +44,9 @@ But first we'll need breakpoints on lines 12, 21 and 23.
 
 We'll start the upload and watch the code break on line 12. 
 
-This is where we define the ref with the folder value being howtofirebase slash uploads
+This is where we define the ref with the folder value being "howtofirebase slash uploads"
 
-The file dot name value is the name of the file from our filesystem.
+The "file dot name" value is the name of the file from our filesystem.
 
 Let's step through to pass the file and task out to our RxJs observer...
 

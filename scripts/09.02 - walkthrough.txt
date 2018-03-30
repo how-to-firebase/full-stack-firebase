@@ -12,7 +12,7 @@ So let's check out a simple Hosting implementation in a Glitch.
 
 This Glitch is named 'ripe knife', and you can follow along on Glitch.com.
 
-Let's start with firebase dot json.
+Let's start with "firebase dot json".
 
 This file is for Firebase configuration.
 
@@ -44,7 +44,7 @@ So all paths besides 'hey guys' will get rewritten to 'index dot html'.
 
 This is a standard rewrite for single-page apps that need to funnel urls through one entry point.
 
-An important note here is that this star star rewrite won't get applied for existing files.
+An important note here is that this "star star" rewrite won't get applied for existing files.
 
 This means that if you request 'slash public slash style dot css', you'll get the css file.
 

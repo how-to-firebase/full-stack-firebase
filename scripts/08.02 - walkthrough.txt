@@ -14,9 +14,9 @@ You can sit back and relax... because this is just another walk through.
 
 We'll go through the FCM implementation in detail later on.
 
-Our Glitch is named 'fine ping', so we'll navigate to fine dash ping dot glitch dot me.
+Our Glitch is named 'fine ping', so we'll navigate to "fine dash ping dot glitch dot me".
 
-We'll open DevTools and find the client dot js source file.
+We'll open DevTools and find the "client dot js" source file.
 
 We'll set breakpoints on lines 35, 54, 56, 59 and 70.
 
@@ -28,17 +28,17 @@ Once we've signed in, we'll click the 'request permission' button.
 
 This triggers our breakpoint on line 54
 
-A simple call to messaging dot requestPermission causes the browser to request our permission.
+A simple call to "messaging dot requestPermission" causes the browser to request our permission.
 
 We allow permission, which calls the callback on line 56.
 
-Line 56 calls messaging dot getToken to generate a unique token for the browser session.
+Line 56 calls "messaging dot getToken" to generate a unique token for the browser session.
 
 We receive the token on line 59 and send the token to the Realtime Database.
 
 Let's navigate to our Realtime Database console to see the data.
 
-It's all under authenticated slash notification dash users.
+It's all under "authenticated slash notification dash users".
 
 You can see the existing user objects with their tokens.
 
@@ -52,17 +52,17 @@ Notice the token and message query parameters.
 
 We'll let that play through and go check out the server code.
 
-Server dot js contains our POST handler.
+"Server dot js" contains our POST handler.
 
-It pulls the token and message attributes from request dot query and sends the message.
+It pulls the token and message attributes from "request dot query" and sends the message.
 
-Admin dot messaging gets the server library and dot send does the sending.
+"Admin dot messaging" gets the server library and "dot send" does the sending.
 
 The message body needs token and data attributes, which will go straight to our client.
 
 Let's return to the client and trigger another message.
 
-Each message triggers the onMessage callback on line 41 of client dot js.
+Each message triggers the onMessage callback on line 41 of "client dot js".
 
 The onMessage callback gets triggered whenever the app is active in the browser.
 
@@ -86,7 +86,7 @@ So let's trigger a message while the app is in the background!
 
 We'll do this by going to the Network tab in DevTools and finding our last sendMessage POST.
 
-Right-click on the request and copy the request as CURL.
+We'll right-click on the request and copy the request as CURL.
 
 Now we'll hop into our bash command line and fire off the CURL command to recreate the POST.
 

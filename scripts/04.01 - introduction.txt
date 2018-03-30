@@ -8,7 +8,7 @@ Cloud Firestore starts with the scalability and reliability of Cloud Datastore..
 
 ...and adds awesome client libraries like we have with the Realtime Database...
 
-...to create a massively scalable, easily-to-develop cloud database platform.
+...to create a massively scalable, easy-to-use cloud database platform.
 
 Cloud Firestore is a document/collection database like MongoDB or CouchDB. 
 
@@ -30,7 +30,7 @@ Imagine a data structure with two collections, Users and Transactions.
 
 Each User document has a userId and an email. 
 
-Likewise, we have collection of Transactions where each transaction has a userId and an amount.
+Likewise, we have a collection of Transactions where each transaction has a userId and an amount.
 
 The userId fields can be used to connect records in the two collections...
 

@@ -40,4 +40,8 @@ Read the online book at [FullStackFirebase.com](https://www.fullstackfirebase.co
 
 ## Firebase Hosting
 
+[Firebase Hosting walkthrough](https://glitch.com/edit/#!/ripe-knife?path=firebase.json:3:23)
+
 ## Next Steps
+
+[Firebase Slack](https://firebase.community/)

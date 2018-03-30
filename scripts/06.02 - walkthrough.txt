@@ -10,7 +10,7 @@ But for now, let's walk through some Cloud Functions code on Glitch.com.
 
 It's the chat app that we walked through earlier, but this time, it has Cloud Functions.
 
-We'll start on functions slash index dot js
+We'll start on "functions slash index dot js"
 
 This file is the entry point for all Cloud Functions for Firebase.
 
@@ -18,13 +18,13 @@ We're importing the firebase functions library as well as a local library named 
 
 "stats" is the function that we're going to execute.
 
-To attach stats to Cloud Functions we call functions dot database dot ref.
+To attach stats to Cloud Functions we call "functions dot database dot ref".
 
-Dot ref takes a string representing the path to which we'd like to listen...
+"Dot ref" takes a string representing the path to which we'd like to listen...
 
 ...with curly braces around wildcard parameters, in this case "room" and "key".
 
-Then we call dot onCreate and pass in our stats function. 
+Then we call "dot onCreate" and pass in our stats function. 
 
 Now our stats function will run any time data is created on a matching path.
 
@@ -64,7 +64,7 @@ If you fail to return a promise your asynchronous code may fail to execute...
 
 ...and Cloud Functions will throw nasty errors to your logs.
 
-We've used Promise.all to guarantee that this function will not return prematurely.
+We've used "Promise dot all" to guarantee that this function will not return prematurely.
 
 Now let's see this function in action.
 
