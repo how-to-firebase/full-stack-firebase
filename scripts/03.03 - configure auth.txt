@@ -1,0 +1,47 @@
+Let's jump right in to building our demo project.
+
+We're going to build this app in both Angular and React.
+
+You'll want to pick a track... because these apps are basically the same.
+
+Juarez is the Angular expert, so you'll meet up with him if you're on the Angular track.
+
+I'll be taking my React friends along for a very similar journey.
+
+The two tracks will converge for some tasks, because the tasks are identical.
+
+Configuring your Firebase project using the Firebase console is one of those tasks.
+
+Let's do that now.
+
+You can use any Firebase project that you like, so pause for a minute to get to a project.
+
+I'll wait here until you're ready.
+
+...
+
+
+And welcome back!
+
+Navigate to your Authentication page and then click on the "sign-in method" tab.
+
+Now let's enable Google auth.
+
+Make sure to click the SAVE button.
+
+Now add whatever domains you're planning to develop and/or deploy on.
+
+Localhost is there by default... so you may not need to add any domains.
+
+Add your stackblitz project domain if you're following along on Stackblitz.
+
+That domain could look like "react dash abcd dot stackblitz dot io"
+
+You'll see some very descriptive error messages if your authentication is misconfigured.
+
+If that's the case, come back here and review your settings.
+
+Changes to these settings can take a couple of minutes to propagate across Firebase's servers...
+
+...so make sure to wait a minute or two before testing your new configuration.
+
