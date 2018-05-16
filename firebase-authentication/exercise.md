@@ -15,7 +15,7 @@ Pull [the repo](https://github.com/how-to-firebase/firelist-react) directly from
 ```
 git clone https://github.com/how-to-firebase/firelist-react.git
 cd firelist-react
-git checkout firebase-angular
+git checkout firebase-authentication
 ```
 
 Once you're on the branch, make sure to run `yarn` or `npm install` to get your Node.js dependencies.
