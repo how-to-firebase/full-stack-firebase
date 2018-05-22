@@ -1,0 +1,191 @@
+Let's jump right in to building our demo project.
+
+We're going to build this app in both Angular and React.
+
+You'll want to pick a track... because these apps are basically the same.
+
+Juarez is the Angular expert, so you'll meet up with him if you're on the Angular track.
+
+I'll be taking my React friends along for a very similar journey.
+
+The two tracks will converge for some tasks, because the tasks are identical.
+
+Configuring your Firebase project using the Firebase console is one of those tasks.
+
+Let's do that now.
+
+You can use any Firebase project that you like, so pause for a minute to get to a project.
+
+I'll wait here until you're ready.
+
+...
+
+We're going to be developing everything on Localhost...
+
+...meaning that you'll serve your pages up on your own machine
+
+We'll be using Git to manage our code, so let's do a quick git exercise.
+
+First, we'll need to clone the `firelist-react` repo
+
+Start at `github dot com slash how dash to dash firebase slash firelist slash react`
+
+We'll click the 'Clone or download' button to grab the repo's url.
+
+Click the copy button to put the url in your clipboard and let's open up a terminal.
+
+I'm going to be using Windows 10 with the PowerShell.
+
+Very similar commands will work on MacOS and Linux.
+
+I've built this app to run with PowerShell, Windows Linux Subsystem, MacOS and Ubuntu...
+
+...so pick whichever operating system is easiest for you.
+
+The worst case scenario is that you'll need to search the web for unfamiliar command line commands.
+
+So let's open up a terminal and navigate to a directory that we'll use for development.
+
+Now let's clone our repo with `git clone` and paste in our repo's url.
+
+It'll take a few seconds for Git to copy down the files and configure the repository.
+
+Once that's done, 'change directory' into your new project directory with `cd firelist dash react`
+
+And now for your basic Git commands.
+
+Type `git branch` to read out your current branches.
+
+You should see only 'master'.
+
+Now type `git checkout complete` then `git branch`.
+
+Notice that you are now tracking a new GitHub branch named 'complete'
+
+Let's make some edits and see what happens.
+
+Open up this directory in the code editor of your choice.
+
+I'll be using Visual Studio Code, so I'll type `code dot` in my terminal to pop open the editor.
+
+Let's make an edit to the README and focus back on our terminal.
+
+I'll be using Visual Studio Code's integrated terminal from here on out.
+
+Don't worry. 
+
+The integrated terminal is the same as the regular terminal. 
+
+It's all very customizable, so go ahead and search Bing for customization how-tos.
+
+When in doubt, Bing it!
+
+Now let's check out today's challenge branch, `authentication dash challenge`
+
+Type `git checkout authentication dash challenge` then `git branch` to confirm success.
+
+Now try `git status` to see your existing changes.
+
+If you're following along in VSCode, you can check out your changes in the Git tab as well.
+
+Let's erase our changes with `git checkout dot` to get a clean slate.
+
+...
+
+And we're ready to get our app and running!
+
+Run `git checkout master` pull down the finished code.
+
+Once we're on master, we need to install our dependencies and set up our environments.
+
+We'll be using the Yarn package manager, but NPM works just fine.
+
+So you'll need Yarn or NPM installed, both of which manage JavaScript packages in similar ways.
+
+I already went to `yarnpkg dot com` to install Yarn...
+
+...so pause here and make sure you have Yarn or NPM installed.
+
+...
+
+Now run `yarn` or `npm install` to install your packages into `node_modules`.
+
+From here on out we'll stick to Yarn, so run `yarn start` to spin up the dev server.
+
+You'll need to wait a few seconds, but you'll eventually get a "compiled successfully" message.
+
+Navigate to `https colon slash slash localhost colon 8080` to see the running app.
+
+Be super careful to go to `https` not `http`. 
+
+We're going to be a using a Service Worker, and service workers rely on HTTPS to function.
+
+And while we're sorting out HTTPS, let's enable Chrome's #allow-insecure-localhost flag.
+
+This is only for Google's Chrome browser, but that's where most web dev happens these days...
+
+...so we'll be using Google Chrome exclusively.
+
+Open up a new tab in Google Chrome and navigate to `chrome colon slash slash flags`
+
+This the Chrome's flags page where we can set some experimental Chrome features.
+
+Search for and enable #allow-insecure-localhost.
+
+You'll want this enabled for a lot of your local development, but especially for Service Workers.
+
+You would be amazed at how many hours we've wasted debugging Service Worker problems...
+
+...that were merely HTTPS errors.
+
+So now go back to the app and try to log in.
+
+You should be able to interact with the app and create some notes.
+
+You're currently using the credentials for our `firelist-react` Firebase project.
+
+Let's change those credentials to your project.
+
+Go to your Firebase Console and click "Project Overview" and "Add Firebase to your web app".
+
+Copy the credentials you see there and jump back to the code.
+
+You'll use your credentials to replace the creds in `public slash environments`.
+
+There are two environment files, both of which need to be fixed.
+
+Copy your credentials under the `firebase` attribute in both files.
+
+Once that's done, refresh the app in your browser and see if it works!
+
+You'll likely need to go to your Firebase Console to enable the Google sign-in method.
+
+So pause here and take a moment to update enable Google authentication.
+
+Once that's done, you should be able to log in!
+
+Your Firestore is likely not enable yet, so go to your Firestore dashboard on the Console.
+
+The act of visiting your Firestore dashboard should enable Firestore.
+
+Go ahead and start in `test mode` for now. 
+
+We'll secure it later.
+
+Once Firestore is enabled, refresh your app again and you're good to go!
+
+Note that you can stop your server by going to the terminal and typing 'command c` for cancel
+
+You'll likely need to start and stop your dev server quite a bit using `yarn start` and `command c`.
+
+So get comfortable starting and stopping your server and congratulations!
+
+You've got a working demo app configured and running on localhost!
+
+Everything from here on out will be a series of fun learning challenges.
+
+You'll get to play with your live Firebase project and get comfortable with what it can do.
+
+
+
+

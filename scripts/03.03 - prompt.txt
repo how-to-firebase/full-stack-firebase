@@ -1,47 +1,50 @@
-Let's jump right in to building our demo project.
+Are you ready for a quick win!
 
-We're going to build this app in both Angular and React.
+Auth is super easy to set up.
 
-You'll want to pick a track... because these apps are basically the same.
+We've done most of the work in our app configuration by just enabling Google authentication.
 
-Juarez is the Angular expert, so you'll meet up with him if you're on the Angular track.
+We'll be working in two files to set up authentication:
 
-I'll be taking my React friends along for a very similar journey.
+- `src slash components slash authenticate dot js` and
 
-The two tracks will converge for some tasks, because the tasks are identical.
+- `src slash layout dot js`
 
-Configuring your Firebase project using the Firebase console is one of those tasks.
+You can also search the codebase for `CHALLENGE Authentication` to find the challenges.
 
-Let's do that now.
+As we've shown with our Git introduction, jumping between branches is quick and easy.
 
-You can use any Firebase project that you like, so pause for a minute to get to a project.
+If you visit those two files while on `master`, you'll see that they're complete.
 
-I'll wait here until you're ready.
+But we want to write those ourselves, so run `git checkout challenge-authentication`
 
-...
+Now navigate to `src slash layout dot js` while on the `challenge-authentication` branch.
+
+You'll see a prompt with some instructions.
+
+Follow those instructions as best you can and you should be able to get past the loading spinner.
+
+Yeah... there's a loading spinner that doesn't like that there's no `currentUser` in the app.
+
+Then hop over to `src slash components slash authenticate dot js` to complete the second challenge.
+
+That's all you'll need for authentication!
+
+Watch the Authentication Solution video for a full explanation of the code.
+
+And you can always check out master to take a peek at the finished code.
+
+The easiest way to switch to master is to type `git stash` to stash your local changes...
+
+...then `git checkout master` to see the finished code.
+
+Once you've figure out the code a bit better, type `git checkout challenge-authentication`...
+
+...then `git stash pop` to restore the changes that you just stashed.
+
+`git stash` is super useful.
+
+Search it up on Bing to become a `git stash` master!
 
 
-And welcome back!
-
-Navigate to your Authentication page and then click on the "sign-in method" tab.
-
-Now let's enable Google auth.
-
-Make sure to click the SAVE button.
-
-Now add whatever domains you're planning to develop and/or deploy on.
-
-Localhost is there by default... so you may not need to add any domains.
-
-Add your stackblitz project domain if you're following along on Stackblitz.
-
-That domain could look like "react dash abcd dot stackblitz dot io"
-
-You'll see some very descriptive error messages if your authentication is misconfigured.
-
-If that's the case, come back here and review your settings.
-
-Changes to these settings can take a couple of minutes to propagate across Firebase's servers...
-
-...so make sure to wait a minute or two before testing your new configuration.
 
