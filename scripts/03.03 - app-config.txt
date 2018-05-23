@@ -10,7 +10,9 @@ I'll be taking my React friends along for a very similar journey.
 
 Configuring your Firebase project using the Firebase console is one of those tasks.
 
-Let's do that now.
+You'll need to configure your Firebase project using the Firebase Console...
+
+...so let's do that now
 
 You can use any Firebase project that you like, so pause for a minute to get to a project.
 
