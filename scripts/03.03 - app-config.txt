@@ -8,8 +8,6 @@ Juarez is the Angular expert, so you'll meet up with him if you're on the Angula
 
 I'll be taking my React friends along for a very similar journey.
 
-Configuring your Firebase project using the Firebase console is one of those tasks.
-
 You'll need to configure your Firebase project using the Firebase Console...
 
 ...so let's do that now
