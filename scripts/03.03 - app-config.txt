@@ -26,7 +26,7 @@ We'll be using Git to manage our code, so let's do a quick git exercise.
 
 First, we'll need to clone the `firelist-react` repo
 
-Start at `github dot com slash how dash to dash firebase slash firelist slash react`
+Start at `github dot com slash how dash to dash firebase slash firelist dash react`
 
 We'll click the 'Clone or download' button to grab the repo's url.
 
