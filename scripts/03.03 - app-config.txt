@@ -186,9 +186,9 @@ We'll secure it later.
 
 Once Firestore is enabled, refresh your app again and you're good to go!
 
-Note that you can stop your server by going to the terminal and typing 'command c` for cancel
+Note that you can stop your server by going to the terminal and typing 'control c` for cancel
 
-You'll likely need to start and stop your dev server quite a bit using `yarn start` and `command c`.
+You'll likely need to start and stop your dev server quite a bit using `yarn start` and `control c`.
 
 So get comfortable starting and stopping your server.
 
