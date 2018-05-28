@@ -16,9 +16,9 @@ As we've shown with our Git introduction, jumping between branches is quick and 
 
 If you visit those two files while on `master`, you'll see that they're complete.
 
-But we want to write those ourselves, so run `git checkout challenge-authentication`
+But we want to write those ourselves, so run `git checkout challenge dash authentication`
 
-Now navigate to `src slash layout dot js` while on the `challenge-authentication` branch.
+Now navigate to `src slash layout dot js` while on the `challenge dash authentication` branch.
 
 You'll see a prompt with some instructions.
 
@@ -28,7 +28,17 @@ Yeah... there's a loading spinner that doesn't like that there's no `currentUser
 
 Then hop over to `src slash components slash authenticate dot js` to complete the second challenge.
 
-That's all you'll need for authentication!
+These two challenges should take between five and thirty minutes.
+
+The code itself is dead simple, but you may need to read the instructions...
+
+...and the docs...
+
+...a few times before you see the pattern to follow.
+
+Don't guess wildly. Read the docs until you see the solution, then take a stab at it.
+
+And that's all you'll need for authentication!
 
 Watch the Authentication Solution video for a full explanation of the code.
 
@@ -38,7 +48,7 @@ The easiest way to switch to master is to type `git stash` to stash your local c
 
 ...then `git checkout master` to see the finished code.
 
-Once you've figure out the code a bit better, type `git checkout challenge-authentication`...
+Once you've figure out the code a bit better, type `git checkout challenge dash authentication`...
 
 ...then `git stash pop` to restore the changes that you just stashed.
 

@@ -1,0 +1,87 @@
+We have two tasks to complete to implement Firebase Authentication.
+
+First, we need to fill in our signIn function in `authenticate dot js`.
+
+Second, we'll need an onAuthStateChanged listener in `layout dot js`.
+
+So let's start with `authenticate dot js`...
+
+If we follow the prompt and visit the Google sign-in docs...
+
+... we see that the code to create a Google Auth Provider is copy/paste.
+
+So we'll copy/paste that bit of code and we have a provider!
+
+Next we call `firebase dot auth` and then `signInWithPopup` with the provider as the argument.
+
+And that's it for our signIn function.
+
+On to 'layout dot js'...
+
+Let's review the docs for onAuthStateChanged.
+
+onAuthStateChanged takes a callback, and it usually only needs to be called once per application.
+
+The beauty of onAuthStateChanged is that it handles auth changes for all authentication methods.
+
+So we'll start by calling `this dot firebase dot auth` to get the Auth client library.
+
+Then we pass a callback function into `onAuthStateChanged`.
+
+The callback receives the `currentUser` object, which is either null or a JWT.
+
+We'll do our application-specific logic in the callback, setting the current user...
+
+...and calling `setUserTokens` if a logged-in currentUser exists.
+
+Our function is complete, but we should talk about the architecture behind `setUserTokens`.
+
+See, we want access to our users' JWTs in our database, but we don't want to trust our users.
+
+We should assume that our users are all malicious hackers...
+
+...and we don't want to let hackers write their own user details to the DB.
+
+So we're letting users write their 'user tokens' to the Realtime Database.
+
+Later on we'll write a Cloud Function to verify users' tokens and write the verified data to the DB.
+
+We can grant users read-only access to their user data...
+
+...and we know that the data is real, because we got it from the Cloud Function's verified token.
+
+This is a common pattern with Cloud Functions.
+
+Give users write access to one part of the database...
+
+...and intercept those writes with a Cloud Function.
+
+The Cloud Function handles whatever verification we need and writes to a read-only part of the DB.
+
+But don't worry about that too much now!
+
+We'll cover it in detail in the section on Cloud Functions.
+
+In the meantime, let's click around our newly-functional app.
+
+Notice how we can log out? 
+
+Well check out `src slash components slash toolbar dot js`
+
+There's a `signOut` function at the bottom of the file that calls `firebase dot auth` and `signOut`.
+
+Kind of simple isn't it?
+
+Yeah... we didn't think it was worth writing a challenge prompt.
+
+Anyway... click around and get comfortable with the functioning app.
+
+And if you'd like an extra challenge, try implementing Facebook auth or email/password auth.
+
+You'll want to start by reading up on the docs surrounding different auth providers.
+
+It's a little more complicated than Google Auth, so don't get too sidetracked...
+
+...however, it might be worth spending ten to twenty minutes just messing around.
+
+
