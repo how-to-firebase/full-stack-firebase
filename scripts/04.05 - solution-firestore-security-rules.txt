@@ -1,0 +1,245 @@
+We've covered Firestore queries and Firestore's create, update and delete methods.
+
+So we can manage Firestore data pretty well...
+
+...however, our database is still in test mode...
+
+...and test mode is entirely insecure and worthless for production use.
+
+So let's graduate to a secure, production-worthy database.
+
+We'll be doing all of this work in a top-level file named `firestore dot rules`.
+
+Let's be frank about security rules: they're tough to write and nearly impossible to test.
+
+Firebase products have a fantastic developer experience in every aspect except for security rules.
+
+That's not to say that security rules don't work...
+
+...because they are very powerful and enable fully secure and production-worthy apps.
+
+It's just that you need to read the docs a lot more carefully than you probably want to...
+
+...and if you're not careful with the design of your data structure...
+
+...it's entirely possible to design a data structure that cannot be secured.
+
+We've taken the time to read and understand the security rules...
+
+...and we'll do our best to ease your pain in the next few minutes.
+
+So let's talk through the structure of a security rules file.
+
+First off is the service designation, in this case `cloud dot firestore`.
+
+This means that all subsequent rules will apply to `cloud firestore`.
+
+Next we have a `match` statement.
+
+`match` statements use strings, slashes and wildcards to match objects.
+
+`match` statements can be nested if you like... or you can write them all at the top-level.
+
+It's usually best to write at least one level of nesting...
+
+...starting from `slash databases slash wildcard database slash documents`.
+
+This first `match` statement is a doozy, so let's talk it out.
+
+Firebase's security rules system needs to work for all existing and future Firebase services.
+
+We've already defined that we're writing rules for `cloud dot firestore`.
+
+Now we need to match all existing Firestore databases.
+
+But, you say, there's only one Firestore database!
+
+Well you're right, there's only one database... for now.
+
+But if the Firebase team decides to add multiple Firestore databases...
+
+...they'll need this match statement to make it work.
+
+So they've designed security rules defensively with an eye toward the future.
+
+So now that we've told Firestore that our rules are meant to apply to all Firestore databases...
+
+...we'll nest the rest of our rules within this first `match` block...
+
+...to ensure that all subsequent rules will apply to all Firestore databases.
+
+So let's write our first security rule.
+
+We'll start by defining a new `match` block to scope our rule to all `users` objects.
+
+Note, our `users` objects don't exist in the DB yet... but they will soon.
+
+So let's match `slash users slash wildcard uid`.
+
+Notice that a wildcard is just part of a path that's been surrounded with curly braces.
+
+The wildcard is available within the rule so that we can perform operations with it.
+
+In this case, we're going to match all user objects, and we're calling each user key the `uid`.
+
+Note that wildcard names are entirely arbitrary. 
+
+Instead of `uid`, we could have used `gelato` and referred to the user's uid as `gelato`.
+
+We love to each gelato as much as all living humans...
+
+...but let's name our wildcards like good developers and make our security rules readable.
+
+Now that we have a new `match` block, it's time for our read and write rules.
+
+Firestore supports rules for read, write and create.
+
+The rules default to denying access, so if you don't specify a `read` rule...
+
+...then nobody can read your document!
+
+We're going to be managing our `users` objects with a Cloud Function, so they'll be read-only.
+
+That makes this rule easy. 
+
+We'll grant `read` access if the `request dot auth dot uid` equals our `uid` wildcard.
+
+So what's that `request` object you ask?
+
+Well, security rules have access to a request object and a resource object.
+
+You will one hundred percent need to read the docs to understand the attributes of these objects.
+
+We're going to gloss over them here, because they have a bunch of attributes...
+
+...so read those docs as needed to craft your security rules.
+
+Now that we've granted read access to our users objects, let's lock down our notes objects.
+
+These rules are more complicated, because we're attempting to share notes with collaborators.
+
+So let's scroll past the three functions and check out our `match` block.
+
+We've left this `match` block in place because we don't want to torture you.
+
+It matches all notes with `noteId` as the wildcard name for each note key.
+
+Then it breaks out four rules: read, update, delete and create.
+
+Most rules blocks include read and write rules, but we've broken our write rules up.
+
+Write rules can be subdivided into `update`, `delete` and `create` rules...
+
+...and that will be critical for this match block.
+
+See, we want owners and collaborators to be able to read and update notes...
+
+...but we only want owners to be able to delete notes...
+
+...and if you attempt to create a note, the note's `owner` attribute had better match your `uid`!
+
+If we don't enforce that the `owner` attribute matches the `uid`...
+
+...then users could potentially create notes for other users...
+
+...which would be horrible security.
+
+Now notice how these rules call the functions `isOwner`, `isCollaborator` and `isOwnerRequest`?
+
+Let's write the three functions.
+
+First up, `isOwner`.
+
+We need to ensure that the user's uid from Firebase Authentication matches the note's owner field.
+
+We accomplish that with `request dot auth dot uid` and `resource dot data dot owner`.
+
+The request object gives us access to the user's JWT under `request dot auth`...
+
+...and the resource object gives us access to the data node under `resource dot data`.
+
+We merely enforce equality between these two fields and we're done!
+
+Next, let's address `isOwnerRequest`.
+
+We need to ensure that the auth uid equals the owner field on the requested write data.
+
+This is a little trickier, because it chains off of `request dot resource`.
+
+That's because we're looking at the data that's attempting to be created.
+
+The data that's being written is available under `request dot resource dot data`...
+
+...and we want to make sure that the user is setting the `owner` attribute appropriately.
+
+So we enforce that the `owner` attribute equals the auth uid, and we're done.
+
+And now for the tricky part... `isCollaborator`.
+
+We'll be honest.
+
+We spent a long time thinking this one through and reading the docs to craft this function.
+
+We need to make sure that the user's `emailSlug` exists in the note's `collaborators` object.
+
+We can't write security rules using a nested object's values... only the nested object's keys.
+
+This is a bit of a quirk that we found while reading the Firestore security rules docs.
+
+We did a bit of copy/paste from the docs to get this rule, so we'll copy/paste again and review it.
+
+First, we have a `get` function that allows us to traverse the Firestore database.
+
+So we'll traverse down to our user object using `request dot auth dot uid`...
+
+...then we'll pull off `data dot emailSlug`.
+
+This means that we'll have to save an `emailSlug` attribute under each user object...
+
+...but that will be easy to do.
+
+Next, we use the 'in' operator to ensure that the `emailSlug` exists in the `collaborators` object.
+
+We pull collaborators off of `resource dot data` and that's it.
+
+We should emphasize that we poured over the docs to figure out this rule.
+
+In fact, we poured over the docs before designing this data structure...
+
+...because we had no idea how we could share notes securely.
+
+Fortunately, the Firestore team foresaw our needs and built this into the security rules framework.
+
+But we never would have known this if we hadn't read the docs carefully.
+
+Moving on...
+
+...now that we have our security rules written, we need to deploy them.
+
+So jump to your terminal and type `firebase deploy dash dash only firestore`.
+
+This operation will deploy the contents of `firestore dot rules`.
+
+So we'll run that deploy and check our Firebase console to make sure that the rules deployed.
+
+And we'll run some manual checks to make sure that we can still read, write and create notes.
+
+As we said before, security rules are tough to write and tough to test.
+
+We arrived at these rules through trial and error...
+
+...which is an admittedly lousy process.
+
+We can imagine ways to test security rules programmatically with integration testing;
+
+however, on this app we skated by with manual testing once again.
+
+Thanks for staying strong and enduring security rules with us.
+
+This is a lot to digest, so maybe take a break, read the security rules docs...
+
+..and come back when you're ready for more Firebase!
+
+
+
+
