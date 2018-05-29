@@ -1,0 +1,75 @@
+Welcome back! 
+
+If you've followed these lessons sequentially, then you recently survived Firestore security rules.
+
+So congratulations for that feat of patience and long-suffering.
+
+Thankfully, our next topic is significantly less masochistic.
+
+We'll be wiring up our demo app to use the Realtime Database, also known as the RTDB.
+
+As we've mentioned before, the RTDB has been overshadowed by Firestore, so we use it sparingly.
+
+In the demo app, we're using it to queue up jobs for Cloud Functions.
+
+The RTDB is super cheap to use for this type of application. 
+
+The bandwidth required to create a job queue is minimal, so our fees will be minimal too.
+
+All we want to do is to write users' secure tokens to a sort of write-only dropbox endpoint.
+
+We've decided to call this endpoint `userWriteable slash userTokens slash uid`.
+
+We're going to write users' idTokens from Firebase Authentication...
+
+...and we're going to piggy back on this queue to write our Firebase Messaging tokens as well.
+
+We haven't written the Firebase Messaging code yet...
+
+...but we will have to pass secure tokens from Firebase Messaging on the client to our server...
+
+...and since that needs to be a secure operation, we'll do it with a Cloud Function.
+
+So let's write the code.
+
+Search for `challenge realtime db` or use your file browser.
+
+Open up `src slash database slash set dash user dash tokens dot js`.
+
+You'll want to read the docs and follow the prompt.
+
+This will teach you how to write data to the Realtime Database.
+
+This app doesn't read data from the RTDB, so we won't be covering that.
+
+While writing your data, you may get errors due to misconfigured security rules.
+
+You'll need to set your RTDB security rules anyway, so open up `database dot rules dot json`.
+
+You'll see a prompt to write your first security rule for the RTDB.
+
+Go ahead and follow that prompt, and you should be able to write data up to the RTDB.
+
+The demo app is configured to write `userTokens` up to the RTDB every time a user logs in.
+
+Firebase Authentication will automatically log you in when you reload the page...
+
+...so you can trigger write attempts by simply reloading the page.
+
+Once you've either successfully written your data or spent more than about a half hour on this...
+
+...jump to the solutions video to check your work.
+
+There's no point in getting hung up if this challenge proves tricky.
+
+We're not spending a ton of time on the RTDB...
+
+...and our primary objective is simply to understand what it does.
+
+If you know what it does, you'll be able to read the docs and figure the rest out.
+
+The hardest part is usually understanding how the pieces of the Firebase puzzle fit together.
+
+Actually assembling the pieces is made doable with Firebase's excellent docs.
+
+

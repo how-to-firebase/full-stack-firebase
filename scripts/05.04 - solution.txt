@@ -1,0 +1,129 @@
+Now that you've taken a crack at writing some RTDB code, let's review.
+
+Open up `src slash database slash set dash user dash tokens dot js`.
+
+We first create a `userTokensRef` by chaining off of `environment dot firebaseRoot`.
+
+We like to include a `firebaseRoot` variable at the bottom level of our RTDB objects.
+
+This allows us to host multiple apps on the same RTDB database without conflicting;
+
+however, this is just our preference. 
+
+It's probably not even a best practice... we've just done this for years and like the pattern.
+
+So now that we have our `userTokensRef`, let's create our cleaned-up `userTokens` object.
+
+`userTokens` needs two tokens, the `idToken` and the `messagingToken`.
+
+`messagingToken` is likely missing, so we'll pass this object through `omitEmptyValues`.
+
+`omitEmptyValues` is a utility function that we like to use with the RTDB.
+
+See, the RTDB HATES undefined values.
+
+RTDB data is meant to be sparse, meaning that you don't save a key if there's no value for it.
+
+So the RTDB will throw errors at you if you attempt to save an undefined value.
+
+We use our `omitEmptyValues` utility function to clean up our RTDB objects before writing them.
+
+So pass the `userTokens` object through `omitEmptyValues`...
+
+...and pass the result through to `userTokensRef dot set`.
+
+And this code should be complete.
+
+Now make sure your local server is running with `yarn start` and log in or reload the page.
+
+If this code runs correctly, you'll see a new object written to your Realtime DB.
+
+Now what about security rules?
+
+Firestore has security rules, and the Realtime DB has them too.
+
+So let's open up `database dot rules dot json` to secure our RTDB.
+
+The RTDB uses Firebase's legacy security rules framework.
+
+The old security rules are based off a JSON object with a `rules` attribute at its root.
+
+You'll nest attributes under `rules` to match your data structure. 
+
+This is another situation where reading the docs is critical.
+
+So make sure to comb through the security rules docs before trying to ship RTDB code to production.
+
+We'll be moving quickly with some basic rules.
+
+First, we needs to create some nesting in the JSON structure to match our data structure.
+
+RTDB security rules use a dollar sign to indicate wildcard attributes...
+
+...so we'll nest `dollar environment`, `userWriteable`, `dollar objectType`, and `dollar uid`.
+
+This can be the most perplexing part of RTDB security rules, so let's stop to review.
+
+`dollar environment` will correspond to the base node in our data structure...
+
+...in this case it's the string 'development', but it could be 'test' or 'production'.
+
+Next, we have a hard-coded string, `userWriteable`.
+
+`userWriteable` is not a wildcard.
+
+It's a hard-coded path.
+
+Next we have `dollar objectType`.
+
+We're using an `objectType` wildcard here so that we don't have to write extra rules.
+
+The beauty here is that we're creating a sort of 'dropbox' under `userWriteable`.
+
+We're going to be writing `userTokens` right now, but in the future we could write anything.
+
+Instead of `userTokens`, we could write `outgoingSMS` or `notificationsToSend`... 
+
+...it's really arbitrary.
+
+As long as the `objectType` is nested under `userWriteable`, the rules will apply.
+
+After `dollar objectType` we have the most important node, `dollar uid`.
+
+`dollar uid` will be required under `dollar objectType`, and we'll write our security rule using it.
+
+So let's create a `dot write` rule to verify that `auth dot uid` equals `dollar uid`.
+
+The affect of this rule is that users can only write to their own nodes.
+
+They can write to any `objectType`... but they have to write with a matching uid.
+
+A lousy hacker could write a bunch of garbage data, but we'd see and delete it.
+
+And the hacker couldn't write data for other users due to the `auth dot uid` rule.
+
+Note that we're just writing a `dot write` rule. 
+
+We could have written a `dot read` rule as well, but it would have been hard-coded to false.
+
+Also note that we have access to the user's JWT through the `auth` variable.
+
+So we can use `auth dot uid` and compare it to the `uid` wildcard in our `dot write` rule.
+
+So let's deploy our rules.
+
+Check your `dot firebaserc` file to make sure that you're not deploying to `firelist dash react`.
+
+Make sure that you have your own project ID under the `default` attribute.
+
+Once you're sure of that, open your terminal and run `firebase deploy dash dash only database`.
+
+You should see your security rules deploy up to your Firebase console, so check the console.
+
+If those rules match, reload your localhost app again to make sure that your data is writing.
+
+You should be able to delete your `userTokens` object manually and reset it by reloading the app.
+
+Our app-specific logic is writing our `userTokens` every time a user logs in or reloads the page.
+
+Your `userTokens` are now flowing up to the RTDB, and you're ready to write some Cloud Functions!
