@@ -216,13 +216,23 @@ Moving on...
 
 ...now that we have our security rules written, we need to deploy them.
 
-So jump to your terminal and type `firebase deploy dash dash only firestore`.
+And to deploy Firebase, we need to edit a top-level file named `dot firebaserc`.
+
+`dot firebaserc` controls which Firebase project the Firebase CLI deploys to.
+
+You don't want to deploy to the `firelist-react` project...
+
+...you want to deploy to your own project.
+
+In this case, I'll replace the `default` key with my demo project's ID. 
+
+Now jump to your terminal and type `firebase deploy dash dash only firestore`.
 
 This operation will deploy the contents of `firestore dot rules`.
 
 So we'll run that deploy and check our Firebase console to make sure that the rules deployed.
 
-And we'll run some manual checks to make sure that we can still read, write and create notes.
+And we'll run manual checks to make sure that we can still read, update, create and delete notes.
 
 As we said before, security rules are tough to write and tough to test.
 
