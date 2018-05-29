@@ -6,7 +6,7 @@ You'll open up `public slash index dot html` and make a copy of the script tag o
 
 Simply paste that line down to line 25 and change the filename to `firebase dash firestore dot js`.
 
-Make sure that your local server is running with `yarn start`, then hit your local app on localhost.
+Make sure that your local server is running with `yarn start`, then open your app on localhost.
 
 Open up the DevTools console and type `firebase dot firestore` and `enter`.
 
@@ -32,9 +32,9 @@ Now let's query our notes with `src slash database slash get dash notes dash obs
 
 We'll need to define the `notesCollection` again, so do that after the first prompt.
 
-After the second prompts, use a `where clause` on `notesCollection`...
+After the second prompt, use a `where clause` on `notesCollection`...
 
-...to query records where the `owner` attribute equals the `uid` variable from line 13.
+...to query records where the `owner` attribute equals the `uid` from the function argument.
 
 Then start the onSnapshot listener and pass all resulting snapshots into the `mapDocs` function.
 
@@ -46,7 +46,7 @@ The last part of wiring up an observable is to return an `unsubscribe` function.
 
 Fortunately, Firestore's onSnapshot function returns an `unsubscribe` function...
 
-...so we can simple return that function so that our observable can unsubscribe.
+...so we can simply return that function so that our observable can unsubscribe.
 
 Check out `src slash store slash notes dot js` lines 29 and 46 to see this observable in action.
 
@@ -56,7 +56,7 @@ You might want to set up some debugging using `console dot table` to read out th
 
 You should see the note that you created in the previous step.
 
-But if you try clicking through the note's detail view, it the app will crash horribly.
+But if you try clicking through to the note's detail view, the app will crash horribly.
 
 So let's fill out `src slash database slash get dash note dash observable dot js`.
 
@@ -88,9 +88,9 @@ Again, define 'notesCollection', and after the second prompt, define `docRef` as
 
 Now call `docRef dot update` and pass in the `cleanUpdates` variable.
 
-Now jump back to your localhost app and try making an update to your note.
+Jump back to your localhost app and try making an update to your note.
 
-You may need to refresh the page a couple of time, but you should be able to update notes.
+Again, you may need to refresh the page a couple of times, but you should be able to update notes.
 
 Finally, let's remove our note.
 
@@ -100,9 +100,129 @@ Now define `docRef` after the second prompt and then call `docRef dot delete`.
 
 Now try deleting your note... and it should be gone!
 
+At this point we can work on notes that we own.
 
+If we jump back to `getNotesObservable`, notice the `where` clause that limits the query.
 
+We're only querying notes for which we are the owner.
 
+What about notes that have been shared with us?
+
+Firestore doesn't do joins or compound `OR`-style `where` clauses like SQL...
+
+...so we need a second query to grab notes belonging to our collaborators.
+
+Open up `src slash database slash get dash collaborative dash notes dash observable dot js`.
+
+This query will be very similar to `getNotesObservable`;
+
+however, we'll be using a very different `where` clause.
+
+So define `notesCollection` as before, then jump to the second prompt and write a `where` clause.
+
+But this time, we're going to use a fancy `where` clause with a dot operator in it.
+
+This is a very powerful feature of Firestore.
+
+Firestore enables us to query based on the keys that exist in an embedded object.
+
+This trick doesn't work for embedded arrays or sub-collections...
+
+...so we've been very careful to include the important data in an embedded object.
+
+To see how this looks, let's share a note with a random user and check out the database.
+
+Make sure that your server is running with `yarn start`, and then edit a note to add a collaborator.
+
+Now let's check out the database. 
+
+Notice how our note has a `collaborators` object within it...
+
+...and the slugified email is included as a key in that object.
+
+So let's jump back to `getCollaborativeNotesObservable` and finish that `where` clause.
+
+We already have `collaboratorPath` and `lowercaseEmail` defined as variables...
+
+...so we'll build out our where clause around those two values.
+
+Firestore is designed very specifically to support this sort of deep `where` clause...
+
+...so this works great with the security rules that we'll write later.
+
+For now, just finish this query out as before with a call to `onSnapshot`...
+
+...and pass the snapshot's docs through `mapDocs` and pass the result to `observer dot next`.
+
+Don't forget to return the `unsubscribe` method...
+
+...and we're done with this query!
+
+We'll test this query by sharing a note with our other Google accounts.
+
+We'll log out and log back in under a different Google account...
+
+...and we'll see the shared note on our main `notes` view!
+
+We're almost done with the Firestore solutions, so hang in there for a few more minutes!
+
+We haven't written the Cloud Function to manage user objects quite yet...
+
+...but we're going to have user objects, and we'll need to query them, so let's set that up.
+
+Go to `src slash database slash get dash user dash observable dash js` to get started.
+
+We'll start by defining a `usersCollection` reference.
+
+It's the same as before, but we're referring to the `users` collections instead of `notes`.
+
+Then we'll create a `docRef` under the next prompt that refers to our user by `uid`.
+
+And finally, we'll register an `onSnapshot` listener, pass the result through `formatDoc`...
+
+...and pass the formatted doc out through `observer dot next`.
+
+Again, we need to return the `unsubscribe` method so our observable's consumer can unsubscribe.
+
+This is going to be hard to test right now, because we don't have our user objects quite yet...
+
+...so trust the process and know that we'll get this sorted out soon.
+
+In the meantime, we need to cover one more topic before moving on.
+
+Check out 'src slash utilities slash delete dash empty dash values dot js`.
+
+Line 2 is of particular interest.
+
+Firestore has a very specific method of deleting a single field in an update statement.
+
+We need to assign that field to the result of `firebase dot firestore dot FieldValue dot delete`.
+
+So any time that we want to delete fields, we need to look through the update objects...
+
+...and re-assign empty or null fields to this special `FieldValue dot delete` value.
+
+It's a common enough issue that we've created two utility functions...
+
+...`deleteEmptyValues` and `deleteFalsyValues`...
+
+...both of which walk through objects and set the delete value.
+
+In one part of the app we needed to delete just the empty values...
+
+...and in another part we needed to delete all falsy values...
+
+...so each of these utility functions is really app-specific logic;
+
+however, the `FieldValue dot delete` trick is common to all Firestore apps...
+
+...so we need to at least call it out, even if we don't dive into the app-specific code.
+
+We're done with Firestore's queries for now...
+
+...so stay tuned for our next section on security rules.
+
+Your app will be helpless without it!
 
 
 
