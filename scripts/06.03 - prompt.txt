@@ -1,0 +1,175 @@
+It's time to get our hands dirty with some Cloud Functions for Firebase!
+
+This is one of the most valuable parts of this course.
+
+We've carefully built up a test-driven development process for Cloud Functions...
+
+...and we're excited to share it with you.
+
+Test-driven development, also known as TDD, means that we start each new feature with a test...
+
+...then we code the feature until the test passes...
+
+...and we write another test, code some more, and so on.
+
+We lead with automated tests and thereby can maintain great test coverage and speed our development.
+
+TDD is critical for developing Cloud Functions, because our code executes in a remote environment.
+
+We don't have the easy developer experience of working on a website with a localhost server.
+
+We have to develop our Cloud Functions code carefully, because each deploy is time-consuming...
+
+...and we don't get great feedback on how our code is behaving in the Cloud Functions environment...
+
+...so our code should be as hardened as possible before shipping it off to Cloud Functions.
+
+The first step to developing Cloud Functions is to install the correct version of Node.
+
+At the time of this recording, Cloud Functions runs Node version `six point fourteen point zero`.
+
+Since this is an older version of Node, we'll install a system-level package named `nvm`...
+
+...which stands for `node version manager`... 
+
+...to manage our node versions.
+
+The easiest way to install NVM is to search it up on Bing and run through the install process.
+
+I've installed NVM for Windows, so I'll demo using it.
+
+Open up any new terminal and type `nvm install six point fourteen point zero`
+
+Now type `nvm use six point fourteen point zero` to use to the older version of Node.
+
+Run `node dash dash version` to confirm that you're on version 6.14.0
+
+Now try `nvm list` to see your available node versions.
+
+We usually run the highest currently available long-term support version of Node...
+
+...so I'll regularly switch between 8.11.2 and 6.14.0 while working on Cloud Functions.
+
+So make sure you're on 6.14.0 and let's keep moving.
+
+The second step in developing Cloud Functions is to create a folder in your repo named 'functions'.
+
+Then you'll need to install two packages with yarn or npm...
+
+...`firebase dash admin` and `firebase dash functions`.
+
+Next you'll create and `index dot js` file and import firebase admin and firebase functions.
+
+But this stuff is easy, so we're going to focus on the tricky stuff, namely, developing functions.
+
+Before you get started, you'll need to run `git checkout challenge dash functions`.
+
+Once again, you'll need to make certain that your `dot firebaserc` file refers to your project...
+
+...and you'll want to check that your `public slash environments` files are updated as well.
+
+But since we're working in Functions now, we have more environment variables to handle...
+
+...and we'll need a service account.
+
+Open up `functions slash environments` and review two files...
+
+...`environments dot dev dot json` and `environments dot json`.
+
+These two files each have three references to `firelist dash react`.
+
+You'll need to swap out these references with references to your own project.
+
+This is absolutely critical, or your Functions will malfunction horribly.
+
+Once BOTH environment files are updated, you'll need to generate a service account.
+
+Service accounts enable us to use Firebase and Google Cloud Platform services as administrators.
+
+We'll need admin rights for our tests and for generating image thumbnails...
+
+...so let's get ourselves a service account.
+
+We'll start off on our Firebase console and click the gears button, then project settings...
+
+...and finally we'll navigate to the Service Accounts tab.
+
+We'll generate a new service account key for the Firebase Admin SDK by clicking the big blue button.
+
+The service account file will download to our local downloads folder...
+
+...so we'll need to copy it into a new file at `functions slash service dash account dot json`.
+
+You'll need to guard this service account file carefully...
+
+...because it grants admin access to Firebase and Google Cloud Platform.
+
+Once you have your service account file correctly established...
+
+...make sure that you've `cd`ed into your functions directory...
+
+...then run `yarn` to install your dependencies.
+
+This will create a new `node_modules` folder within the `functions` folder.
+
+Note that your dependencies must be installed while running Node version 6.14.0.
+
+Now, while inside the `functions` directory, run `yarn test` to fire off your tests.
+
+You should have a ton of failures.
+
+We'll troubleshoot one of those failures now, but the rest will be up to you!
+
+Type `control c` to cancel our test suite and then type `yarn test thumbnails`.
+
+We're using a test package named Jest, which accepts search arguments to run subsets of your tests.
+
+In this case, we want to run just the 'thumbnails' tests, so we type `yarn test thumbnails`.
+
+Later on you may want to execute just `notes dash on dash update dot spec dot js`...
+
+...so you'll run `yarn test notes`...
+
+...and Jest will search for any specs files with the text `notes` in their filenames.
+
+So let's test just the test files with `thumbnails` in their filenames with `yarn test thumbnails`.
+
+Everything went wrong and our tests failed.
+
+So let's scroll up a bit and look for an error message.
+
+Notice that we have an ApiError indicating that we don't have the correct permissions?
+
+We can fix that. 
+
+First, let's enable storage by going to our Firebase Console's Storage page and enabling it.
+
+Once Storage is enabled, try running the tests again.
+ 
+If the tests don't pass then read the errors and troubleshoot...
+
+...but they ought to pass at this point.
+
+From here on out you'll want to follow challenges in order.
+
+Search the codebase for `challenge functions` and you should see six numbered challenges.
+
+Challenges one through three are all challenges that you can complete yourself.
+
+Challenges four through six are completed for you because the code is so tricky...
+
+...however, you'll likely want to spend some time to read through these last three challenges.
+
+And if you succeed in getting all of the tests to pass, consider attempting a deploy.
+
+You can deploy by `cd`ing up to your main directory and running `yarn deploy colon functions`.
+
+You can then test the functions by uploading images to notes in your running localhost app...
+
+...and watching your Functions logs on the Firebase Console to see them succeed or fail.
+
+
+
+
+
+
