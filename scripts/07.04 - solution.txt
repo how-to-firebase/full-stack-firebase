@@ -1,0 +1,25 @@
+Firebase Storage is one of our favorite Firebase features.
+
+It's so easy to use and so powerful.
+
+It's really not fair to all of the other storage providers out there.
+
+So let's start by serving up our localhost app with `yarn start`.
+
+Once we're up and running, let's create a note and attempt to upload an image to it.
+
+Nothing will happen... becuase we haven't completed the challenge code yet!
+
+So let's get started in `src slash storage slash get dash upload dash observable dot js`.
+
+We'll start out by defining our file ref with `storage dot ref`.
+
+We'll pass the `path` variable in as our base ref, then call `dot child` with `file dot name`.
+
+This lets use chain our way to a successful file path.
+
+We could have created a concatentated string and just used a single `storage dot ref` call...
+
+...but using `dot child` can lead to cleaner reading code.
+
+

@@ -1,0 +1,63 @@
+Let's write some Firebase Storage code!
+
+But first, we need to make sure that our Cloud Functions are all deployed correctly.
+
+So checkout the `challenge dash storage` branch with `git checkout challenge dash storage`.
+
+If you have changes in your repo that are not environment files...
+
+...then you're about to have merge conflicts.
+
+So let's remove all of those non-environment changes.
+
+Run `git status` to see your change set.
+
+If you're following along in VSCode, you can use the Git tab to do this manually.
+
+You can reset each file individually in VSCode...
+
+...or you can do bulk checkout operations in your terminal.
+
+If you just finished with the Cloud Functions module, use `git checkout functions slash src`....
+
+...to restore your functions source files without messing up your environment files.
+
+Once your changeset is just your environment files, go ahead and check out `challenge dash storage`,
+
+And just to be certain that your Cloud Functions are in good order...
+
+...let's run `yarn deploy colon functions` to get a fresh Functions deploy.
+
+This may take a few seconds....
+
+...and once it's done...
+
+...search the codebase for `challenge storage` to find the two challenge files.
+
+We'll start with `src slash storage slash get dash upload dash observable dot js`.
+
+This is vanilla Firebase Storage code wrapped in an RxJs observable...
+
+...much like we did in our earlier Firestore challenges.
+
+So follow the instructions and you'll soon be able to upload files from your localhost app.
+
+Next let's navigate to `src slash storage slash delete dash image dot js`.
+
+This one's even easier than the last challenge.
+
+The answer is a one-liner that will delete files from your Cloud Storage bucket.
+
+Once that's done, you'll be able to delete your uploads from the localhost app.
+
+If you get stuck or aren't done within about half an hour, just jump to the solution.
+
+But make sure to read the docs and let yourself struggle a bit.
+
+Learning how to debug these sorts of systems is critical to being a great programmers...
+
+...and it's critical to continuing on with Firebase on your own.
+
+
+
+

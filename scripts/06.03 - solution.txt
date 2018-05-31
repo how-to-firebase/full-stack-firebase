@@ -1,0 +1,296 @@
+Cloud Functions is a NOT for the faint of heart.
+
+And our test-driven development methods for Cloud Functions are complex...
+
+...but they're the best solution we've found after months of experimentation...
+
+...so buckle up and get ready for some test-driven development!
+
+The first challenge is to complete `userTokensOnCreate`, so we'll run `yarn test user dash tokens`.
+
+Jest will search the existing specs files for `user dash tokens` and find our userTokens spec file.
+
+So let's open up up both `functions slash src slash user dash tokens dash on dash create dot js`...
+
+...and the prompt tells us to verify the `idToken` and use it to set the user object.
+
+The first thing to remember about a Cloud Function is that we must always return a promise...
+
+...so we'll call `admin dot auth` and then `verifyIdToken`, making sure to return the result.
+
+And since `verifyIdToken` returns a promise, we'll chain off of it with a `dot then` callback.
+
+`verifyIdToken` returns a decoded token in the `dot then`, which we'll pass into `getUserObject`...
+
+...to get the userObject.
+
+Now we need to call `userRef dot set` with the `userObject` that we just made.
+
+And we can't forget to return the promise from `userRef dot set` to continue the promise chain.
+
+So let's save the file and watch the test run...
+
+...and it fails!
+
+But why does it fail?
+
+It looks like we have two failures.
+
+First, the set call didn't include the `merge true` option, so we can fix that and run the tests...
+
+...and we're down to just one failure. 
+
+It looks like we forgot to remove the queue item's ref, so let's do that in another `dot then`.
+
+We have access to the queue item's ref with `snapshot dot ref`, so we just call `remove`...
+
+...and we're passing all of our tests!
+
+That's an example of a red/green development cycle.
+
+The complexity is built into the tests...
+
+...which you can see in `user dash tokens dash on dash create dot spec dot js`
+
+But let's not dive into that right now...
+
+...because we need to complete the second challenge!
+
+Challenge number two is in `functions slash src slash uploads dash on dash finalize dot js`.
+
+So let's run `yarn test uploads dash on dash finalize` to run just the relevant tests...
+
+...and we can see that our test fails as expected.
+
+So let's read the instructions carefully.
+
+First we need to get the `noteRef` record and pull off the images attribute, so let's do that.
+
+We'll need the `noteRef`, and we can use the pattern in the prompts to get that...
+
+...with `db dot collection` using `collections dot notes` and then `dot doc` with `noteId`.
+
+Then we need to call `dot get` to get the `noteRef`'s existing record.
+
+`dot get` begins a promise chain, so we'll assign the result to the `promise` variable.
+
+Remember that we must always return a promise from a Cloud Function.
+
+Next we'll pull off the `noteRef`'s data with `doc dot data` to return the note object.
+
+The note may be empty, so we'll need to do a quick null-check...
+
+...otherwise, we'll need an empty object.
+
+The next step tells us to add the uploaded image record to the images object...
+
+...with the md5Hash as the key and a very specific data shape.
+
+So we'll do that with a one-liner.
+
+The next instruction indicates that we should set the `images` attribute on `noteRef`...
+
+...and we shouldn't forget the `merge true` option to make this an upsert.
+
+Now let's save the file so that our Jest watcher runs the tests...
+
+...and they're still failing!
+
+It looks like the test is calling `uploadsOnFinalize` with the event and expecting a `noteRef`.
+
+And if we read the next instruction, we'll see that we need to return the `noteRef`...
+
+...not because the Cloud Function needs it, but for testing purposes!
+
+So let's do that, save the file and watch our tests pass.
+
+Now why on Earth would we write code specifically for tests?
+
+There are definitely ways to write tests that don't require this sort of trick;
+
+however, we're happy to modify our code to make testing easier.
+
+Testing can be very difficult.
+
+In many cases, test code is much more challenging than the original code being tested...
+
+...so we shouldn't be shy about making code changes that make testing easier to accomplish.
+
+Testing is a first-class activity.
+
+Testing is in no way inferior to writing original features...
+
+...because code without tests will not be maintainable and will be rewritten within a few years.
+
+Anyway, let's move on to challenge number three...
+
+...which can be found in `functions slash src slash uploads dash on dash delete dot js`
+
+We'll run our tests with `yarn test uploads dash on dash delete`...
+
+...and we have our expected failure, so let's read some instructions and write some code!
+
+It looks like we need a `noteRef` again, so that's easy enough.
+
+Now we're going to need a transaction.
+
+What's a transaction you ask? 
+
+Well, sometimes we need to execute multiple operations at once without interference.
+
+Remember that your data is live and can change quite a bit as your asynchronous code runs...
+
+...so we use transactions to batch a bunch of reads and writes into a single, atomic operation.
+
+So we'll call `db dot runTransaction` to start a new transaction.
+
+The best way to use a transaction is to return its promise chain directly...
+
+...so we'll return `t dot get` with `noteRef` as the argument to start our promise chain.
+
+Transaction objects have similar functions to refs, except that they take refs as arguments.
+
+So we call `t dot get noteRef` to run a `get` operation on the `noteRef`...
+
+...and we continue our promise chain from there.
+
+So all we need is to call `doc dot data` from the noteRef's doc to get the note object...
+
+...then we delete the image by its md5Hash and call `t dot update`.
+
+Notice that `t dot update` takes the `noteRef` as its first argument...
+
+...and the updated values as the second argument?
+
+Transaction operations are like that...
+
+...they move all of the arguments one place to the right to make room for the ref argument.
+
+Anyway, if we run the tests now, they fail...
+
+...because we haven't returned the `noteRef` as requested.
+
+So let's do that now, being mindful chain off of the END of the `runTransaction` call.
+
+Once that's done, our tests pass and we're good!
+
+A quick side note... 
+
+...the `uploadsOnDelete` test is a bit flaky.
+
+These are integration tests and make writes and reads to Firestore, and they're tough to get right.
+
+`uploadsOnDelete` works great when run in isolation, but it often fails when run with other tests.
+
+Moving on...
+
+...let's talk about challenges four through six.
+
+Challenge number four is the worst.
+
+This code took hours and hours for us to get right, so do not waste time trying to read it quickly.
+
+However, if you want some hardcore thumbnail creation, this function does it very well.
+
+Challenge five is an example of handling the `onUpdate` Cloud Functions event for Firestore.
+
+The code for challenge five is almost entirely application-specific...
+
+...so we don't want to waste time with it...
+
+...but it's great to see how `onUpate` events look and what can be done with them.
+
+In this case, we're responding to changes in our note collaborators objects.
+
+We're identifying collaborators that have been added or removed...
+
+...and we're sending Firebase Cloud Messages to the added or removed collaborators.
+
+If you scroll down you'll see a Cloud Messaging challenge the we'll look through later.
+
+And finally, challenge number six is the crux of our entire Cloud Functions architecture.
+
+We don't want to waste time rewriting this code...
+
+...but we need to understand it in depth.
+
+You'll notice that each of the functions that we've worked on is really a higher-order function...
+
+...meaning that it takes context as an argument and returns the actual function that we need.
+
+So we've imported all of our higher-order functions, and we call them one by one with context.
+
+And then we attach the resulting functions to their corresponding Cloud Functions events.
+
+This system of higher-order functions makes our Cloud Functions testable.
+
+We haven't dug deep into the tests for this module, but they'd be much harder to write...
+
+...if we couldn't easily override our function context in our testing environment.
+
+In simpler language, we're passing production context in for production use...
+
+...and we're using testing context for our tests.
+
+Higher-order functions enable us to inject our dependencies and testing becomes much easier.
+
+So now it's time to deploy our functions.
+
+It's not too difficult.
+
+Just run `cd` up to your main folder...
+
+...and run `yarn deploy colon functions` and wait patiently while they deploy.
+
+You may need to deploy a couple of times to push through any errors.
+
+Cloud Functions deploys can themselves be flaky.
+
+So be persistent until you get all green, successful deploys.
+
+You may need to do some debugging, read some docs or search your problem on the `bing dot com`...
+
+...just be persistent, because these Cloud Functions are critical to a successful demo app.
+
+In the worst case scenario, check out master and deploy Cloud Functions with the finished code. 
+
+And double and triple check that your `firebase rc` file, service account...
+
+...and all four environment files are updated with your project-specific details.
+
+It's so easy to accidentally deploy to the wrong project or deploy with the wrong environments.
+
+Once you think that you have a successful deploy, spin your your localhost app with `yarn start`...
+
+...and try logging in.
+
+You should be able to go to your Firebase console and see your `userTokensOnCreate` function logs...
+
+...and you should have a user object in your Firestore database.
+
+If you're having trouble getting your Function to fire, check the Realtime Database.
+
+It's possible that you have a hanging queue item.
+
+Remember that our `userTokensOnCreate` function only responds to creation of a record.
+
+If a record somehow gets orphaned between bad Functions deploys, then you'll need to delete it.
+
+Once you delete it, you can refresh your localhost app to recreate the queue item...
+
+...and if your function works correctly, it will create your user object and delete the queue item.
+
+If your user object is missing, you'll get Firestore errors permission errors...
+
+...because our Firestore security rules for collaborators rely on the Firestore user objects.
+
+All of these operations fit together like puzzle pieces. 
+
+We're building a complex system.
+
+It's as simple as we can make it, but it's still relatively complex...
+
+...so we have to understand the entire system to troubleshoot our errors.
+
+
+
