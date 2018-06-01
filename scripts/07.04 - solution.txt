@@ -8,7 +8,7 @@ So let's start by serving up our localhost app with `yarn start`.
 
 Once we're up and running, let's create a note and attempt to upload an image to it.
 
-Nothing will happen... becuase we haven't completed the challenge code yet!
+Nothing will happen... because we haven't completed the challenge code yet!
 
 So let's get started in `src slash storage slash get dash upload dash observable dot js`.
 
@@ -18,8 +18,74 @@ We'll pass the `path` variable in as our base ref, then call `dot child` with `f
 
 This lets use chain our way to a successful file path.
 
-We could have created a concatentated string and just used a single `storage dot ref` call...
+We could have created a concatenated string and just used a single `storage dot ref` call...
 
 ...but using `dot child` can lead to cleaner reading code.
+
+Now we'll define the `uploadTask` with `ref dot put` with the `file` as the argument.
+
+The `uploadTask` enables us to register a `state underscore changed` listener...
+
+...using `uploadTask dot on` with the first argument as `state underscore changed`.
+
+The next three arguments are all callback functions.
+
+The first will be our progress callback.
+
+We'll receive the snapshot, pass it through `getSnapshotProgress` to get a progress number...
+
+...and we'll call `observer dot next` with the progress value.
+
+The next callback is for any errors, which we'll pass through directly with `observer dot error`.
+
+And finally, the third callback is for completion and just needs a call to `observer dot complete`.
+
+And we're done with one small exception...
+
+...make sure to check your `public slash environments` files.
+
+If the `uploadPath` attribute in either file still refers to `firelist dash react`...
+
+...you'll need to change that reference to your own project.
+
+You'll need files to upload to a folder that has your project name in the path.
+
+Once that's confirmed, go ahead and upload a file using your localhost app!
+
+You'll know that the upload is complete when you see a trashcan icon in the corner of the image.
+
+Go ahead and check your Firebase Console's storage page to confirm that your upload made it.
+
+And maybe check your Functions page as well to see the logs and confirm that the Function fired.
+
+Once you have the upload feature working, let's write the delete code!
+
+Navigate to `src slash storage slash delete dash image dot js` and follow the prompt.
+
+This one's a piece of cake.
+
+We'll call `storage dot ref` with the `name` variable as the argument...
+
+Then we call `dot delete` off of the result, which should delete our image.
+
+Let's test it in the demo app.
+
+Click the delete button and you'll see the image grey out.
+
+This indicates that the Cloud Function is processing the delete action.
+
+Once the Cloud Function has processed the deletion, the image will disappear from your note.
+
+Check your Storage console and Functions console to confirm that it all executed correctly.
+
+You should now be able to upload and delete files as needed.
+
+Go ahead and test with a variety of image files.
+
+This isn't the most robust system, meaning that uploading bulk images won't work great...
+
+...we'd need to build some fancy upload queueing to accomplish that...
+
+...but this system covers the basics and enables us to upload and delete, which is all we need.
 
 

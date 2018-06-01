@@ -1,0 +1,94 @@
+It's time to implement our own Firebase Cloud Messaging system.
+
+It's not too difficult if we take each step carefully.
+
+So let's check out `challenge dash messaging` with `git checkout challenge dash messaging`.
+
+You'll likely need to remove your changes from prior modules, so run `git checkout src`...
+
+...which will reset all changes with the `src` folder.
+
+Run `git status` to confirm that your current change set is merely environment files.
+
+Once that's complete, go ahead and check out `challenge dash messaging` and we'll get to work.
+
+Search the codebase for `challenge messaging` to see the seven challenge prompts.
+
+We'll follow them in order.
+
+Let's get started with `src slash messaging slash get dash token dot js`.
+
+You'll need to review the docs from each challenge prompt, but it should be too difficult.
+
+The final challenge, number 7, doesn't require any coding...
+
+...but read the docs and understand the code referenced in the challenge...
+
+...as it will make your own implementation of this Firebase Cloud Messaging much easier.
+
+These challenges may take an hour or two, because you will need to read a bit and experiment.
+
+Frankly, the hardest part of this entire thing is the serviceWorker.
+
+You'll want to debug your service worker by opening Dev Tools in your localhost app.
+
+Go to the 'Application' tab and click the 'Service Workers' side tab.
+
+You can review the loaded service worker code by clicking the `sw dot js` link next to source.
+
+If we make a trivial change to the service worker and reload the page...
+
+...we need to return to the 'Application' tab and 'Service Workers' side tab to load the code.
+
+You'll likely see a `waiting to activate` message...
+
+...because service workers don't automatically update themselves.
+
+So click the `skipWaiting` link next to the orange `status` dot to load it immediately.
+
+Now you can click through to `sw dot js` to confirm that your code has changed.
+
+Once all of the challenges are complete...
+
+...you can trigger notifications by adding yourself as a collaborator.
+
+But first you'll need to go to your Account page by clicking the menu button on the top-left.
+
+Once on your account page, click the `activate notifications` button.
+
+If nothing happens, you may have already accepted or blocked site notifications...
+
+...in which case you'll want to click Chrome's page security button next to the URL field.
+
+Click the 'Site Settings' link at the bottom of the menu.
+
+The relevant preference is 'Notifications', which you'll want to be `ask default`.
+
+Once that's done, reload your page and try activating notifications again.
+
+Click 'Allow' to kick off a Cloud Function that sets the `messagingToken` user attribute.
+
+You can confirm that the attribute is set by going to your Firestore console and finding your user.
+
+Scroll down to check for a `messagingToken`. 
+
+It should be a long string that looks like gibberish.
+
+That's the token that Firebase Cloud Messaging uses to identify your browser for messages.
+
+Note that this token requires Cloud Functions to be working, so you could debug the Functions logs.
+
+Once you have a `messagingToken`, you'll notice that the text on your Account page changes.
+
+The button should now read 'deactivate notifications'.
+
+Now you can create or edit a note and add yourself as a collaborator.
+
+Just make sure to match your email address and you should get an alert from the bottom of the page.
+
+As always, check out the challenge solution if you're getting stuck...
+
+...and we'll see each other in the next video!
+
+
+

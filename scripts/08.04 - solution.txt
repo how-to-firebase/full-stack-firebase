@@ -1,0 +1,78 @@
+The first step in enabling Firebase Cloud Messaging is asking for the user's permission.
+
+We'll do that in `src slash messaging slash get dash token dot js`.
+
+The first step is simply to `await` a call to `messaging dot requestPermission`.
+
+The `requestPermission` call throws an error if it's denied...
+
+...which is why it's in a try/catch block.
+
+If `requestPermission` is allowed, then our next step is to call `messaging dot getToken`.
+
+Make sure to assign the value to `messagingToken`...
+
+...because the following `setUserTokens` call can needs a value for `messagingToken`.
+
+Next up is `src slash messaging slash remove dash token dot js`.
+
+This challenge is a one-liner.
+
+We just need to call `setUserTokens` with `messagingToken` equal to `false`.
+
+Once that's in place, we're ready to test the tokens in the browser.
+
+So jump to your localhost app and navigate to the Account page.
+
+Try activating and deactivating notifications.
+
+Each click of the button will push the `messagingToken` to the Realtime Database...
+
+...which will fire off the `userTokensOnCreate` Cloud Function.
+
+The delay between activation and deactivation is the time that the Cloud Function takes to execute.
+
+Now that we have control over our `messagingToken`, let's handle messages in the browser.
+
+Navigate to `src slash components slash messaging dot js` and we'll attack both challenges.
+
+First off, we need to listen to token refreshes.
+
+They're not common, but if the browser decides to refresh our token, we need to respond.
+
+So we'll call `this dot messaging dot onTokenRefresh` with `this dot getToken` as the callback.
+
+And we can't forget to assign the `unlisten` function to `this dot unlistenOnTokenRefresh`.
+
+We need to disable this listener when this React component unmounts.
+
+The next challenge isn't much more complicated.
+
+We're going to use `this dot messaging dot onMessage` and register a callback.
+
+The callback takes a payload and passes `payload dot data` in to `this dot showMessage`.
+
+And we need to assign the `unlisten` function to `this dot unlistenOnMessage`.
+
+We're not ready to test this yet, because we need our `serviceWorker` code to receive messages.
+
+So let's forge ahead by opening `public slash sw dot js`.
+
+
+
+TODO: Once the sw.js file is written, we can test the messages in the browser
+
+
+
+
+
+
+Now we can refresh our local app and start testing.
+
+We'll add our email address as a collaborator on a note and watch the bottom of the screen.
+
+It will take a few second for the Cloud Function to fire...
+
+...but we should soon have a popup from the bottom of the page.
+
+

@@ -68,6 +68,12 @@ Once again, you'll need to make certain that your `dot firebaserc` file refers t
 
 ...and you'll want to check that your `public slash environments` files are updated as well.
 
+Your `public slash environments` files have references to an `uploadPath`...
+
+...and that `uploadPath` needs to change from `firelist-react` to your own project id.
+
+If you don't do this, your uploads functions won't run correctly.
+
 But since we're working in Functions now, we have more environment variables to handle...
 
 ...and we'll need a service account.
@@ -150,7 +156,7 @@ If the tests don't pass then read the errors and troubleshoot...
 
 ...but they ought to pass at this point.
 
-From here on out you'll want to follow challenges in order.
+From here on out you'll want to follow the challenges in order.
 
 Search the codebase for `challenge functions` and you should see six numbered challenges.
 
@@ -168,7 +174,23 @@ You can then test the functions by uploading images to notes in your running loc
 
 ...and watching your Functions logs on the Firebase Console to see them succeed or fail.
 
+Cloud Functions is an advanced topic, especially the way that we do them.
 
+Don't let yourself get bogged down, and if it gets too frustrating, watch to solutions!
+
+And you can always check out master with `git checkout master` to see the finished code.
+
+If you haven't made some progress in about 30 minutes, you'll definitely want to check the solution.
+
+This entire exercise should not take more than an hour or two...
+
+...unless you decide to get deeper into understanding the final three challenges...
+
+...which is an excellent decision if you intend to do a lot of Cloud Functions development.
+
+Good luck! 
+
+And we'll see each other in the solutions video.
 
 
 
