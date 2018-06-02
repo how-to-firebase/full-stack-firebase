@@ -58,21 +58,111 @@ We're not ready to test this yet, because we need our `serviceWorker` code to re
 
 So let's forge ahead by opening `public slash sw dot js`.
 
+The first challenge needs us to call `messaging dot setBackgroundMessageHandler` with a callback.
 
+The callback receives a `payload` which we'll create and send at the end of this video.
 
-TODO: Once the sw.js file is written, we can test the messages in the browser
+Anyway, this callback will call `self dot registration dot showNotification` with two arguments.
 
+The first argument is the title of the notification. 
 
+It's just a string.
 
+The second argument is a configuration object that needs attributes for `body`, `data` and `icon`.
 
+We'll call our notification 'Firelist' and pull `body` and `data` off of our payload.
 
+The `icon` value is hardcoded as `iconUrl` and is just a file that we saved to Cloud Storage.
 
-Now we can refresh our local app and start testing.
+At this point we're handling incoming FCM messages...
 
-We'll add our email address as a collaborator on a note and watch the bottom of the screen.
+...but what if we click on a desktop notification?
 
-It will take a few second for the Cloud Function to fire...
+Click handlers are entirely separate from Firebase Cloud Messaging, so let's configure ours now.
+
+The next challenge requires us to call `self dot addEventListener` with two arguments...
+
+...the first being the string `notificationclick` and the second being our event handler.
+
+We can pull the `noteId` off of `event dot notification dot data`...
+
+...at which point we'll construct our own url and call it `noteUrl`.
+
+We then call `event dot notification dot close`...
+
+...and tell the serviceWorker to wait for our navigation with `event dot waitUntil`.
+
+`event dot waitUntil` is critical...
+
+...because it tells the serviceWorker to wait for the next operation.
+
+Inside our `waitUntil` call we'll pass `clients dot openWindow` with `noteUrl` as the argument.
+
+Now any notification clicks will open up our browser and navigate to our `noteUrl`.
+
+We can finally test our messaging framework in our localhost app.
+
+Make sure to open up DevTools' Application tab and the 'Service Workers' side tab...
+
+...and force-refresh your service worker by clicking the `skip waiting` link.
+
+Failure to do this will prevent your serviceWorker changes from coming into effect.
+
+Now we'll add our email address as a collaborator on a note and watch the bottom of the screen.
+
+It will take a few seconds for the Cloud Function to fire...
 
 ...but we should soon have a popup from the bottom of the page.
+
+Next, let's attempt to receive a system-level message.
+
+We'll have to quickly trigger the message and change Chrome tabs...
+
+...otherwise Chrome will show the popup in the browser window instead of at a system level.
+
+So we'll add or remove ourselves as a collaborator and QUICKLY switch tabs.
+
+If we beat the Cloud Function in firing off the message, we should see the system-level popup.
+
+Let's click it to watch our click handler in action...
+
+...and it opens up a new tab straight to our note!
+
+We have everything working...
+
+...but there's one mystery.
+
+What exactly is firing off the FCM message?
+
+For that, let's check out our last challenge.
+
+We'll need to open `functions slash src slash notes dash on dash update dot js`.
+
+The bottom of the file has our final Messaging challenge.
+
+The code here is complete, because we had to deploy it with our Cloud Functions...
+
+...so let's just read and understand it.
+
+We're calling `messaging dot send` with a configuration object.
+
+The config object needs `token` and `data` attributes. 
+
+The `token` is the same `messagingToken` that we dealt with in the first challenge...
+
+...and the `data` attribute is up to 4 kilobytes of whatever JSON we want to message.
+
+In this case our `data` object has `title`, `noteId` and `message` attributes.
+
+We used the `noteId` and `message` attributes in the last challenge in our serviceWorker...
+
+...but we can pass any sort of data that we like. 
+
+This data payload is entirely arbitrary and up to us to define.
+
+And that's all that there is to Firebase Cloud Messaging...
+
+...so you're ready to create your own messages for your next project!
+
 
 

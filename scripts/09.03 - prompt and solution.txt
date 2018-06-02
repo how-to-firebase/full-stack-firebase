@@ -1,0 +1,120 @@
+Firebase Hosting does not lend itself to challenges and solutions.
+
+We're going to walk through the three processes that matter and be done with it.
+
+There are exactly three things to keep track of...
+
+...first is our production app build...
+
+...second is our `firebase dot json` file...
+
+...and finally we have the deploy command.
+
+The production build relies on `public slash environments slash environment dot js`...
+
+...so double-check that you didn't leave any default data in your production environment file.
+
+Our production build is kicked off with `yarn build` or `yarn build colon windows`.
+
+You can check out `package dot json` to see the details of those two commands...
+
+...but they're simple Webpack commands to run our production build.
+
+Webpack builds our app into a folder named `dist`.
+
+`dist` is the folder that we'll be sending to Firebase Hosting.
+
+Next, we need to tell Firebase Hosting how to deploy our app, so let's open `firebase dot json`.
+
+`firebase dot json` has four attributes...
+
+...three of which tell the `firebase tools` cli where our security rules files are located...
+
+...and another attribute...`hosting`... that describes the hosting deploy.
+
+The `hosting` attribute indicates that our `public` folder is `dist`...
+
+...and it tells Hosting to ignore a few file patterns.
+
+These ignores are defaults from running `firebase init` at the beginning of our project.
+
+We don't include any of these files in our `dist` build...
+
+...but we'll hang onto these ignores anyway.
+
+The `rewrites` attribute is also a default that we selected when running `firebase init`.
+
+We told the `firebase tools` cli to redirect all unrecognized routes to `index dot html`...
+
+...and this is the rewrite rule to do that.
+
+You can do some pretty sophisticated rewrites and redirects with Firebase Hosting...
+
+...but that's entirely application-specific and well documented in the Firebase docs...
+
+...so we won't get distracted now.
+
+Finally, we just need to run our deploy job.
+
+Fire off `yarn deploy colon hosting` in your terminal.
+
+This is a command defined in `package dot json` so let's check out that file while we deploy.
+
+These deploy commands follow a simple pattern...
+
+...`firebase deploy dash dash only` followed by the service name.
+
+You can install `firebase dash tools` globally and run these CLI commands directly.
+
+We wanted to package this app in a self-contained way, so we installed `firebase tools` locally.
+
+If you're using a Node executable locally...
+
+...you have to kick it off from a `package dot json` script...
+
+...which is why we've included so many scripts in our `package dot json`.
+
+Anyway, once our deploy is complete we'll see our 'Hosting URL' in the terminal...
+
+...so let's visit it!
+
+A couple of notes regarding caching...
+
+...because we're using a serviceWorker cache, which is incredibly persistent.
+
+If you find yourself debugging deploys, make sure to clear your site data manually.
+
+You can do that by navigating to DevTools' Application tab and the 'Clear storage' side tab.
+
+Clear that site data and refresh your page...
+
+...and make sure that you have the latest serviceWorker code.
+
+And a second note...
+
+...the `messagingToken` on our 'Account' page is the same token that we had on localhost.
+
+We need to deactivate and activate it again to receive messages from the production app.
+
+This app does not do a good job of separating between the localhost and production data.
+
+You'd typically deploy your production app to an entirely different Firebase project...
+
+...but we've developed and deployed with a single project for simplicity.
+
+That means that we have one set of data and one set of Cloud Functions and a single deploy.
+
+This is not ideal for a production application...
+
+...so make sure to have separate Firebase projects for each environment when you develop a real app.
+
+And that's it.
+
+Really.
+
+We made it.
+
+
+
+
+

@@ -1,0 +1,48 @@
+This has been a massive amount of information.
+
+We've done our best to deliver it clearly, but we're sure we came short in numerous places.
+
+The best way to ask questions is on our GitHub projects.
+
+Go to `github dot com slash how dash to dash firebase` and find the appropriate repo.
+
+Fo example, if you have questions about `firelist react`...
+
+...ask questions in the `firelist react` repo.
+
+File as many issues as you like. 
+
+We're happy to chat and answer questions... whatever you need!
+
+Juarez and I have social channels that you can hit up as well.
+
+We're on twitter as `chrisesplin` and `juarez p a f`...
+
+...so slide into our DMs anytime.
+
+And thank you!
+
+Thank you for persevering through such a challenging topic.
+
+This course is an attempt to give an efficient overview of Firebase for web...
+
+...because it has to be Full-Stack Firebase.
+
+Anything less than a full-stack approach wouldn't do the platform justice.
+
+We want to de-mystify Firebase development and help startups and large companies alike.
+
+We want Firebase to be the most popular way to develop a serverless web application.
+
+Great technology is absolutely nothing without great community...
+
+...so welcome to the Firebase community!
+
+We're a beginner-friendly group, and Juarez and I aim to be as accessible as humanly possible.
+
+So don't be shy.
+
+Let us know what you're thinking...
+
+...and we can grow the Firebase community together and take our own applications to new heights.
+
