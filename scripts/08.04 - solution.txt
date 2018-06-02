@@ -12,7 +12,7 @@ If `requestPermission` is allowed, then our next step is to call `messaging dot 
 
 Make sure to assign the value to `messagingToken`...
 
-...because the following `setUserTokens` call can needs a value for `messagingToken`.
+...because the following `setUserTokens` call needs a value for `messagingToken`.
 
 Next up is `src slash messaging slash remove dash token dot js`.
 
@@ -44,7 +44,7 @@ So we'll call `this dot messaging dot onTokenRefresh` with `this dot getToken` a
 
 And we can't forget to assign the `unlisten` function to `this dot unlistenOnTokenRefresh`.
 
-We need to disable this listener when this React component unmounts.
+We need to disable the listener when this React component unmounts.
 
 The next challenge isn't much more complicated.
 
@@ -60,7 +60,7 @@ So let's forge ahead by opening `public slash sw dot js`.
 
 The first challenge needs us to call `messaging dot setBackgroundMessageHandler` with a callback.
 
-The callback receives a `payload` which we'll create and send at the end of this video.
+The callback receives a `payload` which we'll create and send at the end of this challenge solution.
 
 Anyway, this callback will call `self dot registration dot showNotification` with two arguments.
 
@@ -96,7 +96,7 @@ We then call `event dot notification dot close`...
 
 ...because it tells the serviceWorker to wait for the next operation.
 
-Inside our `waitUntil` call we'll pass `clients dot openWindow` with `noteUrl` as the argument.
+Inside our `waitUntil` we'll pass `clients dot openWindow` with `noteUrl` as the argument.
 
 Now any notification clicks will open up our browser and navigate to our `noteUrl`.
 

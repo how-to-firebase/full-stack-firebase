@@ -4,9 +4,11 @@ We've done our best to deliver it clearly, but we're sure we came short in numer
 
 The best way to ask questions is on our GitHub projects.
 
+Please, please, please let us know how we messed up.
+
 Go to `github dot com slash how dash to dash firebase` and find the appropriate repo.
 
-Fo example, if you have questions about `firelist react`...
+For example, if you have questions about `firelist react`...
 
 ...ask questions in the `firelist react` repo.
 
@@ -44,5 +46,5 @@ So don't be shy.
 
 Let us know what you're thinking...
 
-...and we can grow the Firebase community together and take our own applications to new heights.
+...and we can grow the Firebase community together and take our own skills to the next level.
 

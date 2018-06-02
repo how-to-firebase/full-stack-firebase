@@ -16,9 +16,9 @@ The production build relies on `public slash environments slash environment dot 
 
 Our production build is kicked off with `yarn build` or `yarn build colon windows`.
 
-You can check out `package dot json` to see the details of those two commands...
+You can check out `package dot json` to see the details of those two commands.
 
-...but they're simple Webpack commands to run our production build.
+They're basic Webpack commands to run our production build and nothing more.
 
 Webpack builds our app into a folder named `dist`.
 

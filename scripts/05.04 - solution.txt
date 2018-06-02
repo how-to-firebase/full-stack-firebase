@@ -48,7 +48,7 @@ The RTDB uses Firebase's legacy security rules framework.
 
 The old security rules are based off a JSON object with a `rules` attribute at its root.
 
-You'll nest attributes under `rules` to match your data structure. 
+You'll nest attributes under `rules` to match your data shape. 
 
 This is another situation where reading the docs is critical.
 
@@ -56,7 +56,7 @@ So make sure to comb through the security rules docs before trying to ship RTDB 
 
 We'll be moving quickly with some basic rules.
 
-First, we needs to create some nesting in the JSON structure to match our data structure.
+First, we needs to create some nesting in the JSON structure to match our data shape.
 
 RTDB security rules use a dollar sign to indicate wildcard attributes...
 
@@ -126,4 +126,10 @@ You should be able to delete your `userTokens` object manually and reset it by r
 
 Our app-specific logic is writing our `userTokens` every time a user logs in or reloads the page.
 
-Your `userTokens` are now flowing up to the RTDB, and you're ready to write some Cloud Functions!
+And since your `userTokens` are now flowing up to the RTDB...
+
+we're ready to write some Cloud Functions!
+
+
+
+

@@ -54,9 +54,9 @@ If you get stuck or aren't done within about half an hour, just jump to the solu
 
 But make sure to read the docs and let yourself struggle a bit.
 
-Learning how to debug these sorts of systems is critical to being a great programmers...
+Learning how to debug these sorts of systems is critical to being a great programmer...
 
-...and it's critical to continuing on with Firebase on your own.
+...and it's critical to bringing your own Firebase apps to production.
 
 
 

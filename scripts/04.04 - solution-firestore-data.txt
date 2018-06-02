@@ -1,6 +1,6 @@
 Our first task is to get Firestore on our page.
 
-As we mentioned earlier, this is only necessary while Firestore is still in beta.
+As we mentioned earlier, this should only be necessary while Firestore is still in beta.
 
 You'll open up `public slash index dot html` and make a copy of the script tag on line 24.
 
@@ -62,7 +62,7 @@ So let's fill out `src slash database slash get dash note dash observable dot js
 
 Again, define a `notesCollection` after the first prompt.
 
-After the second prompt defined a variable named `docRef` using `notesCollection dot doc`...
+After the second prompt, we'll define a variable named `docRef` using `notesCollection dot doc`...
 
 ...and passing in the `noteId` variable.
 
@@ -180,7 +180,7 @@ Then we'll create a `docRef` under the next prompt that refers to our user by `u
 
 And finally, we'll register an `onSnapshot` listener, pass the result through `formatDoc`...
 
-...and pass the formatted doc out through `observer dot next`.
+...and then pass the formatted doc out through `observer dot next`.
 
 Again, we need to return the `unsubscribe` method so our observable's consumer can unsubscribe.
 

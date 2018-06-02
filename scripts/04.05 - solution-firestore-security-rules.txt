@@ -86,7 +86,7 @@ Note that wildcard names are entirely arbitrary.
 
 Instead of `uid`, we could have used `gelato` and referred to the user's uid as `gelato`.
 
-We love to each gelato as much as all living humans...
+We love to eat gelato as much as all living humans...
 
 ...but let's name our wildcards like good developers and make our security rules readable.
 
@@ -166,7 +166,7 @@ We need to ensure that the auth uid equals the owner field on the requested writ
 
 This is a little trickier, because it chains off of `request dot resource`.
 
-That's because we're looking at the data that's attempting to be created.
+That's because we're looking at the data that our user is attempting to create.
 
 The data that's being written is available under `request dot resource dot data`...
 
@@ -182,7 +182,7 @@ We spent a long time thinking this one through and reading the docs to craft thi
 
 We need to make sure that the user's `emailSlug` exists in the note's `collaborators` object.
 
-We can't write security rules using a nested object's values... only the nested object's keys.
+We cannot write security rules using a nested object's values... only the nested object's keys.
 
 This is a bit of a quirk that we found while reading the Firestore security rules docs.
 
@@ -220,9 +220,9 @@ And to deploy Firebase, we need to edit a top-level file named `dot firebaserc`.
 
 `dot firebaserc` controls which Firebase project the Firebase CLI deploys to.
 
-You don't want to deploy to the `firelist-react` project...
+We don't want to deploy to the `firelist-react` project...
 
-...you want to deploy to your own project.
+...we want to deploy to your own project.
 
 In this case, I'll replace the `default` key with my demo project's ID. 
 
@@ -234,7 +234,7 @@ So we'll run that deploy and check our Firebase console to make sure that the ru
 
 And we'll run manual checks to make sure that we can still read, update, create and delete notes.
 
-As we said before, security rules are tough to write and tough to test.
+As we said before, security rules are tough to write and tougher to test.
 
 We arrived at these rules through trial and error...
 
@@ -248,7 +248,7 @@ Thanks for staying strong and enduring security rules with us.
 
 This is a lot to digest, so maybe take a break, read the security rules docs...
 
-..and come back when you're ready for more Firebase!
+...and come back when you're ready for more Firebase!
 
 
 

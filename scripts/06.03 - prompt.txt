@@ -58,7 +58,7 @@ Then you'll need to install two packages with yarn or npm...
 
 ...`firebase dash admin` and `firebase dash functions`.
 
-Next you'll create and `index dot js` file and import firebase admin and firebase functions.
+Next you'll create an `index dot js` file and import firebase admin and firebase functions.
 
 But this stuff is easy, so we're going to focus on the tricky stuff, namely, developing functions.
 
@@ -86,7 +86,7 @@ These two files each have three references to `firelist dash react`.
 
 You'll need to swap out these references with references to your own project.
 
-This is absolutely critical, or your Functions will malfunction horribly.
+This is absolutely critical, or your Functions will not work at all.
 
 Once BOTH environment files are updated, you'll need to generate a service account.
 

@@ -68,7 +68,7 @@ If Firestore is out of beta by the time you're completing this task...
 
 ...it's very possible that you merely need to update `firebase dot js` to the latest version.
 
-It's very likely that future version of `firebase dot js` will include Firestore by default.
+It's very likely that future versions of `firebase dot js` will include Firestore by default.
 
 You can confirm that you have Firestore on the page by starting up your app with `yarn start`
 
@@ -92,7 +92,7 @@ Completing the 'add note' challenges will let you begin adding notes in the app.
 
 Once that's done, continue with challenges four, five, six and so on.
 
-There are a ton of numbered Firestore challenges... but they're mostly duplicates.
+There are a ton of numbered Firestore challenges.
 
 Once you've completed the first few challenges, the rest will be much, much easier.
 
@@ -108,11 +108,11 @@ Reactive programming patterns aren't native to JavaScript, so we'll use the RxJs
 
 RxJs is the leading reactive programming library for JavaScript, and it's incredible;
 
-however! RxJs is a tough library to learn.
+...however; RxJs is a tough library to learn.
 
 So we will only be using RxJs observables. 
 
-Observables are best part of RxJs, and they will make our lives much, much easier.
+Observables are the best part of RxJs, and they will make our lives much, much easier.
 
 So you're going to need to learn the basics of creating an RxJs observable.
 
@@ -122,7 +122,7 @@ But Firestore's onSnapshot function creates data streams...
 
 ...and handling data streams is very tricky without a strong programming pattern...
 
-...and so we'll use RxJs, because it's be best way we've found to handle Firestore data streams.
+...and so we'll use RxJs, because it's the best way we've found to handle Firestore data streams.
 
 And for our second word of warning:
 

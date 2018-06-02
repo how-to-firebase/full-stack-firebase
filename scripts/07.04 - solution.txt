@@ -1,6 +1,6 @@
 Firebase Storage is one of our favorite Firebase features.
 
-It's so easy to use and so powerful.
+It's easy to use and very powerful.
 
 It's really not fair to all of the other storage providers out there.
 
@@ -16,7 +16,7 @@ We'll start out by defining our file ref with `storage dot ref`.
 
 We'll pass the `path` variable in as our base ref, then call `dot child` with `file dot name`.
 
-This lets use chain our way to a successful file path.
+This lets us chain our way to a complete file path.
 
 We could have created a concatenated string and just used a single `storage dot ref` call...
 
@@ -32,7 +32,7 @@ The next three arguments are all callback functions.
 
 The first will be our progress callback.
 
-We'll receive the snapshot, pass it through `getSnapshotProgress` to get a progress number...
+We'll receive the snapshot, pass it through `getSnapshotProgress` to get a progress value...
 
 ...and we'll call `observer dot next` with the progress value.
 

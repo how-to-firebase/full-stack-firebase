@@ -6,7 +6,7 @@ So let's check out `challenge dash messaging` with `git checkout challenge dash 
 
 You'll likely need to remove your changes from prior modules, so run `git checkout src`...
 
-...which will reset all changes with the `src` folder.
+...which will reset all changes within the `src` folder.
 
 Run `git status` to confirm that your current change set is merely environment files.
 
@@ -18,13 +18,13 @@ We'll follow them in order.
 
 Let's get started with `src slash messaging slash get dash token dot js`.
 
-You'll need to review the docs from each challenge prompt, but it should be too difficult.
+You'll need to review the docs from each challenge prompt, but it should not be too difficult.
 
 The final challenge, number 7, doesn't require any coding...
 
 ...but read the docs and understand the code referenced in the challenge...
 
-...as it will make your own implementation of this Firebase Cloud Messaging much easier.
+...as it will make your own implementations of Firebase Cloud Messaging much easier.
 
 These challenges may take an hour or two, because you will need to read a bit and experiment.
 
@@ -50,11 +50,11 @@ Now you can click through to `sw dot js` to confirm that your code has changed.
 
 Once all of the challenges are complete...
 
-...you can trigger notifications by adding yourself as a collaborator.
+...you can trigger notifications by adding yourself as a note collaborator.
 
 But first you'll need to go to your Account page by clicking the menu button on the top-left.
 
-Once on your account page, click the `activate notifications` button.
+Once you are on your account page, click the `activate notifications` button.
 
 If nothing happens, you may have already accepted or blocked site notifications...
 
@@ -76,7 +76,9 @@ It should be a long string that looks like gibberish.
 
 That's the token that Firebase Cloud Messaging uses to identify your browser for messages.
 
-Note that this token requires Cloud Functions to be working, so you could debug the Functions logs.
+Note that this token requires Cloud Functions to be working...
+
+...so you may need to debug the Functions logs.
 
 Once you have a `messagingToken`, you'll notice that the text on your Account page changes.
 

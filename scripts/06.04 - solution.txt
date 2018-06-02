@@ -10,7 +10,7 @@ The first challenge is to complete `userTokensOnCreate`, so we'll run `yarn test
 
 Jest will search the existing specs files for `user dash tokens` and find our userTokens spec file.
 
-So let's open up up both `functions slash src slash user dash tokens dash on dash create dot js`...
+So let's open up both `functions slash src slash user dash tokens dash on dash create dot js`...
 
 ...and the prompt tells us to verify the `idToken` and use it to set the user object.
 
@@ -170,7 +170,7 @@ Anyway, if we run the tests now, they fail...
 
 ...because we haven't returned the `noteRef` as requested.
 
-So let's do that now, being mindful chain off of the END of the `runTransaction` call.
+So let's do that now, being mindful to chain off of the END of the `runTransaction` call.
 
 Once that's done, our tests pass and we're good!
 
@@ -178,7 +178,7 @@ A quick side note...
 
 ...the `uploadsOnDelete` test is a bit flaky.
 
-These are integration tests and make writes and reads to Firestore, and they're tough to get right.
+These are integration tests that make writes and reads to Firestore, and they're tough to get right.
 
 `uploadsOnDelete` works great when run in isolation, but it often fails when run with other tests.
 
@@ -244,7 +244,7 @@ Just run `cd` up to your main folder...
 
 You may need to deploy a couple of times to push through any errors.
 
-Cloud Functions deploys can themselves be flaky.
+Cloud Function deploys can themselves be flaky.
 
 So be persistent until you get all green, successful deploys.
 
@@ -260,7 +260,7 @@ And double and triple check that your `firebase rc` file, service account...
 
 It's so easy to accidentally deploy to the wrong project or deploy with the wrong environments.
 
-Once you think that you have a successful deploy, spin your your localhost app with `yarn start`...
+Once you think that you have a successful deploy, spin up your localhost app with `yarn start`...
 
 ...and try logging in.
 
@@ -280,7 +280,7 @@ Once you delete it, you can refresh your localhost app to recreate the queue ite
 
 ...and if your function works correctly, it will create your user object and delete the queue item.
 
-If your user object is missing, you'll get Firestore errors permission errors...
+If your user object is missing, you'll get Firestore permission errors...
 
 ...because our Firestore security rules for collaborators rely on the Firestore user objects.
 
