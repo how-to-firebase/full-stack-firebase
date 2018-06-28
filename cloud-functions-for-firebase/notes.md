@@ -1,10 +1,12 @@
-# Cloud Functions for Firebase: Notes
+# Notes
 
-## Functions samples
+## Cloud Functions for Firebase: Notes
+
+### Functions samples
 
 See [the official GitHub repo of Cloud Functions for Firebase sample functions](https://github.com/firebase/functions-samples)
 
-# Mount an Express app
+## Mount an Express app
 
 ```javascript
 const functions = require('firebase-functions');
@@ -29,7 +31,7 @@ app.get('/', (req, res) => res.send(Widgets.list()));
 exports.widgets = functions.https.onRequest(app);
 ```
 
-# Mount an Express handler
+## Mount an Express handler
 
 ```javascript
 exports.helloWorld = functions.https.onRequest((req, res) => {
@@ -38,7 +40,7 @@ exports.helloWorld = functions.https.onRequest((req, res) => {
 });
 ```
 
-# Firestore triggers
+## Firestore triggers
 
 * onCreate
 * onUpdate
@@ -58,7 +60,7 @@ exports.createUser = functions.firestore.document('users/{userId}').onCreate(eve
 });
 ```
 
-# Realtime Database triggers
+## Realtime Database triggers
 
 * onCreate
 * onUpdate
@@ -78,7 +80,7 @@ exports.makeUppercase = functions.database.ref('/messages/{pushId}/original').on
 });
 ```
 
-# Firebase Authentication
+## Firebase Authentication
 
 * onCreate
 * onDelete
@@ -92,7 +94,7 @@ exports.sendWelcomeEmail = functions.auth.user().onCreate(event => {
 });
 ```
 
-# Firebase Storage
+## Firebase Storage
 
 * onChange
 
@@ -135,7 +137,7 @@ exports.generateThumbnail = functions.storage.object().onChange(event => {
 });
 ```
 
-# Use ImageMagick
+## Use ImageMagick
 
 ```javascript
 const functions = require('firebase-functions');
@@ -178,3 +180,4 @@ exports.generateThumbnail = functions.storage.object().onChange(event => {
     .then(() => fs.unlinkSync(tempFilePath));
 });
 ```
+

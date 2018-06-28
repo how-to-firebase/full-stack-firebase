@@ -1,4 +1,4 @@
-# Firebase Authentication: Walk-through
+# Walk-through
 
 Welcome to Full-Stack Firebase with Chris Esplin and Juarez Filho
 
@@ -10,7 +10,7 @@ We'll start off by logging into Google with a Provider.
 
 Don't worry... providers are trivial to create, and we'll cover them elsewhere
 
-Just note that this provider is specific to Google. 
+Just note that this provider is specific to Google.
 
 You'll have different providers for Facebook, Twitter or GitHub.
 
@@ -32,7 +32,7 @@ Now we'll let our application-specific logic respond to the new currentUser obje
 
 And now that we've logged in, let's log out!
 
-auth.signOut() will get the job done for us.
+auth.signOut\(\) will get the job done for us.
 
 Notice how our onAuthStateChanged listener fires again, this time with a null currentUser
 
@@ -41,3 +41,4 @@ Notice how our onAuthStateChanged listener fires again, this time with a null cu
 You can log in with different OAuth providers, an email and password or even a mobile phone.
 
 Firebase Authentication is quick and easy to implement, and it provides the backbone for all of Firebase's security.
+

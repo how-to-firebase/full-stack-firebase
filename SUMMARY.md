@@ -1,18 +1,21 @@
-# Summary
+# Table of contents
+
+* [Introduction](README.md)
 
 ## Introduction
 
-* [Full-Stack Firebase](README.md)
+* [Full-Stack Firebase](introduction/full-stack-firebase.md)
 * [Why Firebase?](introduction/why-firebase.md)
 * [What is serverless?](introduction/what-is-serverless.md)
 * [Prerequisites](introduction/prerequisites.md)
 * [Overview & Structure](introduction/overview-and-structure.md)
 * [Write your first query](introduction/write-your-first-query.md)
+* [Links](introduction/links.md)
 
 ## Firebase Console
 
-* [Introduction](console/introduction.md)
-* [Walk-through](console/walk-through.md)
+* [Introduction](firebase-console/introduction.md)
+* [Walk-through](firebase-console/walk-through.md)
 
 ## Firebase Tools
 

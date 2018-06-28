@@ -1,4 +1,4 @@
-# Cloud Firestore: Walk-through
+# Walk-through
 
 Fogo is an image-management application, and as such, it needs to handle thousands of images.
 
@@ -14,7 +14,7 @@ Filtering on the environment attribute enables us to host multiple versions of t
 
 Next we define the limitedCollection by adding a .limit filter on the collection.
 
-Finally, if there is an existing cursor then we modify the limitedCollection to start after that cursor. 
+Finally, if there is an existing cursor then we modify the limitedCollection to start after that cursor.
 
 If there is no cursor, then we don't call the startAfter function and simply request the first 25 records.
 
@@ -36,28 +36,17 @@ So we set up a new query for the uploads collection. Again, we filter on the env
 
 This time we also put on a second "where" clause to require the "created" attribute to be after the lastCreated timestamp.
 
-Now we'll use the onSnapshot function to listen for new records. 
+Now we'll use the onSnapshot function to listen for new records.
 
 The initial snapshot result is null, because there are no records uploaded after our lastCreated timestamp.
 
-However, as soon as a new record hits the database with a more recent timestamp, the onSnapshot listener fires with all of the results. 
+However, as soon as a new record hits the database with a more recent timestamp, the onSnapshot listener fires with all of the results.
 
-Note that the snapshot will have all of the results that match the criteria. 
+Note that the snapshot will have all of the results that match the criteria.
 
 We've just uploaded one file in this case, but if we were to upload a second file, the onSnapshot listener would fire again, but this time with two results.
 
 onSnapshot fires whenever the query results change, and it returns all of the query results every time.
 
 And there it is! We have infinite-scroll pagination as well as a listener that will tack new records onto the top of our list as they arrive!
-
-
-
-
-
-
-
-
-
-
-
 

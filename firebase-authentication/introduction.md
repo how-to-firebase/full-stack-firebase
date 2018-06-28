@@ -1,4 +1,4 @@
-# # Firebase Authentication: Introduction
+# Introduction
 
 You need Firebase Authentication for two reasons:
 
@@ -7,15 +7,13 @@ You need Firebase Authentication for two reasons:
 
 ## Firebase Auth + Security Rules
 
-Firebase needs a security system. In a traditional database you provide your own security using your API server. Since Firebase **is** the API server, it needs a programmable way to control read and write access to your data. 
+Firebase needs a security system. In a traditional database you provide your own security using your API server. Since Firebase **is** the API server, it needs a programmable way to control read and write access to your data.
 
 When users use your client apps to authenticate with Firebase Authentication they receive a [JSON Web Tokens](https://jwt.io/) that will identify them to Firebase's **security rules** system. We'll cover this more later. Just remember that Firebase Authentication will enable your users to interact with the rest of the Firebase platform.
 
 ## Ease Of Use
 
-Have you ever implemented your own auth system? Yes? Then you know how challenging it can be. If
-not... then take my word for it and use an off-the-shelf system. Firebase Authentication provides
-the following auth methods:
+Have you ever implemented your own auth system? Yes? Then you know how challenging it can be. If not... then take my word for it and use an off-the-shelf system. Firebase Authentication provides the following auth methods:
 
 * Email/password
 * Phone
@@ -37,20 +35,17 @@ We'll cover JWTs later. Don't worry. They're simple JSON objects.
 
 ### Email/Password
 
-Email/password auth is exactly what it sounds like. You register an email address and a password
-with Firebase and it keeps track of your user account.
+Email/password auth is exactly what it sounds like. You register an email address and a password with Firebase and it keeps track of your user account.
 
 ### Phone
 
-Google [acquired Twitter Digits](https://firebase.googleblog.com/2017/01/FabricJoinsGoogle17.html) in early 2017 and rolled their phone authentication into Firebase Authentication. This means that with minimum fuss you can implement a full SMS-based phone auth flow. 
+Google [acquired Twitter Digits](https://firebase.googleblog.com/2017/01/FabricJoinsGoogle17.html) in early 2017 and rolled their phone authentication into Firebase Authentication. This means that with minimum fuss you can implement a full SMS-based phone auth flow.
 
 This is particularly great for mobile web apps. Phone authentication is the preferred auth method for many users, especially those outside of the United States.
 
-### OAuth 2 (Google, Facebook, Twitter, Github)
+### OAuth 2 \(Google, Facebook, Twitter, Github\)
 
-OAuth is the fastest auth method, because it relies on accounts that your users already have. Most
-everyone has either Google, Facebook or Twitter, and developers love Github. OAuth 2 is also the
-easiest auth flow to implement.
+OAuth is the fastest auth method, because it relies on accounts that your users already have. Most everyone has either Google, Facebook or Twitter, and developers love Github. OAuth 2 is also the easiest auth flow to implement.
 
 And all of the OAuth providers support [multi-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication), which we should all be using.
 
@@ -79,7 +74,7 @@ Would you like to use a third-party authentication system with Firebase?
 
 Maybe you'd like to authenticate with your company's existing SAML implementation?
 
-That's not a problem. We won't cover custom tokens here except to say that you can use your private auth servers to mint Firebase auth tokens that you can then send to your client applications. 
+That's not a problem. We won't cover custom tokens here except to say that you can use your private auth servers to mint Firebase auth tokens that you can then send to your client applications.
 
 These tokens will allow your client apps to authenticate with Firebase using whatever JWT you create on your server.
 

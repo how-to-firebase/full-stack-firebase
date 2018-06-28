@@ -1,8 +1,9 @@
-# Firebase Authentication: Notes
+# Notes
 
 See the [Firebase Authentication docs for web](https://firebase.google.com/docs/auth/web/manage-users).
 
-### onAuthStateChanged
+## onAuthStateChanged
+
 ```javascript
 firebase.auth().onAuthStateChanged(currentUser => {
   if (currentUser) {
@@ -13,7 +14,8 @@ firebase.auth().onAuthStateChanged(currentUser => {
 });
 ```
 
-### Register Email/Password
+## Register Email/Password
+
 ```javascript
 firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
   // Handle Errors here.
@@ -23,7 +25,7 @@ firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(e
 });
 ```
 
-### Sign In Email/Password
+## Sign In Email/Password
 
 ```javascript
 firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
@@ -34,43 +36,50 @@ firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error
 });
 ```
 
-### Create Provider
+## Create Provider
 
 Google
+
 ```javascript
 var provider = new firebase.auth.GoogleAuthProvider();
 ```
 
 Facebook
+
 ```javascript
 var provider = new firebase.auth.FacebookAuthProvider();
 ```
 
 Twitter
+
 ```javascript
 var provider = new firebase.auth.TwitterAuthProvider();
 ```
 
 GitHub
+
 ```javascript
 var provider = new firebase.auth.GithubAuthProvider();
 ```
 
-### OAuth sign in with a provider
+## OAuth sign in with a provider
 
 Popup
+
 ```javascript
 firebase.auth().signInWithPopup(provider);
 ```
 
 Redirect
+
 ```javascript
 firebase.auth().signInWithRedirect(provider);
 ```
 
-### Phone Auth
+## Phone Auth
 
 First attach a recaptcha using an element ID...
+
 ```javascript
 window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
   'size': 'invisible',
@@ -82,6 +91,7 @@ window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button',
 ```
 
 ... then capture a phone number from user input and send the sms...
+
 ```javascript
 var phoneNumber = getPhoneNumberFromUserInput();
 var appVerifier = window.recaptchaVerifier;
@@ -97,6 +107,7 @@ firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
 ```
 
 ...and finally authenticate with the code from user input.
+
 ```javascript
 var code = getCodeFromUserInput();
 confirmationResult.confirm(code).then(function (result) {
@@ -108,3 +119,4 @@ confirmationResult.confirm(code).then(function (result) {
   // ...
 });
 ```
+

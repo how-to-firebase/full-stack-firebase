@@ -1,6 +1,8 @@
-# Cloud Firestore: Notes
+# Notes
 
-# Set a document
+## Cloud Firestore: Notes
+
+## Set a document
 
 ```javascript
 var data = {
@@ -16,7 +18,7 @@ var setDoc = db
   .set(data);
 ```
 
-# Data types
+## Data types
 
 ```javascript
 var data = {
@@ -38,7 +40,7 @@ var setDoc = db
   .set(data);
 ```
 
-# Add document with auto-generated ID
+## Add document with auto-generated ID
 
 > In a single-step with **asynchronous** access to the new ref
 
@@ -73,7 +75,7 @@ var setDoc = newCityRef
   });
 ```
 
-# Update document
+## Update document
 
 Note the optional `merge: true` option
 
@@ -84,7 +86,7 @@ var cityRef = db.collection('cities').doc('DC');
 var updateSingle = cityRef.update({ capital: true }, { merge: true });
 ```
 
-# Transactions
+## Transactions
 
 ```javascript
 // Initialize document
@@ -113,7 +115,7 @@ var transaction = db
   });
 ```
 
-# Batched writes
+## Batched writes
 
 ```javascript
 // Get a new write batch
@@ -137,7 +139,7 @@ return batch.commit().then(function() {
 });
 ```
 
-# Bulk delete
+## Bulk delete
 
 > Max batch size is 500 records
 
@@ -186,7 +188,7 @@ function deleteQueryBatch(db, query, batchSize, resolve, reject) {
 }
 ```
 
-# Get a document
+## Get a document
 
 ```javascript
 var cityRef = db.collection('cities').doc('SF');
@@ -204,7 +206,7 @@ var getDoc = cityRef
   });
 ```
 
-# Get an entire collection
+## Get an entire collection
 
 ```javascript
 var citiesRef = db.collection('cities');
@@ -220,7 +222,7 @@ var allCities = citiesRef
   });
 ```
 
-# Get with a where clause
+## Get with a where clause
 
 ```javascript
 var citiesRef = db.collection('cities');
@@ -237,7 +239,7 @@ var query = citiesRef
   });
 ```
 
-# List subcollections
+## List subcollections
 
 ```javascript
 var sfRef = db.collection('cities').doc('SF');
@@ -248,7 +250,7 @@ sfRef.getCollections().then(collections => {
 });
 ```
 
-# Listen for document changes
+## Listen for document changes
 
 ```javascript
 var doc = db.collection('cities').doc('SF');
@@ -264,7 +266,7 @@ var observer = doc.onSnapshot(
 );
 ```
 
-# Listen for collection changes
+## Listen for collection changes
 
 ```javascript
 var query = db.collection('cities').where('state', '==', 'CA');
@@ -280,7 +282,7 @@ var observer = query.onSnapshot(
 );
 ```
 
-# Stop listening
+## Stop listening
 
 ```javascript
 var unsub = db.collection('cities').onSnapshot(() => {});
@@ -291,7 +293,7 @@ var unsub = db.collection('cities').onSnapshot(() => {});
 unsub();
 ```
 
-# Compound queries
+## Compound queries
 
 > Valid queries
 
@@ -312,7 +314,7 @@ citiesRef.where('state', '==', 'CA').where('population', '>', 1000000);
 citiesRef.where('state', '>=', 'CA').where('population', '>', 1000000);
 ```
 
-# Order and limit
+## Order and limit
 
 > Valid order/limit combinations
 
@@ -338,7 +340,7 @@ var allBigCities = citiesRef.where('population', '>', 2500000).orderBy('populati
 citiesRef.where('population', '>', 2500000).orderBy('country');
 ```
 
-# Pagination: single-cursor
+## Pagination: single-cursor
 
 > Valid pagination
 
@@ -364,7 +366,7 @@ var endBefore = db
   .endBefore(1000000);
 ```
 
-# Pagination: multiple-cursors
+## Pagination: multiple-cursors
 
 ```javascript
 // Will return all Springfields
@@ -381,3 +383,4 @@ var startAtNameAndState = db
   .orderBy('state')
   .startAt('Springfield', 'Missouri');
 ```
+

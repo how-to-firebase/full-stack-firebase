@@ -1,8 +1,10 @@
-# Firebase Hosting: Notes
+# Notes
 
-# Redirects
+## Firebase Hosting: Notes
 
-```json
+## Redirects
+
+```javascript
 "hosting": {
   // Add the "redirects" section within "hosting"
   "redirects": [ {
@@ -17,9 +19,9 @@
 }
 ```
 
-# Rewrites
+## Rewrites
 
-```json
+```javascript
 "hosting": {
   // Add the "rewrites" section within "hosting"
   "rewrites": [ {
@@ -29,9 +31,9 @@
 }
 ```
 
-# Headers
+## Headers
 
-```json
+```javascript
 "hosting": {
     // Add the "headers" section within "hosting".
     "headers": [ {
@@ -57,9 +59,9 @@
  }
 ```
 
-# Connect a Cloud Function
+## Connect a Cloud Function
 
-```json
+```javascript
 {
   "hosting": {
     "public": "public",
@@ -72,3 +74,4 @@
   }
 }
 ```
+

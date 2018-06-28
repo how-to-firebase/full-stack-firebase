@@ -1,4 +1,4 @@
-# Firebase Tools: Walkthrough
+# Walkthrough
 
 You'll get started with Firebase Tools by installing it. Open up your terminal and make sure you have Node.js installed:
 
@@ -25,10 +25,10 @@ $ #some version number
 To get help:
 
 ```bash
-$ firebase --help 
+$ firebase --help
 ```
 
-### Initialize your app
+## Initialize your app
 
 We mostly use Firebase Tools to initialize our apps. Just make a new folder, `cd` into it, and call `firebase init`.
 
@@ -50,7 +50,7 @@ Now follow the prompts, sticking to the defaults with one exception:
 
 It's easy to remove the single-page app rewrites later if you don't need them. Your should `firebase.json` file should look something like this:
 
-```json
+```javascript
 {
   "database": {
     "rules": "database.rules.json"
@@ -75,13 +75,13 @@ It's easy to remove the single-page app rewrites later if you don't need them. Y
 }
 ```
 
-### Deploy
+## Deploy
 
 Run `firebase deploy` to deploy your new project.
 
 You may get an error like...
 
-```
+```text
 Error: HTTP Error: 400, Project 'how-to-firebase-tutorials' is not a Firestore enabled project.
 ```
 
@@ -93,15 +93,15 @@ Error: HTTP Error: 400, Project 'how-to-firebase-tutorials' is not a Firestore e
 
 Now try `firebase deploy` again if necessary.
 
-Notice the final line of output that looks like this: 
+Notice the final line of output that looks like this:
 
-```
+```text
 Hosting URL: https://how-to-firebase-tutorials.firebaseapp.com
 ```
 
-Follow that url to see the results! 
+Follow that url to see the results!
 
-### Deploy pipeline
+## Deploy pipeline
 
 The Node.js community has moved toward putting all deploy commands in a `package.json` file, so let's initialize our project for Node.js as well and set up our deploy pipeline.
 
@@ -119,7 +119,7 @@ Now that we have a local version of `firebase-tools` our `package.json` scripts 
 
 Now let's add some scripts:
 
-```json
+```javascript
 {
   "name": "starter-project",
   "version": "1.0.0",
@@ -145,41 +145,39 @@ This is a great habit to promote. It both documents and standardizes your deploy
 
 Try running `npm run deploy:hosting` to test it out!
 
-### Firebase deploy
+## Firebase deploy
 
 Firebase Tools deploys five different modules, each of which can be deployed individually with the `--only` flag:
 
-- hosting
-- database
-- firestore
-- storage
-- functions
+* hosting
+* database
+* firestore
+* storage
+* functions
 
-#### Hosting
+### Hosting
 
 Hosting deploys your public folder to Firebase Hosting. It also deploys any hosting settings you have in `firebase.json`.
 
-#### Database
+### Database
 
 The database module deploys your security rules to the Realtime Database as defined in `database.rules.json`.
 
-#### Firestore
+### Firestore
 
 The firestore module deploys two files, `firestore.rules` and `firestore.indexes.json`. These files contain security rules and index specifications.
 
-#### Storage
+### Storage
 
 The storage module deploys the security rules defined in `storage.rules`, which you'll use to secure Firebase Storage.
 
-#### Functions
+### Functions
 
-The functions module is the trickiest of the bunch. It runs a bunch of checks on your `/functions` folder to make sure that all of the right NPM packages are installed and that `/functions/index.js` exports valid Cloud Functions. 
+The functions module is the trickiest of the bunch. It runs a bunch of checks on your `/functions` folder to make sure that all of the right NPM packages are installed and that `/functions/index.js` exports valid Cloud Functions.
 
 Firebase Tools will deploy your functions to Cloud Functions once its validation checks pass. But beware! Firebase Tools can't validate your code very deeply. It just makes sure that you're importing modules correctly and attaching functions to valid endpoints.
 
-We ***HIGHLY*** recommend--in all caps no less--developing Cloud Functions in a local testing environment. Don't get sucked into the tempting feedback loop of deploying a function, testing it on the Cloud Functions servers, making edits and deploying again... This is your ticket to Cloud Functions hell 😈 
+We _**HIGHLY**_ recommend--in all caps no less--developing Cloud Functions in a local testing environment. Don't get sucked into the tempting feedback loop of deploying a function, testing it on the Cloud Functions servers, making edits and deploying again... This is your ticket to Cloud Functions hell 😈
 
 We'll cover Cloud Functions test-driven development elsewhere. You have been warned! 🎉🎉🎉
-
-
 

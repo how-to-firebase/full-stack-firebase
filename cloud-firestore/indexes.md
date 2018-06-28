@@ -1,4 +1,4 @@
-# Cloud Firestore: Indexes
+# Indexes
 
 Indexes are required in Cloud Firestore whenever you want to use two where-clauses in a single query.
 
@@ -18,7 +18,7 @@ async function getUploadsByUser(userId) {
 
 This query would require indexes on `userId` and `created`.
 
-### Console index management
+## Console index management
 
 Queries are super easy to handle via the Console.
 
@@ -28,7 +28,7 @@ You'll see an error message in DevTools whenever you attempt to run a query that
 
 Once on the Console, you'll get a prompt to create the required index. Simply confirm and wait for the index to build.
 
-### Firebase Tools index management
+## Firebase Tools index management
 
 The other way to manage indexes is via Firebase Tools.
 
@@ -38,7 +38,7 @@ You'll spec out your indexes in `firestore.indexes.json` and run `firebase deplo
 
 Here's a sample of how your indexes file could look:
 
-```json
+```javascript
 {
   "indexes": [
     {
@@ -52,6 +52,7 @@ Here's a sample of how your indexes file could look:
 }
 ```
 
-### And that's it!
+## And that's it!
 
 There's nothing more to Firestore indexes. You just need to be aware of them and adjust them as necessary.
+

@@ -6,7 +6,7 @@ We know web, not Android or iOS, and we're teaching what we know; therefore, thi
 
 So why should you use Firebase as your web app platform?
 
-### Everything you need, integrated
+## Everything you need, integrated
 
 You want to use Firebase because it gives you a huge suite of services that you don't have to write.
 
@@ -18,7 +18,7 @@ In short, Firebase saves you time. We've seen greater-than 50% reductions in dev
 
 And by saving you time, Firebase saves you money. Lots of money.
 
-### Production-worthy infrastructure
+## Production-worthy infrastructure
 
 Startups need to write minimum-viable products. They need to prototype. They don't need to focus on scaling in the early days.
 
@@ -35,3 +35,4 @@ A typical startup architecture would include servers and databases, all of which
 Firebase architecture abstracts all of that away. Your code is "serverless", meaning that you don't manage servers yourself. You write code and Firebase puts it on Google's servers and scales it up and down as needed.
 
 You can service millions of customers on the same architecture and infrastructure that you used for your prototype.
+

@@ -1,6 +1,8 @@
-# Realtime Database: Notes
+# Notes
 
-# Set a ref
+## Realtime Database: Notes
+
+## Set a ref
 
 ```javascript
 function writeUserData(userId, name, email, imageUrl) {
@@ -15,7 +17,7 @@ function writeUserData(userId, name, email, imageUrl) {
 }
 ```
 
-# Value events
+## Value events
 
 Value events fire with the entire data payload for any and all changes
 
@@ -42,7 +44,7 @@ return firebase
   });
 ```
 
-# Multi-path updates
+## Multi-path updates
 
 ```javascript
 function writeNewPost(uid, username, picture, title, body) {
@@ -75,7 +77,7 @@ function writeNewPost(uid, username, picture, title, body) {
 }
 ```
 
-# Delete data
+## Delete data
 
 ```javascript
 function deleteUser(userId) {
@@ -86,7 +88,7 @@ function deleteUser(userId) {
 }
 ```
 
-# Detach listener
+## Detach listener
 
 ```javascript
 var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
@@ -99,7 +101,7 @@ function detachListener() {
 }
 ```
 
-# Transactions
+## Transactions
 
 ```javascript
 function toggleStar(postRef, uid) {
@@ -121,11 +123,11 @@ function toggleStar(postRef, uid) {
 }
 ```
 
-# Child events
+## Child events
 
-* **child_added**: fires once for every existing result and then again for every new result; does not fire for changes or removals, only new records
-* **child_changed**: fires when the underlying object or value is changed in any way
-* **child_removed**: fires when the entire record is removed
+* **child\_added**: fires once for every existing result and then again for every new result; does not fire for changes or removals, only new records
+* **child\_changed**: fires when the underlying object or value is changed in any way
+* **child\_removed**: fires when the entire record is removed
 
 ```javascript
 var commentsRef = firebase.database().ref('post-comments/' + postId);
@@ -142,11 +144,11 @@ commentsRef.on('child_removed', function(data) {
 });
 ```
 
-# Sort data
+## Sort data
 
-* **orderByChild('childName')**: Orders by a child attribute
-* **orderByKey()**: Orders by record keys
-* **orderByValue()**: Orders by record values; only relevant when values are strings or numbers and not nested objects
+* **orderByChild\('childName'\)**: Orders by a child attribute
+* **orderByKey\(\)**: Orders by record keys
+* **orderByValue\(\)**: Orders by record values; only relevant when values are strings or numbers and not nested objects
 
 ```javascript
 var topUserPostsRef = firebase
@@ -160,19 +162,15 @@ var mostViewedPosts = firebase
   .orderByChild('metrics/views');
 ```
 
-# Filter data
+## Filter data
 
 > Assumes that data is ordered by key unless otherwise specified
 
-* **limitToFirst(count)**: Sets the maximum number of items to return from the beginning of the ordered list of results.
-
-* **limitToLast(count)**: Sets the maximum number of items to return from the end of the ordered list of results.
-
-* **startAt(value)**: Return items greater than or equal to the specified key or value, depending on the order-by method chosen.
-
-* **endAt(value)**: Return items less than or equal to the specified key or value, depending on the order-by method chosen.
-
-* **equalTo(value)**: Return items equal to the specified key or value, depending on the order-by method chosen.
+* **limitToFirst\(count\)**: Sets the maximum number of items to return from the beginning of the ordered list of results.
+* **limitToLast\(count\)**: Sets the maximum number of items to return from the end of the ordered list of results.
+* **startAt\(value\)**: Return items greater than or equal to the specified key or value, depending on the order-by method chosen.
+* **endAt\(value\)**: Return items less than or equal to the specified key or value, depending on the order-by method chosen.
+* **equalTo\(value\)**: Return items equal to the specified key or value, depending on the order-by method chosen.
 
 ```javascript
 var first100Days = firebase
@@ -203,7 +201,7 @@ var first10DaysOfJanuary = firebase
   .endAt(10); // endAt stops the query before it hits the limit
 ```
 
-# Authenticate Node.js
+## Authenticate Node.js
 
 > Full admin privileges
 
@@ -227,7 +225,7 @@ ref.once('value', function(snapshot) {
 });
 ```
 
-# Initialize Node.js with limited privileges
+## Initialize Node.js with limited privileges
 
 > Set auth token variables to limit access
 
@@ -252,3 +250,4 @@ admin.initializeApp({
   databaseAuthVariableOverride: null,
 });
 ```
+

@@ -1,4 +1,4 @@
-# Cloud Firestore: Security Rules
+# Security Rules
 
 A public-facing database wouldn't be complete without a security system.
 
@@ -6,11 +6,11 @@ Firestore and Firebase Storage both use Firebase's new security rules syntax, wh
 
 The gist of security rules is that you'll be granting read and/or write access to individual nodes of your database.
 
-### Basic Rules
+## Basic Rules
 
 Our Firestore security rules for Fogo, our image-sharing app, are as follows:
 
-```
+```text
 service cloud.firestore {
   match /databases/{database}/documents {
     match /uploads/{document=**} {
@@ -41,11 +41,11 @@ Let's break these rules down line-by-line.
 
 **allow read, write: if request.auth.token.admin == true ;** - allows both read and write access for authenticated sessions with an `admin` attribute equal to `true` on the auth token, which is also known as the user's JWT
 
-### Match blocks
+## Match blocks
 
 Here's the pattern for match blocks 👇
 
-```
+```text
 match /my-collection/my-document {
 
 }
@@ -53,7 +53,7 @@ match /my-collection/my-document {
 
 The document-name fields can be set to wildcard values as well, which looks like this 👇
 
-```
+```text
 match /my-collection/{allDocuments} {
 
 }
@@ -61,7 +61,7 @@ match /my-collection/{allDocuments} {
 
 If you want a rule to apply to all documents _AND_ all sub-collection documents, you need a slightly different syntax:
 
-```
+```text
 match /my-collection/{allDocuments=**} {
 
 }
@@ -69,7 +69,7 @@ match /my-collection/{allDocuments=**} {
 
 Notice the `=**` at the end of the wildcard? That's the "recursive wildcard" syntax. If you don't tell your wildcard to be recursive, your match block will not apply to sub-collection documents. Imagine a data structure like `/users/{userDocs}/preferences/{preferenceDocs}`, where you have a collection of Users, and each user has a collection of Preferences. We can think of three types of match blocks for this data structure:
 
-```
+```text
 match /users/{user} {
   // applies to the user docs, NOT the nested preference docs
 }
@@ -85,7 +85,7 @@ match /users/{user}/preferences/{preference} {
 
 You could write the same rules like this:
 
-```
+```text
 match /users/{user} {
   // applies to the user docs, NOT the nested preference docs
 
@@ -97,7 +97,7 @@ match /users/{user} {
 
 See what we did there with the nested rule blocks? Yeah, you can nest match blocks. It's purely optional, but it might be easier to read in some cases.
 
-### Rule types
+## Rule types
 
 The basic rule types are `read` and `write`. But each of these rule types can be broken down into sub-types.
 
@@ -109,7 +109,7 @@ The basic rule types are `read` and `write`. But each of these rule types can be
   * update
   * delete
 
-#### Read rules
+### Read rules
 
 The basic `allow read` rule grants both `get` and `list` access to the documents in a collection.
 
@@ -145,7 +145,7 @@ firebase
   });
 ```
 
-#### Write rules
+### Write rules
 
 The `allow write` rule grants `create`, `update` and `delete` privileges.
 
@@ -153,13 +153,13 @@ The `allow create`, `allow update` and `allow delete` rules are self-explanatory
 
 Imagine a project-management app with three levels of user-security: admins, managers and employees. In this case, you may want to allow employees to update existing projects, allow managers to create and update projects and allow the admins full create, update and delete permissions.
 
-### Conditions
+## Conditions
 
 Perhaps the trickiest part of security rules is writing the individual rule conditions.
 
 To start off, you can always declare a rule without conditions:
 
-```
+```text
 match /dropboxCollection {
   read false;
   write true;
@@ -170,18 +170,18 @@ match /mailboxCollection {
   write false;
 }
 ```
-> ***Note:***
-> Your Cloud Functions and authorized Node.js servers have full read/write access to the entire database, regardless of security rules.
 
-But most apps need write conditions, so security rules have a similar-to-JavaScript DSL (domain-specific language) for defining those conditions.
+> _**Note:**_ Your Cloud Functions and authorized Node.js servers have full read/write access to the entire database, regardless of security rules.
 
-### Wildcard variables
+But most apps need write conditions, so security rules have a similar-to-JavaScript DSL \(domain-specific language\) for defining those conditions.
+
+## Wildcard variables
 
 First off, any wildcards that you declared in your match rules are available as variables.
 
 The following example shows how you could enable users to read their own user documents and write only one preference document: `receiveMarketingEmail`;
 
-```
+```text
 match /users/{userId} {
 
   allow read: if request.auth.uid == userId;
@@ -193,11 +193,11 @@ match /users/{userId} {
 }
 ```
 
-### Request variables
+## Request variables
 
 Rule conditions have access to a `request` object that represents that incoming request. You'll be using the `request` object for most rule conditions. Here's a sketch of what that object looks like as JSON:
 
-```json
+```javascript
 {
   "auth": {
     "uid": "my-unique-user-id-aka-uid",
@@ -248,33 +248,34 @@ Now we get into some custom objects. You'll want to follow links and read the do
 
 And finally, `request.writeFields` contains a [List object](https://firebase.google.com/docs/firestore/reference/security/#list) of fields being written.
 
-### Resource object
+## Resource object
 
-In addition to the `request` object, there's also a `resource` object available. That means that `resource.data`  can be compared to `request.resource.data` to identify requested changes.
+In addition to the `request` object, there's also a `resource` object available. That means that `resource.data` can be compared to `request.resource.data` to identify requested changes.
 
-### Stick with request.auth
+## Stick with request.auth
 
-The `request.auth` object is by far the most commonly used part of the `request` object, especially when [custom claims](https://firebase.google.com/docs/auth/admin/custom-claims) have been set on `request.auth.token`. 
+The `request.auth` object is by far the most commonly used part of the `request` object, especially when [custom claims](https://firebase.google.com/docs/auth/admin/custom-claims) have been set on `request.auth.token`.
 
 A common custom claim pattern is to set an `admin` flag which can be used like so:
 
-```
+```text
 match /superSecretAdminStuff/{docs=**} {
   allow read, write: request.auth.token.admin == true;
 }
 ```
 
-### Read the docs
+## Read the docs
 
 Firebase has excellent docs, and we don't want to compete with such great writing.
 
 The highlights:
 
-- [the Resource object](https://firebase.google.com/docs/firestore/reference/security/#firestore-resource)
-- [Functions: exists() and get()](https://firebase.google.com/docs/firestore/reference/security/#functions)
-- [Developer-defined Functions](https://firebase.google.com/docs/firestore/reference/security/#developer_defined)
-- [Data types](https://firebase.google.com/docs/firestore/reference/security/#data_types)
+* [the Resource object](https://firebase.google.com/docs/firestore/reference/security/#firestore-resource)
+* [Functions: exists\(\) and get\(\)](https://firebase.google.com/docs/firestore/reference/security/#functions)
+* [Developer-defined Functions](https://firebase.google.com/docs/firestore/reference/security/#developer_defined)
+* [Data types](https://firebase.google.com/docs/firestore/reference/security/#data_types)
 
-### Firebase Storage security rules are nearly identical
+## Firebase Storage security rules are nearly identical
 
 Firestore's security system is shared by [Firebase Storage](https://firebase.google.com/docs/reference/security/storage/). The objects and data types are identical, but Storage is dealing with binary objects, so it's Resource properties are bit different.
+
