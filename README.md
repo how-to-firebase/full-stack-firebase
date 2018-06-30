@@ -2,9 +2,9 @@
 description: Welcome to Full-Stack Firebase!
 ---
 
-# Introduction
+# Introducing Full-Stack Firebase
 
-![](.gitbook/assets/full-stack-firebase-gradient.png)
+![full-stack-firebase-gradient.png](https://goo.gl/YyJKBh)
 
 Our goals is to grow your understanding of the Firebase application-development platform until you're comfortable deploying an app to production.
 
