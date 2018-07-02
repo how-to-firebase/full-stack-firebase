@@ -4,7 +4,7 @@ It's Chris Esplin again, haunting your suggested videos feed!
 
 This will be a short update on what I've been doing for the last year.
 
-In the Summer of 2017 I was approached by some great folks from Udemy.com.
+In the Summer of 2017 I was approached by some great folks from `Udemy dot com`.
 
 They were interested in publishing a Firebase course to their platform...
 
@@ -36,7 +36,7 @@ I worked on the project for three hours every morning before work and on Saturda
 
 Anyway, the reason we're here is because I've got over 40 videos and I'm anxious to ship them!
 
-We're talking about a full-blown, two-and-a-half hours video course on `udemy dot com`.
+We're talking about a full-blown, two-and-a-half hour video course on `udemy dot com`.
 
 I'm a web developer, so this is Firebase for web, not Android or iOS.
 
@@ -52,7 +52,7 @@ I've used `full stack firebase dot com` as a place to outline the material...
 
 So start at `full stack firebase dot com` and you'll find links to purchase the course on Udemy.
 
-You'll find a bunch of introductory modules about high-level Firebase concepts.
+You'll also find a bunch of introductory modules about high-level Firebase concepts.
 
 We've covered serverless concepts and how to think about the Firebase ecosystem.
 

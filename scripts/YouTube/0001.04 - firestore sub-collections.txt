@@ -1,4 +1,4 @@
-Hello YouTube!
+Greetings YouTube!
 
 If you've been keeping up on Firebase in the last year then you're likely using Firestore.
 
@@ -12,7 +12,7 @@ That's a ton of work, but once you're on Google infrastructure, you're on Google
 
 So you might as well design a new database from scratch that crushes everything that came before.
 
-And there's how we got Firestore.
+And that's how we got Firestore.
 
 I've talked about Firestore in the past...
 
@@ -32,7 +32,7 @@ And you can keep nesting your data within sub-collections to your heart's conten
 
 But that would be a horrible mistake.
 
-In fact, I haven't found a great use case for sub-collections yet.
+In fact, I haven't found a great use case for sub-collections quite yet.
 
 First off, you can easily save embedded JSON objects within your documents...
 
@@ -119,3 +119,7 @@ I'll hang out and answer questions as always...
 If you're already subscribed, maybe unsubscribe and subscribe again...
 
 ...just for the satisfaction of clicking that fantastic "subscribe" button one more time.
+
+
+
+

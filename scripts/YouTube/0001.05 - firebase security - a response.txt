@@ -82,9 +82,9 @@ And that's fine if you're writing a little demo app or an internal prototype wit
 
 But it's become clear that there are a ton of bad developers out there...
 
-...and these devs shipped their apps without ever locking them back up.
+...and that these devs shipped their apps without ever locking them back up.
 
-If you're interested in stealing, there are a ton of insecure apps out there.
+If you're interested in stealing, there are a ton of insecure apps on the web.
 
 And some of them are poorly configured Firebase apps.
 
