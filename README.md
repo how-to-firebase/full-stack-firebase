@@ -10,6 +10,18 @@ Our goals is to grow your understanding of the Firebase application-development 
 
 We have a number of ways to learn, so sample them until you find what works for you 😊
 
+## Sign up for updates
+
+We'll email high-value Firebase tips and tricks straight to your inbox :)
+
+<iframe id="inlineFrameExample"
+    style="border: none;"
+    title="Inline Frame Example"
+    width="100%"
+    height="700"
+    src="http://quiver.us8.list-manage.com/subscribe?u=a2ebc70369b08d86ac8cf4773&id=6b3131c3e0">
+</iframe>
+
 ## Check out GitBooks
 
 Don't love reading raw Markdown? [Read this book on GitBook](https://how-to-firebase.gitbooks.io/full-stack-firebase/content/).
