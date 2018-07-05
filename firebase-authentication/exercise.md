@@ -1,4 +1,4 @@
-# Exercise
+# Exercise: Firebase Authentication
 
 ## Find the repo
 

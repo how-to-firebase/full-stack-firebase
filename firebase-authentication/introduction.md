@@ -1,4 +1,4 @@
-# Introduction
+# Introduction: Firebase Authentication
 
 You need Firebase Authentication for two reasons:
 

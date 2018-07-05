@@ -1,4 +1,4 @@
-# Walk-through
+# Walkthrough: Firebase Authentication
 
 Welcome to Full-Stack Firebase with Chris Esplin and Juarez Filho
 

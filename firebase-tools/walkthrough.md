@@ -1,4 +1,4 @@
-# Walkthrough
+# Walkthrough: Firebase Tools
 
 You'll get started with Firebase Tools by installing it. Open up your terminal and make sure you have Node.js installed:
 
