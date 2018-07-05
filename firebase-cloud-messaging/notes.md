@@ -1,14 +1,16 @@
-# Cloud Messaging: Notes
+# Notes
 
-# manifest.json
+## Cloud Messaging: Notes
 
-```json
+## manifest.json
+
+```javascript
 {
   "gcm_sender_id": "103953800507"
 }
 ```
 
-# Request permission in browser
+## Request permission in browser
 
 ```javascript
 // index.html
@@ -42,7 +44,7 @@ messaging
   });
 ```
 
-# Monitor token refresh
+## Monitor token refresh
 
 ```javascript
 // index.html
@@ -66,7 +68,7 @@ messaging.onTokenRefresh(function() {
 });
 ```
 
-# Catch messages when page is in foreground
+## Catch messages when page is in foreground
 
 ```javascript
 // index.html
@@ -80,7 +82,7 @@ messaging.onMessage(function(payload) {
 });
 ```
 
-# Create serviceWorker
+## Create serviceWorker
 
 > You need a serviceWorker to listen for messages in the background
 
@@ -103,7 +105,7 @@ firebase.initializeApp({
 const messaging = firebase.messaging();
 ```
 
-# Send message to single recipient
+## Send message to single recipient
 
 ```javascript
 // Cloud Function
@@ -139,7 +141,7 @@ admin
   });
 ```
 
-# Send multi-cast message
+## Send multi-cast message
 
 ```javascript
 // Cloud Function
@@ -159,7 +161,7 @@ admin
   });
 ```
 
-# Send device-group message
+## Send device-group message
 
 > See [managing device groups](https://firebase.google.com/docs/cloud-messaging/android/device-group#managing_device_groups)
 
@@ -176,7 +178,7 @@ admin
   });
 ```
 
-# Send topic message
+## Send topic message
 
 > See [managing device groups](https://firebase.google.com/docs/cloud-messaging/android/device-group#managing_device_groups)
 
@@ -195,7 +197,7 @@ admin
   });
 ```
 
-# Send to condition
+## Send to condition
 
 > Conditions support only two operations per expression
 
@@ -214,7 +216,7 @@ admin
   });
 ```
 
-# Message options
+## Message options
 
 ```javascript
 // Cloud Function
@@ -241,7 +243,7 @@ admin
   });
 ```
 
-# Subscribe to topic
+## Subscribe to topic
 
 ```javascript
 // Cloud Function
@@ -259,7 +261,7 @@ admin
   });
 ```
 
-# Subscribe to topic
+## Subscribe to topic
 
 ```javascript
 // Cloud Function
@@ -279,7 +281,7 @@ admin
   });
 ```
 
-# Unsubscribe to topic
+## Unsubscribe to topic
 
 ```javascript
 // Cloud Function
@@ -298,3 +300,4 @@ admin
     //...
   });
 ```
+

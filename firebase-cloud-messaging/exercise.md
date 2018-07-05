@@ -1,4 +1,4 @@
-# Cloud Messaging: Challenge
+# Exercise
 
 ## Find the repo
 
@@ -6,13 +6,13 @@ We'll be working on a branch of our [firelist-react](https://github.com/how-to-f
 
 ## Codesandbox
 
-Simply open up the [CodeSandbox.io](https://codesandbox.io/s/github/how-to-firebase/firelist-react/tree/firebase-messaging) project :)
+Simply open up the [CodeSandbox.io](https://codesandbox.io/s/github/how-to-firebase/firelist-react/tree/firebase-messaging) project :\)
 
 ## Localhost installation
 
 Pull [the repo](https://github.com/how-to-firebase/firelist-react) directly from GitHub...
 
-```
+```text
 git clone https://github.com/how-to-firebase/firelist-react.git
 cd firelist-react
 git checkout firebase-messaging
@@ -22,7 +22,7 @@ Once you're on the branch, make sure to run `yarn` or `npm install` to get your 
 
 Then run `yarn start` or `npm run start` to spin up the development server.
 
-```
+```text
 yarn
 yarn start
 ```
@@ -43,7 +43,7 @@ However! We believe that all apps should be PWAs, so we've configured this proje
 
 You'll notice a function in `./src/components/messaging.js` named `registerServiceWorker`
 
-```
+```text
 async function registerServiceWorker(messaging) {
   if ('serviceWorker' in navigator) {
     const registration = await navigator.serviceWorker.register('/sw.js');
@@ -61,3 +61,4 @@ Yes, you can add all of the service worker functionality that you like into `fir
 However, this automatic registration will not allow your users to install your app to their homescreen as a PWA... which totally defeats the purpose of a PWA.
 
 Hence our insistence on using `/sw.js`.
+
