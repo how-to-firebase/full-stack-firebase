@@ -1,0 +1,39 @@
+Welcome to Full-Stack Firebase with me, Chris Esplin
+
+I am a front-end web developer and co-founder of calligraphy dot org
+
+I'm also a Google Developer Expert with a specialization in Firebase
+
+Calligraphy dot org and all of my projects run on the Firebase app platform and have since 2013
+
+I've taught Firebase at programming bootcamps, Firebase hackathons and on my YouTube channel
+
+Firebase is one of the best things to happen in the web ecosystem in the last five years
+
+Firebase is a full-featured application platform that enables rapid, scalable app development
+
+Full-Stack Firebase will teach you Firebase's JavaScript SDK
+
+It will also teach you the building blocks of serverless application development
+
+At the end of this course you'll have the skills to take Firebase apps from prototype to production 
+
+We'll cover Firebase Authentication, Cloud Firestore, the Realtime Database...
+
+...Cloud Functions, Firebase Storage, Firebase Cloud Messaging and Firebase Hosting
+
+We'll learn what each of these features adds to the Firebase ecosystem
+
+We'll see each of these features in action in a live web application
+
+And finally, we'll build our own application, together, using each Firebase feature
+
+Full-Stack Firebase is designed for JavaScript developers looking to get started with Firebase
+
+Students don't need any prior experience except for basic JavaScript and HTML
+
+Your time is valuable. 
+
+Do not waste it learning Firebase the hard way.
+
+Take the shortest path to Firebase mastery with Full-Stack Firebase.
