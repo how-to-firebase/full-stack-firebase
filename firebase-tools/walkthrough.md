@@ -40,7 +40,7 @@ firebase init
 
 Select all of the Firebase features. Because why not!
 
-![firebase-init.png](https://goo.gl/FbF1Zi)
+![firebase-init.png](https://goo.gl/Co7fU9)
 
 Now follow the prompts, sticking to the defaults with one exception:
 
@@ -87,9 +87,9 @@ Error: HTTP Error: 400, Project 'how-to-firebase-tutorials' is not a Firestore e
 
 ... in which case, you'll need to use your Console to activate the Firestore Beta. Make sure to start in locked mode.
 
-![enable-firestore.png](https://goo.gl/veDwFU)
+![enable-firestore.png](https://goo.gl/4oX1a8)
 
-![locked-mode.png](https://goo.gl/AQDVgp)
+![locked-mode.png](https://goo.gl/6MSy65)
 
 Now try `firebase deploy` again if necessary.
 

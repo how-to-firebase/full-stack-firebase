@@ -1,3 +1,5 @@
+# Introduction: Firebase Console
+
 We'll kick this party off with a quick run down of the Firebase Console.
 
 It's how you'll interact with many of the Firebase features.

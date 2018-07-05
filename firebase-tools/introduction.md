@@ -1,4 +1,4 @@
-# Introduction
+# Introduction: Firebase Tools
 
 The Firebase Console handles most administrative functions, but it doesn't deploy code, and there are some admin functions that don't have console dashboards yet.
 
