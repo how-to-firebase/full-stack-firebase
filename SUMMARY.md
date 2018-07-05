@@ -62,10 +62,10 @@
 
 ## Cloud Messaging
 
-* [Introduction](cloud-messaging/introduction.md)
-* [Walk-through](cloud-messaging/walk-through.md)
-* [Exercise](cloud-messaging/exercise.md)
-* [Notes](cloud-messaging/notes.md)
+* [Introduction](firebase-cloud-messaging/introduction.md)
+* [Walk-through](firebase-cloud-messaging/walk-through.md)
+* [Exercise](firebase-cloud-messaging/exercise.md)
+* [Notes](firebase-cloud-messaging/notes.md)
 
 ## Firebase Hosting
 
