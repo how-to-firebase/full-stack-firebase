@@ -1,44 +1,38 @@
 # Walkthrough: Firebase Authentication
 
-Welcome to Full-Stack Firebase with Chris Esplin and Juarez Filho
+## Open the app
 
-The app you see before you is publicly accessible at fogo, that's spelled F-O-G-O, dot how to firebase dot com
+Open the app at [fogo.howtofirebase.com](https://fogo.howtofirebase.com/)
 
-So let's see Firebase Authentication in action in the wild.
+## Open DevTools
 
-We'll start off by logging into Google with a Provider.
+Open [DevTools](https://developers.google.com/web/tools/chrome-devtools/shortcuts) on the app page.
 
-Don't worry... providers are trivial to create, and we'll cover them elsewhere
 
-Just note that this provider is specific to Google.
 
-You'll have different providers for Facebook, Twitter or GitHub.
+# Walkthrough: Firebase Authentication
 
-Now simply pass the provider into auth.signInWithRedirect and we're off and running
+## Open the app
 
-Notice how our browser automatically redirects to Google's auth page
+Open the app at [fogo.howtofirebase.com](https://fogo.howtofirebase.com/).
 
-When authentication is complete we're redirected back to our app
+## Open DevTools
 
-Our auth state has changed, so our onAuthStateChanged listener fires with our new currentUser
+[Sourcemaps are currently broken in Chrome](https://github.com/webpack/webpack/issues/3165) for Fogo as of July 2018.
 
-The currentUser is our J-W-T or JOT, and it represents our authentication session.
+This is best done in Firefox.
 
-Notice the currentUser's displayName, email and emailVerified attributes
+Right-click `inspect element` and select the `Debugger` tab. Then click `command + P` to search for and open two files:
 
-There's some extra provider data available as well.
+- `firebase-authentication/src/services/auth.service.js`,
+- and `firebase-authentication/src/index.js`.
 
-Now we'll let our application-specific logic respond to the new currentUser object and log us into the app.
 
-And now that we've logged in, let's log out!
 
-auth.signOut\(\) will get the job done for us.
+![firebase-authentication/src/services/auth.service.js](https://goo.gl/AtUkk3)
 
-Notice how our onAuthStateChanged listener fires again, this time with a null currentUser
+![firebase-authentication/src/index.js](https://goo.gl/6q9Fo1)
 
-... and that's it!
+## Video
 
-You can log in with different OAuth providers, an email and password or even a mobile phone.
-
-Firebase Authentication is quick and easy to implement, and it provides the backbone for all of Firebase's security.
 

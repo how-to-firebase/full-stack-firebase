@@ -1,4 +1,4 @@
-# Write your first query
+# Challenge Write your first query
 
 We'll be using Firestore. Just follow the instructions below.
 

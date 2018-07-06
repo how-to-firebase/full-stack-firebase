@@ -1,4 +1,4 @@
-# Exercise: Firebase Authentication
+# Challenge: Firebase Authentication
 
 ## Find the repo
 
@@ -13,6 +13,16 @@ git clone https://github.com/how-to-firebase/firelist-react.git
 cd firelist-react
 git checkout challenge-authentication
 ```
+
+## Edit environment files
+
+Update the following files with your own project details:
+
+- `/.firebaserc`
+- `/public/environments/environment.dev.js`
+- `/public/environments/environment.js`
+
+## Start the app
 
 Once you're on the branch, make sure to run `yarn` or `npm install` to get your Node.js dependencies.
 
