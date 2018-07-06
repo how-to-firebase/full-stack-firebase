@@ -1,4 +1,4 @@
-# Walk-through
+# Walkthrough
 
 
 
