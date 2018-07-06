@@ -1,4 +1,4 @@
-# Walk-through
+# Walkthrough
 
 We'll kick this party off with a quick run down of the Firebase Console.
 
