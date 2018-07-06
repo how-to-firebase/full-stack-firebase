@@ -25,7 +25,7 @@
 ## Firebase Authentication
 
 * [Introduction](firebase-authentication/introduction.md)
-* [Walk-through](firebase-authentication/walk-through.md)
+* [Walkthrough](firebase-authentication/walk-through.md)
 * [Exercise](firebase-authentication/exercise.md)
 * [Notes](firebase-authentication/notes.md)
 
@@ -35,7 +35,7 @@
 * [Walk-through](cloud-firestore/walk-through.md)
 * [Security Rules](cloud-firestore/security-rules.md)
 * [Indexes](cloud-firestore/indexes.md)
-* [Exercise](cloud-firestore/exercise.md)
+* [Exercise](realtime-database/exercise.md)
 * [Notes](cloud-firestore/notes.md)
 
 ## Realtime Database
@@ -62,10 +62,10 @@
 
 ## Cloud Messaging
 
-* [Introduction](firebase-cloud-messaging/introduction.md)
-* [Walk-through](firebase-cloud-messaging/walk-through.md)
-* [Exercise](firebase-cloud-messaging/exercise.md)
-* [Notes](firebase-cloud-messaging/notes.md)
+* [Introduction](cloud-messaging/introduction.md)
+* [Walk-through](cloud-messaging/walk-through.md)
+* [Exercise](cloud-messaging/exercise.md)
+* [Notes](cloud-messaging/notes.md)
 
 ## Firebase Hosting
 

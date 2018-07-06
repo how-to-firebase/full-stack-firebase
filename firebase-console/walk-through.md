@@ -1,4 +1,4 @@
-# Walkthrough: Firebase Console
+# Walk-through
 
 We'll kick this party off with a quick run down of the Firebase Console.
 
@@ -6,7 +6,7 @@ It's how you'll interact with many of the Firebase features.
 
 You'll need your Dashboard to configure your services and watch data flow through your project. Most of the Dashboard's functions are also accessible via the Firebase Tools command-line interface.
 
-Command-line interface is a mouthful, so we'll refer to it as a CLI. 
+Command-line interface is a mouthful, so we'll refer to it as a CLI.
 
 ## firebase.google.com
 
@@ -26,7 +26,7 @@ You can copy/paste values from this popup directly into your 'index dot html'.
 
 ![Add Firebase to your web app](https://goo.gl/LCK1fW)
 
-Now notice the gears button. We won't spend much time here, but it's good to click around. Notice that you can change your project name and generate service accounts. We'll use the service accounts later when we're using Node.js in admin mode. 
+Now notice the gears button. We won't spend much time here, but it's good to click around. Notice that you can change your project name and generate service accounts. We'll use the service accounts later when we're using Node.js in admin mode.
 
 But let's continue on to the left bar.
 
@@ -36,11 +36,11 @@ The left bar has four sections, Develop, Stability, Analytics and Grow. The firs
 
 Google rolled a bunch of their mobile platform products into the Firebase brand; however, Google's web products, such as Analytics and AdSense, are not under the Firebase brand
 
-So let's start with Authentication. 
+So let's start with Authentication.
 
 ## Firebase Authentication
 
-Our user accounts list is empty, because we haven't enabled any sign-in methods, so let's do that. We have a variety of sign-in methods. 
+Our user accounts list is empty, because we haven't enabled any sign-in methods, so let's do that. We have a variety of sign-in methods.
 
 ![Sign-In Methods](https://goo.gl/4GFwXV)
 
@@ -52,11 +52,11 @@ Later in the course we'll be coding on Glitch.com. So let's authorize the Glitch
 
 Let's also allow creation of multiple accounts per email address. This will automatically merge duplicate accounts created under the same email address. It's common for users to create an email/password account with a GMail address and later try to log in with Google using that same GMail address.
 
-Now let's click through the Templates and Usage tabs. 
+Now let's click through the Templates and Usage tabs.
 
 ![Authentication Templates](https://goo.gl/cqbxgr)
 
-Firebase will send some email on your behalf, so it's nice to customize those emails. 
+Firebase will send some email on your behalf, so it's nice to customize those emails.
 
 And you'll have to pay for phone authentication if your app gets enormous. Having a hugely successful app would be a great problem to have. We hope to someday suffer that plight and spend more time monitoring usage.
 
@@ -68,7 +68,7 @@ The Database section will give you two options, the Realtime Database or Cloud F
 
 The Rules tab is great for visualizing and testing security rules. You can use the security rules simulator to simulate reads and writes. This is useful for making sure that your data is locked down and secure.
 
-Moving on... the Backups tab is great once you're in production. You'll want to enable frequent database backups. They're cheap insurance against data loss. 
+Moving on... the Backups tab is great once you're in production. You'll want to enable frequent database backups. They're cheap insurance against data loss.
 
 And the Usage tab will, as we've seen before, help you manage your costs as you scale.
 
@@ -78,13 +78,13 @@ Let's continue on to the Storage section.
 
 ![Firebase Storage](https://goo.gl/vzTRMG)
 
-It's pretty spare with only two tabs, Files and Rules. We can use the File browser to create folders and upload files. Once we have files in our Storage bucket we can also view file details and some metadata. We'll cover security rules for Storage in a later chapter. 
+It's pretty spare with only two tabs, Files and Rules. We can use the File browser to create folders and upload files. Once we have files in our Storage bucket we can also view file details and some metadata. We'll cover security rules for Storage in a later chapter.
 
 So let's continue on to Hosting!
 
 ![Firebase Hosting](https://goo.gl/Jy9jDp)
 
-You'll mostly use Hosting's Dashboard tab to connect a custom domain. Firebase Hosting provides a *.firebaseapp.com subdomain for each project. But when you're ready for real users, you'll want a custom domain with free SSL certs. You can also manage your deploys and review your deployment history.
+You'll mostly use Hosting's Dashboard tab to connect a custom domain. Firebase Hosting provides a \*.firebaseapp.com subdomain for each project. But when you're ready for real users, you'll want a custom domain with free SSL certs. You can also manage your deploys and review your deployment history.
 
 The Usage tab is, again, most useful for cost control if your site gets popular.
 
@@ -110,7 +110,7 @@ All of our development usage and some of our production usage falls within the f
 
 Flame is never cheaper than Blaze... it's just price capped at 25 US dollars
 
-We use Blaze for all of our projects. 
+We use Blaze for all of our projects.
 
 ## Conclusion
 
@@ -119,3 +119,4 @@ And that's the Firebase Console!
 We'll dive deeper into each console section as we learn the associated Firebase features.
 
 There's a lot to learn here, but you'll need a rich, active project for it to get interesting
+

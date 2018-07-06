@@ -1,4 +1,4 @@
-# Challenge: Firebase Authentication
+# Exercise
 
 ## Find the repo
 
@@ -18,9 +18,9 @@ git checkout challenge-authentication
 
 Update the following files with your own project details:
 
-- `/.firebaserc`
-- `/public/environments/environment.dev.js`
-- `/public/environments/environment.js`
+* `/.firebaserc`
+* `/public/environments/environment.dev.js`
+* `/public/environments/environment.js`
 
 ## Start the app
 
@@ -40,3 +40,4 @@ Search the codebase for `Challenge Authentication` to find all of the challenges
 We'll be editing `./src/components/authenticate.js` and `./src/index.js`.
 
 Read the comments and complete the steps in those two files.
+
