@@ -35,7 +35,7 @@
 * [Walkthrough](cloud-firestore/walkthrough.md)
 * [Security Rules](cloud-firestore/security-rules.md)
 * [Indexes](cloud-firestore/indexes.md)
-* [Exercise](cloud-firestore/exercise.md)
+* [Challenge](cloud-firestore/exercise.md)
 * [Notes](cloud-firestore/notes.md)
 
 ## Realtime Database
@@ -49,27 +49,27 @@
 
 * [Introduction](cloud-functions-for-firebase/introduction.md)
 * [Walk-through](cloud-functions-for-firebase/walk-through.md)
-* [Exercise](cloud-functions-for-firebase/exercise.md)
+* [Challenge](cloud-functions-for-firebase/exercise.md)
 * [Notes](cloud-functions-for-firebase/notes.md)
 
 ## Firebase Storage
 
 * [Introduction](firebase-storage/introduction.md)
 * [Walk-through](firebase-storage/walk-through.md)
-* [Exercise](firebase-storage/exercise.md)
+* [Challenge](firebase-storage/exercise.md)
 * [Notes](firebase-storage/notes.md)
 
 ## Cloud Messaging
 
 * [Introduction](cloud-messaging/introduction.md)
 * [Walk-through](cloud-messaging/walk-through.md)
-* [Exercise](cloud-messaging/exercise.md)
+* [Challenge](cloud-messaging/exercise.md)
 * [Notes](cloud-messaging/notes.md)
 
 ## Firebase Hosting
 
 * [Introduction](firebase-hosting/introduction.md)
 * [Walk-through](firebase-hosting/walk-through.md)
-* [Exercise](firebase-hosting/exercise.md)
+* [Challenge](firebase-hosting/exercise.md)
 * [Notes](firebase-hosting/notes.md)
 

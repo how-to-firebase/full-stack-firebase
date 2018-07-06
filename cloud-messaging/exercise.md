@@ -1,4 +1,4 @@
-# Exercise
+# Challenge
 
 ## Find the repo
 
