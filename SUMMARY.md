@@ -26,13 +26,13 @@
 
 * [Introduction](firebase-authentication/introduction.md)
 * [Walkthrough](firebase-authentication/walk-through.md)
-* [Exercise](firebase-authentication/exercise.md)
+* [Challenge](firebase-authentication/exercise.md)
 * [Notes](firebase-authentication/notes.md)
 
 ## Cloud Firestore
 
 * [Introduction](cloud-firestore/introduction.md)
-* [Walk-through](cloud-firestore/walk-through.md)
+* [Walkthrough](cloud-firestore/walk-through.md)
 * [Security Rules](cloud-firestore/security-rules.md)
 * [Indexes](cloud-firestore/indexes.md)
 * [Exercise](realtime-database/exercise.md)

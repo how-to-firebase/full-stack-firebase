@@ -1,4 +1,4 @@
-# Walk-through
+# Walkthrough
 
 Fogo is an image-management application, and as such, it needs to handle thousands of images.
 
