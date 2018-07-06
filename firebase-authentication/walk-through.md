@@ -29,9 +29,9 @@ Right-click `inspect element` and select the `Debugger` tab. Then click `command
 
 
 
-![firebase-authentication/src/services/auth.service.js](https://goo.gl/AtUkk3)
+![firebase-authentication/src/services/auth.service.js](https://goo.gl/KJ2RgR)
 
-![firebase-authentication/src/index.js](https://goo.gl/6q9Fo1)
+![firebase-authentication/src/index.js](https://goo.gl/KJ2RgR)
 
 ## Video
 
