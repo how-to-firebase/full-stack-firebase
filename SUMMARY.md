@@ -25,25 +25,24 @@
 ## Firebase Authentication
 
 * [Introduction](firebase-authentication/introduction.md)
-* [Walkthrough](firebase-authentication/walk-through.md)
-* [Challenge](firebase-authentication/exercise.md)
+* [Walkthrough](firebase-authentication/walkthrough.md)
+* [Challenge](firebase-authentication/challenge.md)
 * [Notes](firebase-authentication/notes.md)
 
 ## Cloud Firestore
 
 * [Introduction](cloud-firestore/introduction.md)
-* [Walkthrough](cloud-firestore/walk-through.md)
+* [Walkthrough](cloud-firestore/walkthrough.md)
 * [Security Rules](cloud-firestore/security-rules.md)
 * [Indexes](cloud-firestore/indexes.md)
-* [Exercise](cloud-firestore/exercise.md)
 * [Notes](cloud-firestore/notes.md)
+* [Exercise](cloud-firestore/exercise.md)
 
 ## Realtime Database
 
 * [Introduction](realtime-database/introduction.md)
 * [Walk-through](realtime-database/walk-through.md)
 * [Security Rules](realtime-database/security-rules.md)
-* [Exercise](realtime-database/exercise.md)
 * [Notes](realtime-database/notes.md)
 
 ## Cloud Functions for Firebase
