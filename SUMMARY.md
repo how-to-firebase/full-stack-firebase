@@ -35,8 +35,8 @@
 * [Walkthrough](cloud-firestore/walkthrough.md)
 * [Security Rules](cloud-firestore/security-rules.md)
 * [Indexes](cloud-firestore/indexes.md)
-* [Notes](cloud-firestore/notes.md)
 * [Exercise](cloud-firestore/exercise.md)
+* [Notes](cloud-firestore/notes.md)
 
 ## Realtime Database
 
