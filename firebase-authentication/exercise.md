@@ -2,11 +2,7 @@
 
 ## Find the repo
 
-We'll be working on a branch of our [firelist-react](https://github.com/how-to-firebase/firelist-react) repo named [firebase-authentication](https://github.com/how-to-firebase/firelist-react/tree/master).
-
-## Codesandbox
-
-Simply open up the [CodeSandbox.io](https://codesandbox.io/s/github/how-to-firebase/firelist-react/tree/firebase-authentication) project :\)
+We'll be working on a branch of our [firelist-react](https://github.com/how-to-firebase/firelist-react) repo named [challenge-authentication](https://github.com/how-to-firebase/firelist-react/tree/challenge-authentication).
 
 ## Localhost installation
 
@@ -15,7 +11,7 @@ Pull [the repo](https://github.com/how-to-firebase/firelist-react) directly from
 ```text
 git clone https://github.com/how-to-firebase/firelist-react.git
 cd firelist-react
-git checkout firebase-authentication
+git checkout challenge-authentication
 ```
 
 Once you're on the branch, make sure to run `yarn` or `npm install` to get your Node.js dependencies.
@@ -29,7 +25,8 @@ yarn start
 
 ## Complete the challenge
 
+Search the codebase for `Challenge Authentication` to find all of the challenges.
+
 We'll be editing `./src/components/authenticate.js` and `./src/index.js`.
 
 Read the comments and complete the steps in those two files.
-
