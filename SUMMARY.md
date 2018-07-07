@@ -43,11 +43,13 @@
 * [Introduction](realtime-database/introduction.md)
 * [Walkthrough](realtime-database/walkthrough.md)
 * [Security Rules](realtime-database/security-rules.md)
+* [Challenge](realtime-database/challenge.md)
 * [Notes](realtime-database/notes.md)
 
 ## Cloud Functions for Firebase
 
 * [Introduction](cloud-functions-for-firebase/introduction.md)
+* [Walkthrough](cloud-functions-for-firebase/walkthrough.md)
 * [Challenge](cloud-functions-for-firebase/challenge.md)
 * [Notes](cloud-functions-for-firebase/notes.md)
 
