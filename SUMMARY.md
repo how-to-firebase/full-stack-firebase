@@ -41,7 +41,7 @@
 ## Realtime Database
 
 * [Introduction](realtime-database/introduction.md)
-* [Walkthrough](cloud-functions-for-firebase/walkthrough.md)
+* [Walkthrough](realtime-database/walkthrough.md)
 * [Security Rules](realtime-database/security-rules.md)
 * [Notes](realtime-database/notes.md)
 
