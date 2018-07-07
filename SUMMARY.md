@@ -48,7 +48,6 @@
 ## Cloud Functions for Firebase
 
 * [Introduction](cloud-functions-for-firebase/introduction.md)
-* [Walkthrough](cloud-functions-for-firebase/walkthrough.md)
 * [Challenge](cloud-functions-for-firebase/challenge.md)
 * [Notes](cloud-functions-for-firebase/notes.md)
 
