@@ -1,7 +1,5 @@
 # Walkthrough
 
-## Walkthrough: Firebase Authentication
-
 ### Open the app
 
 Open the app at [fogo.howtofirebase.com](https://fogo.howtofirebase.com/).

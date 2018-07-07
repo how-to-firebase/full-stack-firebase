@@ -39,3 +39,4 @@ Search the codebase for `Challenge Firestore` to find all of the challenges.
 
 Read the comments and complete the steps in those files.
 
+
