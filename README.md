@@ -10,9 +10,25 @@ Our goals is to grow your understanding of the Firebase application-development 
 
 We have a number of ways to learn, so sample them until you find what works for you 😊
 
-## Check out GitBooks
+## Udemy Course
 
-Don't love reading raw Markdown? [Read this book on GitBook](https://how-to-firebase.gitbooks.io/full-stack-firebase/content/).
+[![Udemy Link](https://goo.gl/7rF7Nh)](https://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018)
+
+We've launched [Full-Stack Firebase on Udemy](https://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018) for the full video experience.
+
+The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is the absolute fastest, easiest way to learn Firebase. We've condensed everything on FullStackFirebase.com into video form with free instructor Q&A.
+
+## Email List
+
+
+
+## GitBook vs GitHub
+
+Read the GitBook or the GitHub repo:
+
+- [GitBook](https://www.fullstackfirebase.com/): A luxurious reading experience
+- [GitHub](https://github.com/how-to-firebase/full-stack-firebase): The delightful and gory details
+
 
 ## Beginners Welcome!
 
