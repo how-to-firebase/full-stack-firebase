@@ -1,6 +1,8 @@
 # Notes
 
-## Cloud Messaging: Notes
+# Cloud Messaging
+
+See the [Firebase Cloud Messaging docs for web](https://firebase.google.com/docs/cloud-messaging/js/client).
 
 ## manifest.json
 
@@ -44,6 +46,8 @@ messaging
   });
 ```
 
+<div class="page"/>
+
 ## Monitor token refresh
 
 ```javascript
@@ -82,6 +86,8 @@ messaging.onMessage(function(payload) {
 });
 ```
 
+<div class="page"/>
+
 ## Create serviceWorker
 
 > You need a serviceWorker to listen for messages in the background
@@ -104,6 +110,8 @@ firebase.initializeApp({
 // messages.
 const messaging = firebase.messaging();
 ```
+
+<div class="page"/>
 
 ## Send message to single recipient
 
@@ -140,6 +148,8 @@ admin
     console.log('Error sending message:', error);
   });
 ```
+
+<div class="page"/>
 
 ## Send multi-cast message
 
@@ -178,6 +188,8 @@ admin
   });
 ```
 
+<div class="page"/>
+
 ## Send topic message
 
 > See [managing device groups](https://firebase.google.com/docs/cloud-messaging/android/device-group#managing_device_groups)
@@ -215,6 +227,8 @@ admin
     //...
   });
 ```
+
+<div class="page"/>
 
 ## Message options
 
@@ -260,6 +274,8 @@ admin
     //...
   });
 ```
+
+<div class="page"/>
 
 ## Subscribe to topic
 

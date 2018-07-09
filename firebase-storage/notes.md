@@ -1,6 +1,8 @@
 # Notes
 
-## Firebase Storage: Notes
+# Firebase Storage
+
+See the [Firebase Storage docs for web](https://firebase.google.com/docs/storage/web/start).
 
 ## Create a ref
 
@@ -45,6 +47,8 @@ var metadata = {
 var uploadTask = storageRef.child('images/mountains.jpg').put(file, metadata);
 ```
 
+<div class="page"/>
+
 ## Full example
 
 ```javascript
@@ -74,8 +78,7 @@ function uploadFile(file) {
       }
     },
     function(error) {
-      // A full list of error codes is available at
-      // https://firebase.google.com/docs/storage/web/handle-errors
+      // Errors list: https://firebase.google.com/docs/storage/web/handle-errors
       switch (error.code) {
         case 'storage/unauthorized':
           // User doesn't have permission to access the object
@@ -97,6 +100,8 @@ function uploadFile(file) {
   );
 }
 ```
+
+<div class="page"/>
 
 ## Download file
 
@@ -132,6 +137,8 @@ starsRef.getDownloadURL().then(function(url) {
   }
 });
 ```
+
+<div class="page"/>
 
 ## Set metadata
 

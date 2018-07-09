@@ -1,6 +1,8 @@
 # Notes
 
-## Cloud Firestore: Notes
+# Cloud Firestore
+
+See the [Cloud Firestore docs for web](https://firebase.google.com/docs/firestore/quickstart).
 
 ## Set a document
 
@@ -39,6 +41,8 @@ var setDoc = db
   .doc('one')
   .set(data);
 ```
+
+<div class="page"/>
 
 ## Add document with auto-generated ID
 
@@ -85,6 +89,8 @@ var cityRef = db.collection('cities').doc('DC');
 // Set the 'capital' field of the city
 var updateSingle = cityRef.update({ capital: true }, { merge: true });
 ```
+
+<div class="page"/>
 
 ## Transactions
 
@@ -139,6 +145,8 @@ return batch.commit().then(function() {
 });
 ```
 
+<div class="page"/>
+
 ## Bulk delete
 
 > Max batch size is 500 records
@@ -187,6 +195,8 @@ function deleteQueryBatch(db, query, batchSize, resolve, reject) {
     .catch(reject);
 }
 ```
+
+<div class="page"/>
 
 ## Get a document
 
@@ -239,6 +249,8 @@ var query = citiesRef
   });
 ```
 
+<div class="page"/>
+
 ## List subcollections
 
 ```javascript
@@ -281,6 +293,8 @@ var observer = query.onSnapshot(
   }
 );
 ```
+
+<div class="page"/>
 
 ## Stop listening
 
@@ -332,6 +346,8 @@ var biggest = citiesRef
 
 var allBigCities = citiesRef.where('population', '>', 2500000).orderBy('population');
 ```
+
+<div class="page"/>
 
 > !!! INVALID QUERY AHEAD !!!
 

@@ -1,6 +1,8 @@
 # Notes
 
-## Cloud Functions for Firebase: Notes
+# Cloud Functions
+
+See the [Cloud Functions docs for Firebase](https://firebase.google.com/docs/functions/get-started).
 
 ### Functions samples
 
@@ -39,6 +41,8 @@ exports.helloWorld = functions.https.onRequest((req, res) => {
   res.send('hello world');
 });
 ```
+
+<div class="page"/>
 
 ## Firestore triggers
 
@@ -80,6 +84,8 @@ exports.makeUppercase = functions.database.ref('/messages/{pushId}/original').on
 });
 ```
 
+<div class="page"/>
+
 ## Firebase Authentication
 
 * onCreate
@@ -93,6 +99,8 @@ exports.sendWelcomeEmail = functions.auth.user().onCreate(event => {
   const displayName = user.displayName; // The display name of the user.
 });
 ```
+
+<div class="page"/>
 
 ## Firebase Storage
 
@@ -136,6 +144,8 @@ exports.generateThumbnail = functions.storage.object().onChange(event => {
   }
 });
 ```
+
+<div class="page"/>
 
 ## Use ImageMagick
 

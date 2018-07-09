@@ -1,6 +1,8 @@
 # Notes
 
-## Realtime Database: Notes
+# Realtime Database
+
+See the [Realtime Database docs for web](https://firebase.google.com/docs/database/).
 
 ## Set a ref
 
@@ -43,6 +45,8 @@ return firebase
     // ...
   });
 ```
+
+<div class="page"/>
 
 ## Multi-path updates
 
@@ -88,6 +92,8 @@ function deleteUser(userId) {
 }
 ```
 
+<div class="page"/>
+
 ## Detach listener
 
 ```javascript
@@ -122,6 +128,8 @@ function toggleStar(postRef, uid) {
   });
 }
 ```
+
+<div class="page"/>
 
 ## Child events
 
@@ -162,6 +170,8 @@ var mostViewedPosts = firebase
   .orderByChild('metrics/views');
 ```
 
+<div class="page"/>
+
 ## Filter data
 
 > Assumes that data is ordered by key unless otherwise specified
@@ -200,6 +210,8 @@ var first10DaysOfJanuary = firebase
   .limitToFirst(100) // Limit is never hit
   .endAt(10); // endAt stops the query before it hits the limit
 ```
+
+<div class="page"/>
 
 ## Authenticate Node.js
 

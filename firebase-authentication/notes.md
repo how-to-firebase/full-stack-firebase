@@ -1,5 +1,7 @@
 # Notes
 
+# Firebase Authentication
+
 See the [Firebase Authentication docs for web](https://firebase.google.com/docs/auth/web/manage-users).
 
 ## onAuthStateChanged
@@ -35,6 +37,8 @@ firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error
   // ...
 });
 ```
+
+<div class="page"/>
 
 ## Create Provider
 
@@ -75,6 +79,8 @@ Redirect
 ```javascript
 firebase.auth().signInWithRedirect(provider);
 ```
+
+<div class="page"/>
 
 ## Phone Auth
 
