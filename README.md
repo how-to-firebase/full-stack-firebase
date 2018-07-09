@@ -20,11 +20,11 @@ The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is 
 
 ## Email List
 
-<div>
-  <strong>Email sign up script</strong>
+[![email-signup-form.png](https://goo.gl/UraJYQ)](http://eepurl.com/ceGkov)
 
-  <img src="https://goo.gl/7rF7Nh" onerror="alert('hey guys')" />
-</div>
+[Sign up for email updates](http://eepurl.com/ceGkov) 💌
+
+We email with a very light touch 👍
 
 ## GitBook vs GitHub
 
@@ -50,13 +50,13 @@ We'll cover integration for Angular and React. The Firebase SDK is all vanilla J
 This course consists of a bunch of modules, including:
 
 * Firebase Console
-* Authentication
-* Firestore
+* Firebase Authentication
+* Cloud Firestore
 * Realtime Database
 * Cloud Functions
-* Storage
-* Messaging
-* Hosting
+* Firebase Storage
+* Cloud Messaging
+* Firebase Hosting
 
 ## Module Structure
 
