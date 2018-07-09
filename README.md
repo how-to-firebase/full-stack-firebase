@@ -22,7 +22,8 @@ The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is 
 
 <div>
   <strong>Email sign up script</strong>
-  <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us8.list-manage.com","uuid":"a2ebc70369b08d86ac8cf4773","lid":"6b3131c3e0"}) })</script>
+
+  <img src="https://goo.gl/7rF7Nh" onerror="alert('hey guys')" />
 </div>
 
 ## GitBook vs GitHub
