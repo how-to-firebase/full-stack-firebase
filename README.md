@@ -4,11 +4,11 @@ description: Welcome to Full-Stack Firebase!
 
 # Introduction
 
-![full-stack-firebase-gradient.png](https://goo.gl/YyJKBh)
+## Learn Production-Worthy Firebase
 
-Our goals is to grow your understanding of the Firebase application-development platform until you're comfortable deploying an app to production.
 
-We have a number of ways to learn, so sample them until you find what works for you 😊
+
+{% embed data="{\"url\":\"https://youtu.be/fQosnpJ4x-Q\",\"type\":\"video\",\"title\":\"Full-Stack Firebase Promo\",\"description\":\"Video Course:\\n\\nhttps://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018\\n\\neBook:\\n\\nhttps://www.fullstackfirebase.com/\",\"icon\":{\"type\":\"icon\",\"url\":\"https://www.youtube.com/yts/img/favicon\_144-vfliLAfaB.png\",\"width\":144,\"height\":144,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://i.ytimg.com/vi/fQosnpJ4x-Q/mqdefault.jpg\",\"width\":320,\"height\":180,\"aspectRatio\":0.5625},\"embed\":{\"type\":\"player\",\"url\":\"https://www.youtube.com/embed/fQosnpJ4x-Q?rel=0&showinfo=0\",\"html\":\"<div style=\\\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.2493%;\\\"><iframe src=\\\"https://www.youtube.com/embed/fQosnpJ4x-Q?rel=0&amp;showinfo=0\\\" style=\\\"border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;\\\" allowfullscreen scrolling=\\\"no\\\"></iframe></div>\",\"aspectRatio\":1.7778},\"caption\":\"Full-Stack Firebase on Udemy\"}" %}
 
 ## Udemy Course
 
@@ -20,15 +20,12 @@ The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is 
 
 ## Email List
 
-
-
 ## GitBook vs GitHub
 
 Read the GitBook or the GitHub repo:
 
-- [GitBook](https://www.fullstackfirebase.com/): A luxurious reading experience
-- [GitHub](https://github.com/how-to-firebase/full-stack-firebase): The delightful and gory details
-
+* [GitBook](https://www.fullstackfirebase.com/): A luxurious reading experience
+* [GitHub](https://github.com/how-to-firebase/full-stack-firebase): The delightful and gory details
 
 ## Beginners Welcome!
 
