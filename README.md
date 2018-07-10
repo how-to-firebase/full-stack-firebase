@@ -8,17 +8,17 @@ description: Welcome to Full-Stack Firebase!
 
 {% embed data="{\"url\":\"https://youtu.be/fQosnpJ4x-Q\",\"type\":\"video\",\"title\":\"Full-Stack Firebase Promo\",\"description\":\"Video Course:\\n\\nhttps://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018\\n\\neBook:\\n\\nhttps://www.fullstackfirebase.com/\",\"icon\":{\"type\":\"icon\",\"url\":\"https://www.youtube.com/yts/img/favicon\_144-vfliLAfaB.png\",\"width\":144,\"height\":144,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://i.ytimg.com/vi/fQosnpJ4x-Q/mqdefault.jpg\",\"width\":320,\"height\":180,\"aspectRatio\":0.5625},\"embed\":{\"type\":\"player\",\"url\":\"https://www.youtube.com/embed/fQosnpJ4x-Q?rel=0&showinfo=0\",\"html\":\"<div style=\\\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.2493%;\\\"><iframe src=\\\"https://www.youtube.com/embed/fQosnpJ4x-Q?rel=0&amp;showinfo=0\\\" style=\\\"border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;\\\" allowfullscreen scrolling=\\\"no\\\"></iframe></div>\",\"aspectRatio\":1.7778},\"caption\":\"Full-Stack Firebase on Udemy\"}" %}
 
-## Udemy Course
+## Available on Udemy
 
-[![Udemy Link](https://goo.gl/7rF7Nh)](https://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018)
+![It&apos;s all on Udemy!](.gitbook/assets/howtofirebase-2f640-2fudemy-hero-1.png)
 
 We've launched [Full-Stack Firebase on Udemy](https://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018) for the full video experience.
 
 The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is the absolute fastest, easiest way to learn Firebase. We've condensed everything on FullStackFirebase.com into video form with free instructor Q&A.
 
-## Email List
+## Newsletter
 
-[![email-signup-form.png](https://goo.gl/UraJYQ)](http://eepurl.com/ceGkov)
+![Click to subscribe](.gitbook/assets/email-signup-form.png)
 
 [Sign up for email updates](http://eepurl.com/ceGkov) 💌
 
