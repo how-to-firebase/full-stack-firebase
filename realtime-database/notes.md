@@ -1,7 +1,5 @@
 # Notes
 
-## Notes
-
 ## Realtime Database
 
 See the [Realtime Database docs for web](https://firebase.google.com/docs/database/).

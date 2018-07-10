@@ -1,7 +1,5 @@
 # Notes
 
-## Notes
-
 ## Firebase Authentication
 
 See the [Firebase Authentication docs for web](https://firebase.google.com/docs/auth/web/manage-users).

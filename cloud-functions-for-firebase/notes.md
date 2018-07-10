@@ -1,7 +1,5 @@
 # Notes
 
-## Notes
-
 ## Cloud Functions
 
 See the [Cloud Functions docs for Firebase](https://firebase.google.com/docs/functions/get-started).

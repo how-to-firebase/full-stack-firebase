@@ -1,7 +1,5 @@
 # Notes
 
-## Notes
-
 ## Firebase Hosting
 
 See the [Firebase Hosting doc for web](https://firebase.google.com/docs/cloud-messaging/js/client).

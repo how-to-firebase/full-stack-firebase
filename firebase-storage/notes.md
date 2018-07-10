@@ -1,7 +1,5 @@
 # Notes
 
-## Notes
-
 ## Firebase Storage
 
 See the [Firebase Storage docs for web](https://firebase.google.com/docs/storage/web/start).

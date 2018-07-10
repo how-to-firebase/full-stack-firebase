@@ -1,7 +1,5 @@
 # Notes
 
-## Notes
-
 ## Cloud Messaging
 
 See the [Firebase Cloud Messaging docs for web](https://firebase.google.com/docs/cloud-messaging/js/client).

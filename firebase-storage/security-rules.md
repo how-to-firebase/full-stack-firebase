@@ -1,6 +1,8 @@
 # Security Rules
 
-# Firebase Storage
+## Security Rules
+
+## Firebase Storage
 
 Firebase Storage exposes quite a bit of functionality to the public, so you'll need to write some security rules.
 
@@ -14,7 +16,7 @@ The best way to understand Firebase Storage security rules is to read up on [Fir
 
 The basic rules look something like this:
 
-```
+```text
 // Only authenticated users can read or write to the bucket
 service firebase.storage {
   match /b/{bucket}/o {
@@ -43,7 +45,7 @@ Of course, instead of matching collections and documents, you're matching folder
 
 Let's write a match block for a folder structure like this: `/user/{userId}/path/to/file.txt`
 
-```
+```text
 service firebase.storage {
   match /b/{bucket}/o {
     match /user/{userId}/{allPaths=**} {
@@ -67,7 +69,7 @@ Wildcards work just like those in Firestore. You can place them at will and over
 
 The following example secures a dropbox-style pattern where users can upload to an uploads folder at `/user/uploads/{userId}/uploaded-file.jpg` but can only read from `/user/thumbnails/{userId}/thumbnail.jpg`.
 
-```
+```text
 service firebase.storage {
   match /b/{bucket}/o {
     match /user/ {
@@ -94,7 +96,7 @@ Rule conditions also have access to a `resource` object. In Firestore this objec
 
 Here's a sample `resource` object that you may find handy:
 
-```json
+```javascript
 {
   "name": "howtofirebase/uploads/locked-mode.png",
   "bucket": "quiver-four.appspot.com",
@@ -118,7 +120,7 @@ Here's a sample `resource` object that you may find handy:
 
 ### Read the docs
 
-It's been said before and we'll say it again. Read the docs. 
+It's been said before and we'll say it again. Read the docs.
 
 The highlights:
 

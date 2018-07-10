@@ -1,7 +1,5 @@
 # Notes
 
-## Notes
-
 ## Cloud Firestore
 
 See the [Cloud Firestore docs for web](https://firebase.google.com/docs/firestore/quickstart).

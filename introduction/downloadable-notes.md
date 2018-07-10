@@ -1,7 +1,3 @@
----
-description: JavaScript SDK Cheatsheets in PDF form
----
-
 # Downloadable Notes
 
 ![Notes Example](../.gitbook/assets/image.png)
