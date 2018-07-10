@@ -1,10 +1,12 @@
 # Notes
 
-# Cloud Messaging
+## Notes
+
+## Cloud Messaging
 
 See the [Firebase Cloud Messaging docs for web](https://firebase.google.com/docs/cloud-messaging/js/client).
 
-## manifest.json
+### manifest.json
 
 ```javascript
 {
@@ -12,7 +14,7 @@ See the [Firebase Cloud Messaging docs for web](https://firebase.google.com/docs
 }
 ```
 
-## Request permission in browser
+### Request permission in browser
 
 ```javascript
 // index.html
@@ -46,9 +48,7 @@ messaging
   });
 ```
 
-<div class="page"/>
-
-## Monitor token refresh
+### Monitor token refresh
 
 ```javascript
 // index.html
@@ -72,7 +72,7 @@ messaging.onTokenRefresh(function() {
 });
 ```
 
-## Catch messages when page is in foreground
+### Catch messages when page is in foreground
 
 ```javascript
 // index.html
@@ -86,9 +86,7 @@ messaging.onMessage(function(payload) {
 });
 ```
 
-<div class="page"/>
-
-## Create serviceWorker
+### Create serviceWorker
 
 > You need a serviceWorker to listen for messages in the background
 
@@ -111,9 +109,7 @@ firebase.initializeApp({
 const messaging = firebase.messaging();
 ```
 
-<div class="page"/>
-
-## Send message to single recipient
+### Send message to single recipient
 
 ```javascript
 // Cloud Function
@@ -149,9 +145,7 @@ admin
   });
 ```
 
-<div class="page"/>
-
-## Send multi-cast message
+### Send multi-cast message
 
 ```javascript
 // Cloud Function
@@ -171,7 +165,7 @@ admin
   });
 ```
 
-## Send device-group message
+### Send device-group message
 
 > See [managing device groups](https://firebase.google.com/docs/cloud-messaging/android/device-group#managing_device_groups)
 
@@ -188,9 +182,7 @@ admin
   });
 ```
 
-<div class="page"/>
-
-## Send topic message
+### Send topic message
 
 > See [managing device groups](https://firebase.google.com/docs/cloud-messaging/android/device-group#managing_device_groups)
 
@@ -209,7 +201,7 @@ admin
   });
 ```
 
-## Send to condition
+### Send to condition
 
 > Conditions support only two operations per expression
 
@@ -228,9 +220,7 @@ admin
   });
 ```
 
-<div class="page"/>
-
-## Message options
+### Message options
 
 ```javascript
 // Cloud Function
@@ -257,7 +247,7 @@ admin
   });
 ```
 
-## Subscribe to topic
+### Subscribe to topic
 
 ```javascript
 // Cloud Function
@@ -275,9 +265,7 @@ admin
   });
 ```
 
-<div class="page"/>
-
-## Subscribe to topic
+### Subscribe to topic
 
 ```javascript
 // Cloud Function
@@ -297,7 +285,7 @@ admin
   });
 ```
 
-## Unsubscribe to topic
+### Unsubscribe to topic
 
 ```javascript
 // Cloud Function

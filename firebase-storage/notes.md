@@ -1,17 +1,19 @@
 # Notes
 
-# Firebase Storage
+## Notes
+
+## Firebase Storage
 
 See the [Firebase Storage docs for web](https://firebase.google.com/docs/storage/web/start).
 
-## Create a ref
+### Create a ref
 
 ```javascript
 var storageRef = firebase.storage().ref();
 const fileRef = storageRef.child('/some/file/path.jpg);
 ```
 
-## Navigate
+### Navigate
 
 ```javascript
 // Points to the root reference
@@ -35,7 +37,7 @@ var name = spaceRef.name;
 var imagesRef = spaceRef.parent;
 ```
 
-## Upload file
+### Upload file
 
 ```javascript
 // Create file metadata including the content type
@@ -47,9 +49,7 @@ var metadata = {
 var uploadTask = storageRef.child('images/mountains.jpg').put(file, metadata);
 ```
 
-<div class="page"/>
-
-## Full example
+### Full example
 
 ```javascript
 function uploadFile(file) {
@@ -101,9 +101,7 @@ function uploadFile(file) {
 }
 ```
 
-<div class="page"/>
-
-## Download file
+### Download file
 
 ```javascript
 // Create a reference to the file we want to download
@@ -138,9 +136,7 @@ starsRef.getDownloadURL().then(function(url) {
 });
 ```
 
-<div class="page"/>
-
-## Set metadata
+### Set metadata
 
 ```javascript
 // Create a reference to the file whose metadata we want to change

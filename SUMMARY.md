@@ -11,6 +11,7 @@
 * [Overview & Structure](introduction/overview-and-structure.md)
 * [Write your first query](introduction/write-your-first-query.md)
 * [Links](introduction/links.md)
+* [Downloadable Notes](introduction/downloadable-notes.md)
 
 ## Firebase Console
 

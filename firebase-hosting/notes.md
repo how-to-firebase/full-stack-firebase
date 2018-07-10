@@ -1,10 +1,12 @@
 # Notes
 
-# Firebase Hosting
+## Notes
+
+## Firebase Hosting
 
 See the [Firebase Hosting doc for web](https://firebase.google.com/docs/cloud-messaging/js/client).
 
-## Redirects
+### Redirects
 
 ```javascript
 "hosting": {
@@ -21,7 +23,7 @@ See the [Firebase Hosting doc for web](https://firebase.google.com/docs/cloud-me
 }
 ```
 
-## Rewrites
+### Rewrites
 
 ```javascript
 "hosting": {
@@ -33,9 +35,7 @@ See the [Firebase Hosting doc for web](https://firebase.google.com/docs/cloud-me
 }
 ```
 
-<div class="page"/>
-
-## Headers
+### Headers
 
 ```javascript
 "hosting": {
@@ -63,7 +63,7 @@ See the [Firebase Hosting doc for web](https://firebase.google.com/docs/cloud-me
  }
 ```
 
-## Connect a Cloud Function
+### Connect a Cloud Function
 
 ```javascript
 {

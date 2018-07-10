@@ -1,10 +1,12 @@
 # Notes
 
-# Firebase Authentication
+## Notes
+
+## Firebase Authentication
 
 See the [Firebase Authentication docs for web](https://firebase.google.com/docs/auth/web/manage-users).
 
-## onAuthStateChanged
+### onAuthStateChanged
 
 ```javascript
 firebase.auth().onAuthStateChanged(currentUser => {
@@ -16,7 +18,7 @@ firebase.auth().onAuthStateChanged(currentUser => {
 });
 ```
 
-## Register Email/Password
+### Register Email/Password
 
 ```javascript
 firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -27,7 +29,7 @@ firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(e
 });
 ```
 
-## Sign In Email/Password
+### Sign In Email/Password
 
 ```javascript
 firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
@@ -38,9 +40,7 @@ firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error
 });
 ```
 
-<div class="page"/>
-
-## Create Provider
+### Create Provider
 
 Google
 
@@ -66,7 +66,7 @@ GitHub
 var provider = new firebase.auth.GithubAuthProvider();
 ```
 
-## OAuth sign in with a provider
+### OAuth sign in with a provider
 
 Popup
 
@@ -80,9 +80,7 @@ Redirect
 firebase.auth().signInWithRedirect(provider);
 ```
 
-<div class="page"/>
-
-## Phone Auth
+### Phone Auth
 
 First attach a recaptcha using an element ID...
 

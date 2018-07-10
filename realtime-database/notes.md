@@ -1,10 +1,12 @@
 # Notes
 
-# Realtime Database
+## Notes
+
+## Realtime Database
 
 See the [Realtime Database docs for web](https://firebase.google.com/docs/database/).
 
-## Set a ref
+### Set a ref
 
 ```javascript
 function writeUserData(userId, name, email, imageUrl) {
@@ -19,7 +21,7 @@ function writeUserData(userId, name, email, imageUrl) {
 }
 ```
 
-## Value events
+### Value events
 
 Value events fire with the entire data payload for any and all changes
 
@@ -46,9 +48,7 @@ return firebase
   });
 ```
 
-<div class="page"/>
-
-## Multi-path updates
+### Multi-path updates
 
 ```javascript
 function writeNewPost(uid, username, picture, title, body) {
@@ -81,7 +81,7 @@ function writeNewPost(uid, username, picture, title, body) {
 }
 ```
 
-## Delete data
+### Delete data
 
 ```javascript
 function deleteUser(userId) {
@@ -92,9 +92,7 @@ function deleteUser(userId) {
 }
 ```
 
-<div class="page"/>
-
-## Detach listener
+### Detach listener
 
 ```javascript
 var starCountRef = firebase.database().ref('posts/' + postId + '/starCount');
@@ -107,7 +105,7 @@ function detachListener() {
 }
 ```
 
-## Transactions
+### Transactions
 
 ```javascript
 function toggleStar(postRef, uid) {
@@ -129,9 +127,7 @@ function toggleStar(postRef, uid) {
 }
 ```
 
-<div class="page"/>
-
-## Child events
+### Child events
 
 * **child\_added**: fires once for every existing result and then again for every new result; does not fire for changes or removals, only new records
 * **child\_changed**: fires when the underlying object or value is changed in any way
@@ -152,7 +148,7 @@ commentsRef.on('child_removed', function(data) {
 });
 ```
 
-## Sort data
+### Sort data
 
 * **orderByChild\('childName'\)**: Orders by a child attribute
 * **orderByKey\(\)**: Orders by record keys
@@ -170,9 +166,7 @@ var mostViewedPosts = firebase
   .orderByChild('metrics/views');
 ```
 
-<div class="page"/>
-
-## Filter data
+### Filter data
 
 > Assumes that data is ordered by key unless otherwise specified
 
@@ -211,9 +205,7 @@ var first10DaysOfJanuary = firebase
   .endAt(10); // endAt stops the query before it hits the limit
 ```
 
-<div class="page"/>
-
-## Authenticate Node.js
+### Authenticate Node.js
 
 > Full admin privileges
 
@@ -237,7 +229,7 @@ ref.once('value', function(snapshot) {
 });
 ```
 
-## Initialize Node.js with limited privileges
+### Initialize Node.js with limited privileges
 
 > Set auth token variables to limit access
 
