@@ -10,7 +10,7 @@ description: Welcome to Full-Stack Firebase!
 
 ## Available on Udemy
 
-![It&apos;s all on Udemy!](.gitbook/assets/howtofirebase-2f640-2fudemy-hero-1.png)
+![Click the link below to learn more &#x1F447;](.gitbook/assets/howtofirebase-2f640-2fudemy-hero-1.png)
 
 We've launched [Full-Stack Firebase on Udemy](https://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018) for the full video experience.
 
@@ -18,11 +18,11 @@ The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is 
 
 ## Newsletter
 
-![Click to subscribe](.gitbook/assets/email-signup-form.png)
+![Click below &#x1F447; to subscribe](.gitbook/assets/email-signup-form.png)
 
 [Sign up for email updates](http://eepurl.com/ceGkov) 💌
 
-We email with a very light touch 👍
+We'll send you some "getting started" emails. From there on out, we email with a light touch 👍
 
 ## GitBook vs GitHub
 
