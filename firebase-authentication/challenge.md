@@ -1,5 +1,7 @@
 # Challenge
 
+## Firebase Authentication
+
 ## Find the repo
 
 We'll be working on a branch of our [firelist-react](https://github.com/how-to-firebase/firelist-react) repo named [challenge-authentication](https://github.com/how-to-firebase/firelist-react/tree/challenge-authentication).
