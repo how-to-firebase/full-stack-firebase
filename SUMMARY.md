@@ -58,6 +58,7 @@
 
 * [Introduction](firebase-storage/introduction.md)
 * [Walkthrough](firebase-storage/walkthrough.md)
+* [Security Rules](firebase-storage/security-rules.md)
 * [Challenge](firebase-storage/challenge.md)
 * [Notes](firebase-storage/notes.md)
 
