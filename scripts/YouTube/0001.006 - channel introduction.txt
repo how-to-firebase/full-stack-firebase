@@ -1,0 +1,41 @@
+How To Firebase is all about building production-worthy Firebase apps for web.
+
+Firebase got its start back in 2011 as a Y Combinator startup.
+
+It was acquired by Google just three years later in October of 2014.
+
+The Firebase platform has grown from a fun toy to use for prototype apps...
+
+...to the premiere, planet-scale app development platform.
+
+We're talking about taking your apps from prototype to production without touching the database!
+
+Firebase has matured into a monster of a product, and I want to scream from the roof tops...
+
+...if you're not considering Firebase for your next project, you are missing a golden opportunity!
+
+But a game-changing development platform like Firebase has a bit of a learning curve.
+
+The Firebase team works hard to lower that barrier to entry...
+
+...but developers who are steeped in SQL and other NoSQL datastores often struggle at first.
+
+So let me be your guide!
+
+I use Firebase for all of my projects.
+
+I built Calligraphy.org on top of Firebase and have run it profitably since 2012.
+
+I've built countless custom apps for myself and clients over the years.
+
+I subscribe to all of the Firebase newsletters and read the blog posts...
+
+...and I summarize what I've learned here on YouTube, for your viewing pleasure.
+
+These are not adorable cat videos.
+
+I can't help that it's programming...
+
+...but smash that subscribe button anyway!
+
+I will make Firebase as riveting as possible and earn your YouTube views.

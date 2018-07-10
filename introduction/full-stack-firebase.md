@@ -1,14 +1,31 @@
 # Full-Stack Firebase
 
-Welcome!
+## Learn Production-Worthy Firebase
 
-Our goals is to grow your understanding of the Firebase application-development platform until you're comfortable deploying an app to production.
+{% embed data="{\"url\":\"https://youtu.be/fQosnpJ4x-Q\",\"type\":\"video\",\"title\":\"Full-Stack Firebase Promo\",\"description\":\"Video Course:\\n\\nhttps://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018\\n\\neBook:\\n\\nhttps://www.fullstackfirebase.com/\",\"icon\":{\"type\":\"icon\",\"url\":\"https://www.youtube.com/yts/img/favicon\_144-vfliLAfaB.png\",\"width\":144,\"height\":144,\"aspectRatio\":1},\"thumbnail\":{\"type\":\"thumbnail\",\"url\":\"https://i.ytimg.com/vi/fQosnpJ4x-Q/mqdefault.jpg\",\"width\":320,\"height\":180,\"aspectRatio\":0.5625},\"embed\":{\"type\":\"player\",\"url\":\"https://www.youtube.com/embed/fQosnpJ4x-Q?rel=0&showinfo=0\",\"html\":\"<div style=\\\"left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.2493%;\\\"><iframe src=\\\"https://www.youtube.com/embed/fQosnpJ4x-Q?rel=0&amp;showinfo=0\\\" style=\\\"border: 0; top: 0; left: 0; width: 100%; height: 100%; position: absolute;\\\" allowfullscreen scrolling=\\\"no\\\"></iframe></div>\",\"aspectRatio\":1.7778},\"caption\":\"Full-Stack Firebase on Udemy\"}" %}
 
-We have a number of ways to learn, so sample them until you find what works for you 😊
+## Available on Udemy
 
-## Check out GitBooks
+![Click the link below to learn more &#x1F447;](.gitbook/assets/howtofirebase-2f640-2fudemy-hero-1.png)
 
-Don't love reading raw Markdown? [Read this book on GitBook](https://how-to-firebase.gitbooks.io/full-stack-firebase/content/).
+We've launched [Full-Stack Firebase on Udemy](https://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018) for the full video experience.
+
+The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is the absolute fastest, easiest way to learn Firebase. We've condensed everything on FullStackFirebase.com into video form with free instructor Q&A.
+
+## Newsletter
+
+![Click below &#x1F447; to subscribe](.gitbook/assets/email-signup-form.png)
+
+[Sign up for email updates](http://eepurl.com/ceGkov) 💌
+
+We'll send you some "getting started" emails. From there on out, we email with a light touch 👍
+
+## GitBook vs GitHub
+
+Read the GitBook or the GitHub repo:
+
+* [GitBook](https://www.fullstackfirebase.com/): A luxurious reading experience
+* [GitHub](https://github.com/how-to-firebase/full-stack-firebase): The delightful and gory details
 
 ## Beginners Welcome!
 
@@ -27,13 +44,13 @@ We'll cover integration for Angular and React. The Firebase SDK is all vanilla J
 This course consists of a bunch of modules, including:
 
 * Firebase Console
-* Authentication
-* Firestore
+* Firebase Authentication
+* Cloud Firestore
 * Realtime Database
 * Cloud Functions
-* Storage
-* Messaging
-* Hosting
+* Firebase Storage
+* Cloud Messaging
+* Firebase Hosting
 
 ## Module Structure
 
