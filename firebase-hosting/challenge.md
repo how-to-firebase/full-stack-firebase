@@ -42,6 +42,3 @@ Just run `yarn deploy`!
 
 Check out `/package.json` and the `scripts` attribute to see what scripts are available and what they do.
 
-
-
-
