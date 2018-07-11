@@ -51,8 +51,8 @@
 
 * [Introduction](cloud-functions-for-firebase/introduction.md)
 * [Walkthrough](cloud-functions-for-firebase/walkthrough.md)
-* [Notes](cloud-functions-for-firebase/notes.md)
 * [Challenge](cloud-functions-for-firebase/challenge.md)
+* [Notes](cloud-functions-for-firebase/notes.md)
 
 ## Firebase Storage
 

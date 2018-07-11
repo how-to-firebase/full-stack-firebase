@@ -53,6 +53,6 @@ Search the codebase for `Challenge Storage` to find all of the challenges.
 
 Read the comments and complete the steps in those files.
 
-- `src/storage/delete-image.js`
-- `src/storage/get-upload-observable.js`
+* `src/storage/delete-image.js`
+* `src/storage/get-upload-observable.js`
 
