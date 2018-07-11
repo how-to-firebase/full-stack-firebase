@@ -44,8 +44,8 @@
 * [Introduction](realtime-database/introduction.md)
 * [Walkthrough](realtime-database/walkthrough.md)
 * [Security Rules](realtime-database/security-rules.md)
-* [Notes](realtime-database/notes.md)
 * [Challenge](realtime-database/challenge.md)
+* [Notes](realtime-database/notes.md)
 
 ## Cloud Functions for Firebase
 

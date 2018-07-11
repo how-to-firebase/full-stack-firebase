@@ -45,6 +45,6 @@ Search the codebase for `Challenge Realtime DB` to find all of the challenges.
 
 Read the comments and complete the steps in those files.
 
-* `databse.rules.json`
+* `database.rules.json`
 * `src/database/set-user-tokens.js`
 
