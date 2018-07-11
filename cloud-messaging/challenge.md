@@ -6,10 +6,6 @@
 
 We'll be working on a branch of our [firelist-react](https://github.com/how-to-firebase/firelist-react) repo named [firebase-messaging](https://github.com/how-to-firebase/firelist-react/tree/master).
 
-## Codesandbox
-
-Simply open up the [CodeSandbox.io](https://codesandbox.io/s/github/how-to-firebase/firelist-react/tree/firebase-messaging) project :\)
-
 ## Localhost installation
 
 Pull [the repo](https://github.com/how-to-firebase/firelist-react) directly from GitHub...
