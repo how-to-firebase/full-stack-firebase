@@ -1,0 +1,213 @@
+I've fielded quite a few questions over the years regarding my coding setup.
+
+Programmers are always looking for tips and tricks to improve their coding productivity.
+
+Everything can make a difference...
+
+...from your operating system, to your code editor, to your keyboard.
+
+So here's a quick rundown of my favorite tools.
+
+First off is the operating system.
+
+I switch off regularly between macOS and Windows 10.
+
+I run a Windows box at home because I need a full-sized graphics card for video processing.
+
+I built my Windows box with recommendations from `LogicalIncrements dot com`...
+
+...but I'd probably buy a pre-built machine if I had to do it again.
+
+It was my first computer build, and while it went off without a hitch...
+
+...I'm not sure how much money I saved for my efforts.
+
+My work machine is a Macbook Pro with the touchbar. 
+
+I frankly prefer my Windows box at this point, but it doesn't make much difference.
+
+You get used to your tools and any operating system will work fine with a little customization.
+
+The nicest things that I can say about macOS...
+
+...is that its Bash command line is easier to use than even Windows Linux Subsystem...
+
+...and macOS has better font display... by a wide, wide margin
+
+You wouldn't think that font quality matters much... until you switch back and forth every day.
+
+Next up is my code editor, which has been VSCode for the last few years.
+
+VSCode is taking over the open-source editor market.
+
+I've used Sublime Text, Atom, WebStorm, TextMate... and even Vim...
+
+...but VSCode slays all comers.
+
+I haven't found a system that I like nearly as well.
+
+My next most common text editor is Vim, but that's just because it's quick from the command line.
+
+I know a lot of you love your Vim, and I understand... 
+
+...but I'm just not productive enough with Vim.
+
+And if you're wondering why my text looks the way that it does....
+
+...it's because I use Dank Mono with ligatures as my font.
+
+The next most important bit of tooling that I love is Chrome DevTools and my Chrome extensions.
+
+I could write a whole series of videos on DevTools and the workflows that make me smile.
+
+...but for now just know that DevTools is the key to productively building web front ends.
+
+I like Firefox for browsing, and its developer tools are good and even better at a few things...
+
+...but Chrome DevTools sets the standard with excellent breakpoint handling...
+
+...performance reporting and PWA application support.
+
+As far as Chrome extensions go, I use 1Password for all of my security...
+
+...Toby for managing my tabs and saving tab sessions...
+
+...and Liner for highlighting web pages.
+
+I'm also a fan of Wunderlist for to-do lists...
+
+...and `Carbon dot now dot sh` for visually appealing code images.
+
+I do a fair bit of mock matching when working on front ends, so I'll use xScope on Mac...
+
+...and the PerfectPixel Chrome extension to dial in the pixels.
+
+Pixel matching is often looked down on by hardcore JavaScript devs;
+
+however, I respect my designers and want to do their pixel-perfect designs justice...
+
+...so I suck it up and pixel match my designs whenever possible.
+
+And when I'm not coding, I'm generating video.
+
+I do a bunch of screencasting and take lots of screenshots...
+
+...so I have to give a shout out to Camtasia and Snagit.
+
+They're pretty expensive, so I waited a while before I bought them...
+
+...however, they've been a huge productivity boost.
+
+I searched high and low for cheaper options, and nothing else compares to the Camtasia suite.
+
+Of course, video editing is Adobe Premiere...
+
+...audio editing is Adobe Audition and images are Photoshop.
+
+My wife is a graphic designer so we pay for the Adobe Creative Suite already.
+
+Again... it's expensive software that's worth every dime.
+
+And finally... let's cover some quick hardware decisions.
+
+I'm rocking a Razer DeathAdder Elite mouse...
+
+...although I try not to use the mouse much, and I'm not picky about mice.
+
+I've been using my DasKeyboard with Cherry MX browns since 2011.
+
+Yeah... if the baldness wasn't a hint... I'm that old.
+
+I gave up on my original Finance career and taught myself to code in 2011...
+
+...so I'm already deep into my second career at 35.
+
+Anyway... I need new keycaps because the original set is not only mirror-finish shiny...
+
+...but the reference bumps are almost gone after seven years of frantic typing.
+
+I don't understand how folks type on anything other than mechanical keyboards.
+
+Seriously Apple... what is up with those scissor switches and their half millimeter of travel?
+
+Your keyboards are beautiful and thin... but they're so slow and error prone for touch typing.
+
+Anyway... let's keep moving... 
+
+...for monitors I use two cheap Samsung 4k displays.
+
+I can't remember the model numbers, but they're the cheapest 28 inch Samsung 4k panels on Amazon...
+
+...they were less than $300 a piece.
+
+The key is that they're high resolution and there are two of them.
+
+The viewing angles on these things are horrible, so I do not trust them for graphic design.
+
+My designer wife hates sitting down to my machine, because all of the colors are screwy...
+
+...however, I spend my time with code editors and websites...
+
+...so maybe I'll buy a fancier color-reference monitor in a year or two...
+
+...but I've spent too much on hardware for now.
+
+And speaking of overspending...
+
+...shooting videos is a hardware-intensive exercise.
+
+I use a Sony A6000 with a fancy aftermarket lens for shooting video.
+
+Audio is handled with a Rode NTG-2 shotgun mic and a Tascam DR-40 recorder.
+
+Getting good audio is probably harder than good video. 
+
+Or maybe I'm audio deficient... but landing on the Rode and Tascam combo took trial and error.
+
+I use Sennheiser HD280 Pro wired headphones and Bose QC35s for bluetooth noise cancelling.
+
+You wouldn't think that headphones matter that much...
+
+...but the Bose are critical for long plane flights...
+
+...and the Sennheisers are comfortable for all-day coding sessions.
+
+And while we're doing the office tour...
+
+...you can't shoot good video without a ton of supplemental lighting.
+
+I've had a great experience with my four Neewer LED panel lights.
+
+Neewer is available on Amazon and their stuff is aggressively priced.
+
+Any LED panels lights would probably work great... but I found that I need a bunch of them.
+
+Any fewer than three panel lights and my face is surrounded by distracting shadows.
+
+And finally, I always get questions about my backpack.
+
+The programmer and the backpack are joined at the hip... 
+
+...and like a lot of people, I'm a sucker for a pretty backpack.
+
+So I've spent the last couple of years with my prized Peak Designs Everyday 20 liter.
+
+I highly recommend Peak Designs if you can justify the expense.
+
+Unfortunately, all of this gear has cost me a ton of money.
+
+I've been scrounging it off of eBay and Amazon Warehouse deals for a few years now.
+
+You can find some great deals if you're patient enough...
+
+...but it's a slow process if you're not willing to pay full price for high-end gear.
+
+My office is the product of years of scrounging and tough buying decisions...
+
+...and I'm very curious to see how other folks have managed their setups.
+
+So please share your recommendations in the comments!
+
+I would love to hear what makes you more productive.
+
+
