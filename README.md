@@ -18,8 +18,6 @@ The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is 
 
 ## Newsletter
 
-![Click below &#x1F447; to subscribe](.gitbook/assets/email-signup-form.png)
-
 [Sign up for email updates](http://eepurl.com/ceGkov) 💌
 
 We'll send you some "getting started" emails. From there on out, we email with a light touch 👍
