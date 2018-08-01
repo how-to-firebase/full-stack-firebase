@@ -146,7 +146,7 @@ So I'm using Firebase's CDN links for the SDK...
 
 ...which means that the client's browser may already have the CDN files cached.
 
-And I've got full Service Worker caching in place...
+And since I have full Service Worker caching in place...
 
 ...only the very first page load is ever effected. 
 
@@ -160,7 +160,7 @@ You can find my Firebase SSR Starter code on GitHub.
 
 You're welcome to copy it, but I'd recommend using it as a reference instead.
 
-I used to use other people's app starters for every project.
+In my early years developing, I often used other people's app starters for my projects.
 
 It's a great feeling to jump right into building my app-specific features... 
 
@@ -172,10 +172,10 @@ So I'll probably reference this starter app a lot going forward...
 
 ...but I'll most likely only use it for my next app...
 
-...because I'll have learned so much by the end of that app, that I'll need to start fresh.
+...because I'll have learned so much by the end of that build out, that I'll need to start fresh.
 
 So copy/paste and learn from the past, but don't value it too highly...
 
-...because you always know more now than when you started your last app...
+...because you always know more NOW than when you started your last app...
 
-...and you need to be deeply familiar with your entire app if you hope to ship anything valuable.
+...and you need to be deeply familiar with your architecture if you hope to ship anything valuable.

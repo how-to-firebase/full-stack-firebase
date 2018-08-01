@@ -20,7 +20,7 @@ And make sure to refer to it as TDD, short for test-driven development.
 
 The acronym helps your credibility a lot more than it should.
 
-So let's learn how to write Cloud Functions with test-driven design!
+So let's learn how to write Cloud Functions with test-driven development!
 
 PAUSE FOR INTERSTITIAL
 
@@ -42,7 +42,7 @@ I may have five big, nasty integration tests, and I only want to run one at a ti
 
 ...and Jest makes that easy.
 
-What we're going for here is a red/green development cycle.
+What we need to achieve is a red/green development cycle.
 
 We write a failing test that imports our module and fails...
 
@@ -52,11 +52,11 @@ Then we write just enough code in the module under test to make the test pass...
 
 ...and we're in a "green" or passed state.
 
-Now rinse and repeat, writing expectations in your tests and regular code...
+Now rinse and repeat, writing expectations in your tests and writing regular code...
 
 ...switching between "red" and "green" states, until the module is done.
 
-Once the module you're working on is working and all green, run all of your tests.
+Once the module you're working on is all green, run all of your tests.
 
 When your tests are all passing, you're good to commit your code to GitHub or wherever...
 
@@ -86,7 +86,9 @@ Basically, every Cloud Function that we write will be wrapped in a higher-order 
 
 ...so make sure to drop that terminology in your next interview as well.
 
-So our higher-order wrapping function takes a context object as its one argument...
+So we start with a higher-order wrapping function...
+
+...which takes a context object as its one argument...
 
 ...and that context object has attributes named `admin` and `environment`.
 
@@ -150,7 +152,9 @@ The actual act of setting our custom claim would not work without a real life us
 
 Mocking means replacing real code with a fake function that does nothing.
 
-So now that our custom claims call is replaced with a mocked, we can write the rest of our test.
+So now that our custom claims call is replaced with a mock...
+
+...we can write the rest of our test.
 
 I've written a `test admin` utility to authenticate a new Firebase Admin SDK instance.
 
@@ -176,9 +180,9 @@ Our production environment doesn't have the `test dash` prefixes...
 
 And if our tests fail to clean up after themselves, it'll be easy to spot the issue.
 
-Now back to the spec file...
+...and now back to the spec file...
 
-...and you'll see that we'll add the `admin` and `environment` variables to a `context` object.
+...you'll see that we'll add the `admin` and `environment` variables to a `context` object.
 
 Then we'll initialize two utility functions just for the purposes of this test.
 
@@ -196,13 +200,13 @@ You don't want to leave any old data lying around, because it could interfere wi
 
 So we have two utility functions, `set custom claims by email` and `remove custom claims by email`.
 
-We'll pass in the `context` object into both so they can set and remove our data.
+We'll pass the `context` object into both so they can set and remove our data.
 
 Don't worry about the details of how these functions are working...
 
 ...because they're literally just setting and removing data from the Realtime Database.
 
-We still have some more set up to do, so stay strong and let's forge ahead!
+We have more set up to do, so stay strong and let's forge ahead!
 
 Next we'll import the actual function that we want to test.
 
@@ -214,7 +218,7 @@ I like to name my functions generically in my spec files...
 
 ...so I've named this function `Func` with a capital `F`.
 
-Now we'll initialize our Firestore database and set our settings.
+Now we'll initialize our Firestore database and our Firestore settings.
 
 And we'll need access to our `usersCollection` later, so we'll initialize it here too.
 
@@ -224,9 +228,9 @@ Every Jest test should be nested within one or more `describe` blocks.
 
 You can nest `describe` blocks as much as you like.
 
-Jest provides `describe` as a global variable that you can use within any Jest spec file.
+Jest provides `describe` as a global function that you can use within any Jest spec file.
 
-It also provides `beforeEach`, `afterEach`, `beforeAll` and `afterAll` as global variables.
+It also provides `beforeEach`, `afterEach`, `beforeAll` and `afterAll` as global functions.
 
 You can call these `before` and `after` functions within any `describe` block...
 
@@ -234,13 +238,13 @@ You can call these `before` and `after` functions within any `describe` block...
 
 ...or before and after all of the code in the `describe` block.
 
-`it` is another global variable from Jest that lets us write our actual tests.
+`it` is another global function from Jest that lets us write our actual tests.
 
 So we're going to do a bunch of setup in our `beforeEach` function...
 
 ...and a little cleanup in our `afterAll`.
 
-Before each test we're going to initiailze our `capital F Func` function...
+Before each test we're going to initialize our `capital F Func` function...
 
 ...and assign it to a `lowercase f func` variable.
 
@@ -264,7 +268,7 @@ This is going to be a little disappointing.
 
 See, we just need to define an `it` block and give it a name and a function.
 
-The first test is just to make sure that we got the right environment object.
+The first test is simply to make sure that we got the right environment object.
 
 I was fussing around with my environments, and this smoke test makes sure that my setup succeeded.
 
@@ -300,7 +304,7 @@ It's all available on `Full Stack Firebase dot com`.
 
 The online written material is all free and the entire course is open-source.
 
-You'll need to pay a few buck for the full Udemy course...
+You'll need to pay a few bucks for the full Udemy course...
 
 ...but it's the culmination of hundreds of hours of work on my part...
 
