@@ -22,7 +22,7 @@ However, Cloud Firestore, the Realtime Database, Security Rules and Cloud Functi
 These modules are multi-purpose tools that can be used in all sorts of creative ways. We'll go much deeper into these Firebase features. We'll cover common use cases and potential pitfalls. And we'll try to inspire you with advanced architectures that will make your apps both performant and easier to write.
 
 | Module | Intensity | Reasoning |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Console | 🌶 | A quick walk-through |
 | Authentication | 🌶 | Auth is the easiest Firebase feature to implement. |
 | Firestore | 🌶🌶🌶🌶🌶 | Firestore is the meat of Firebase's offering. |

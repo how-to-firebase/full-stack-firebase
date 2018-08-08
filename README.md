@@ -12,7 +12,7 @@ description: Welcome to Full-Stack Firebase!
 
 ![Click the link below to learn more &#x1F447;](.gitbook/assets/howtofirebase-2f640-2fudemy-hero-1.png)
 
-We've launched [Full-Stack Firebase on Udemy](https://www.udemy.com/full-stack-firebase/?couponCode=FULLSTACK2018) for the full video experience.
+We've launched [Full-Stack Firebase on Udemy](https://www.udemy.com/full-stack-firebase/?couponCode=FSFDOTCOM) for the full video experience.
 
 The Udemy course features 2.5 hours of tightly-edited video walkthroughs. It is the absolute fastest, easiest way to learn Firebase. We've condensed everything on FullStackFirebase.com into video form with free instructor Q&A.
 
