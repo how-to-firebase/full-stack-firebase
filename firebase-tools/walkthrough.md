@@ -105,6 +105,12 @@ Follow that url to see the results!
 
 The Node.js community has moved toward putting all deploy commands in a `package.json` file, so let's initialize our project for Node.js as well and set up our deploy pipeline.
 
+### Note
+
+> You likely have `package.json` and other `npm` files under `./functions/` because you ran `firebase init` and initialized the functions.
+> The following steps will add new `npm`-related files in your root directory (`./package.json` and such).
+> This is intended, because both folders will act as separate NPM packages.
+
 ```bash
 $ npm init #go ahead and accept the defaults
 ```
