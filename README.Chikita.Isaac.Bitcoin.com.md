@@ -91,3 +91,4 @@ Firebase changes. A lot. The docs are canonical. Use them. We'll do our best to 
 
 Have you found an error or a bug? Don't hesitate to [file an issue ](https://github.com/how-to-firebase/full-stack-firebase/issues) or make pull requests 💕
 
+https://firebase.google.com/docs/reference/android/com/google/android/gms/ads/instream/package-summary#classes
