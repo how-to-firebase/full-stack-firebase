@@ -8,7 +8,7 @@ See the [Firebase Storage docs for web](https://firebase.google.com/docs/storage
 
 ```javascript
 var storageRef = firebase.storage().ref();
-const fileRef = storageRef.child('/some/file/path.jpg);
+const fileRef = storageRef.child('/some/file/path.jpg');
 ```
 
 ### Navigate
